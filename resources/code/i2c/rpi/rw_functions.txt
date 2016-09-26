@@ -1,0 +1,74 @@
+#include <wiringSerial.h>
+#include <wiringPiI2C.h>
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+
+//static int fd;
+
+int main()
+{
+        unsigned short input = 0;
+        //int fd = wiringPiI2CSetup(0x44);
+        while (1)
+        {
+                if (input == 999)
+                {
+                        cout << "\nEnter the device address: ";
+                        cin >> input;
+                        cin.ignore();
+                        int fd = wiringPiI2CSetup(input);
+                        int w = 0;
+                        int r = 0;
+                        cout << "\nPlease enter the master command number:   ";
+                        cin >> input;
+                        cin.ignore();
+                        if (input == 50)
+                        {
+                                cout << "\nNotifying slave of 32 byte block read...";
+                                w = wiringPiI2CWrite(fd, 50);
+                                r = wiringPiI2CRead(fd);
+                                //cout << "\nDumping data...";
+                                cout << "\n_________________________________________";
+                                //system("i2cdump -y 1 0x44 i");
+                                //w = wiringPiI2CWrite(fd, 255);
+                        }
+                        else
+                        {
+                                cout << "\nReading response to "<< input <<" from slave...";
+                                w = wiringPiI2CWrite(fd, input);
+                                r = wiringPiI2CRead(fd);
+                                char c = r;
+                                cout << "\nDevice returned " << c;
+                                cout << "\nDone.\n";
+                        }
+                }
+                else
+                {
+                        cout << "\nBlock read mode.\n_______________________";
+                        cout << "\nEnter device address: ";
+                        cin >> input;
+                        cin.ignore();
+                        int fd = wiringPiI2CSetup(65);//input);
+                        int w = 0;
+                        int r = 0;
+                        w = wiringPiI2CWrite(fd, 1);
+                        r = wiringPiI2CRead(fd);
+                        cout << "\nThe device responded with "<<r<<" to 0x01.";
+                        w = wiringPiI2CWrite(fd, 50);
+                        for (int i = 0; i < 32; i++)
+                        {
+                                w = wiringPiI2CWrite(fd, i);
+                                r = wiringPiI2CRead(fd);
+                                char c = r;
+                                cout << c;
+                        }
+                }
+        }
+        return 0;
+}
+
+
+
+
