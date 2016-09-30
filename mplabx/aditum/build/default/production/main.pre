@@ -4197,7 +4197,7 @@ extern __nonreentrant void _delay3(unsigned char);
 #pragma config HFOFST = ON
 #pragma config MCLRE = ON
 #pragma config STVREN = ON
-#pragma config LVP = ON
+#pragma config LVP = OFF
 #pragma config XINST = OFF
 #pragma config CP0 = OFF
 #pragma config CP1 = OFF
@@ -4843,31 +4843,30 @@ PIR1bits.SSPIF = 0;
 PIE1bits.SSPIE = 1;
 INTCONbits.GIE_GIEH = 1;
 INTCONbits.PEIE_GIEL = 1;
+INTCONbits.RBIE = 0;
 }
 
 unsigned char read_keypad()
 {
-TRISB = 0b00011111;
-TRISC = 0b00011000;
-TRISD = 0b00000000;
-PORTD = 0b00000001;
+TRISB = 0b01111000;
+PORTB = 0b00000001;
 
-if (PORTBbits.RB4) {PORTC = 0x00; return '*';}
-if (PORTBbits.RB1) {PORTC = 0x00; return '1';}
-if (PORTBbits.RB2) {PORTC = 0x00; return '4';}
-if (PORTBbits.RB3) {PORTC = 0x00; return '7';}
-PORTD = 0b00000010;
+if (PORTBbits.RB6) {PORTB = 0x00; return '*';}
+if (PORTBbits.RB3) {PORTB = 0x00; return '1';}
+if (PORTBbits.RB4) {PORTB = 0x00; return '4';}
+if (PORTBbits.RB5) {PORTB = 0x00; return '7';}
+PORTB = 0b00000010;
 
-if (PORTBbits.RB1) {PORTC = 0x00; return '2';}
-if (PORTBbits.RB2) {PORTC = 0x00; return '5';}
-if (PORTBbits.RB3) {PORTC = 0x00; return '8';}
-if (PORTBbits.RB4) {PORTC = 0x00; return '0';}
-PORTD = 0b00000100;
+if (PORTBbits.RB3) {PORTB = 0x00; return '2';}
+if (PORTBbits.RB4) {PORTB = 0x00; return '5';}
+if (PORTBbits.RB5) {PORTB = 0x00; return '8';}
+if (PORTBbits.RB6) {PORTB = 0x00; return '0';}
+PORTB = 0b00000100;
 
-if (PORTBbits.RB1) {PORTC = 0x00; return '3';}
-if (PORTBbits.RB2) {PORTC = 0x00; return '6';}
-if (PORTBbits.RB3) {PORTC = 0x00; return '9';}
-if (PORTBbits.RB4) {PORTC = 0x00; return '#';}
+if (PORTBbits.RB3) {PORTB = 0x00; return '3';}
+if (PORTBbits.RB4) {PORTB = 0x00; return '6';}
+if (PORTBbits.RB5) {PORTB = 0x00; return '9';}
+if (PORTBbits.RB6) {PORTB = 0x00; return '#';}
 return '_';
 }
 void latch_keypad(unsigned char* x)
@@ -4882,7 +4881,7 @@ _delay((unsigned long)((20)*(16000000/4000.0)));
 void load_reg_map()
 {
 
-# 336
+# 335
 for (int i = 0; i < 9; i++)
 i2c_r_reg[i] = current_user[i];
 
@@ -5080,7 +5079,7 @@ Lcd_Clear();
 Lcd_Set_Cursor(1,1);
 Lcd_Write_String("I2C_ADDR>>EEPROM");
 
-# 538
+# 537
 for (int i = 0; i < 10; i++)
 _delay((unsigned long)((20)*(16000000/4000.0)));
 menu_progress_bar(500);
@@ -5107,7 +5106,7 @@ else
 {
 v = 1;
 
-# 626
+# 625
 }
 
 

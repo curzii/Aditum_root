@@ -17,7 +17,7 @@
 #pragma config HFOFST = ON      // HFINTOSC Fast Start-up (HFINTOSC starts clocking the CPU without waiting for the oscillator to stablize.)
 #pragma config MCLRE = ON       // MCLR Pin Enable bit (MCLR pin enabled; RE3 input pin disabled)
 #pragma config STVREN = ON      // Stack Full/Underflow Reset Enable bit (Stack full/underflow will cause Reset)
-#pragma config LVP = ON         // Single-Supply ICSP Enable bit (Single-Supply ICSP enabled)
+#pragma config LVP = OFF        // Single-Supply ICSP Enable bit (Single-Supply ICSP enabled)
 #pragma config XINST = OFF      // Extended Instruction Set Enable bit (Instruction set extension and Indexed Addressing mode disabled (Legacy mode))
 #pragma config CP0 = OFF        // Code Protection Block 0 (Block 0 (000800-001FFFh) not code-protected)
 #pragma config CP1 = OFF        // Code Protection Block 1 (Block 1 (002000-003FFFh) not code-protected)
@@ -64,13 +64,13 @@
 //Header rear view:
 //      x           3       1       2
 //      y   2   3   0   4   0   1   0
-#define X1 PORTDbits.RD0
-#define X2 PORTDbits.RD1
-#define X3 PORTDbits.RD2
-#define Y1 PORTBbits.RB1
-#define Y2 PORTBbits.RB2
-#define Y3 PORTBbits.RB3
-#define Y4 PORTBbits.RB4
+#define X1 PORTDbits.RB0
+#define X2 PORTDbits.RB1
+#define X3 PORTDbits.RB2
+#define Y1 PORTBbits.RB3
+#define Y2 PORTBbits.RB4
+#define Y3 PORTBbits.RB5
+#define Y4 PORTBbits.RB6
 //__________________________________________________________________________________________________________________________________________
 
 #endif	/* MCU_CONFIG_H */

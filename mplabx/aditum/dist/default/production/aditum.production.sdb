@@ -51,21 +51,23 @@
 [v _main main `(v  1 e 1 0 ]
 "265
 [v _mcu_initialise mcu_initialise `(v  1 e 1 0 ]
-"294
+"295
 [v _read_keypad read_keypad `(uc  1 e 1 0 ]
-"319
+"318
 [v _latch_keypad latch_keypad `(v  1 e 1 0 ]
-"328
+"327
 [v _load_reg_map load_reg_map `(v  1 e 1 0 ]
 [v i2_load_reg_map load_reg_map `(v  1 e 1 0 ]
-"343
+"342
 [v _ISR ISR `II(v  1 e 1 0 ]
-"405
+"404
 [v _start_routine start_routine `(v  1 e 1 0 ]
 "62 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\menu.h
 [v _menu_seconds_to_mmss menu_seconds_to_mmss `(v  1 e 1 0 ]
 "85
 [v _menu_progress_bar menu_progress_bar `(v  1 e 1 0 ]
+"769 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f45k20.h
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
 [s S334 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
@@ -75,7 +77,7 @@
 `uc 1 RB6 1 0 :1:6 
 `uc 1 RB7 1 0 :1:7 
 ]
-"822 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f45k20.h
+"822
 [s S343 . 1 `uc 1 INT0 1 0 :1:0 
 `uc 1 INT1 1 0 :1:1 
 `uc 1 INT2 1 0 :1:2 
@@ -109,10 +111,6 @@
 ]
 [u S374 . 1 `S334 1 . 1 0 `S343 1 . 1 0 `S352 1 . 1 0 `S361 1 . 1 0 `S366 1 . 1 0 `S371 1 . 1 0 ]
 [v _PORTBbits PORTBbits `VES374  1 e 1 @3969 ]
-"976
-[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
-"1166
-[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
 [s S21 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
@@ -144,7 +142,7 @@
 [v _PORTDbits PORTDbits `VES47  1 e 1 @3971 ]
 "1794
 [v _LATC LATC `VEuc  1 e 1 @3979 ]
-[s S591 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S590 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -154,31 +152,31 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "1974
-[s S600 . 1 `uc 1 LD0 1 0 :1:0 
+[s S599 . 1 `uc 1 LD0 1 0 :1:0 
 ]
-[s S602 . 1 `uc 1 . 1 0 :1:0 
+[s S601 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 ]
-[s S605 . 1 `uc 1 . 1 0 :2:0 
+[s S604 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LD2 1 0 :1:2 
 ]
-[s S608 . 1 `uc 1 . 1 0 :3:0 
+[s S607 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 LD3 1 0 :1:3 
 ]
-[s S611 . 1 `uc 1 . 1 0 :4:0 
+[s S610 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LD4 1 0 :1:4 
 ]
-[s S614 . 1 `uc 1 . 1 0 :5:0 
+[s S613 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 LD5 1 0 :1:5 
 ]
-[s S617 . 1 `uc 1 . 1 0 :6:0 
+[s S616 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 LD6 1 0 :1:6 
 ]
-[s S620 . 1 `uc 1 . 1 0 :7:0 
+[s S619 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S623 . 1 `S591 1 . 1 0 `S600 1 . 1 0 `S602 1 . 1 0 `S605 1 . 1 0 `S608 1 . 1 0 `S611 1 . 1 0 `S614 1 . 1 0 `S617 1 . 1 0 `S620 1 . 1 0 ]
-[v _LATDbits LATDbits `VES623  1 e 1 @3980 ]
+[u S622 . 1 `S590 1 . 1 0 `S599 1 . 1 0 `S601 1 . 1 0 `S604 1 . 1 0 `S607 1 . 1 0 `S610 1 . 1 0 `S613 1 . 1 0 `S616 1 . 1 0 `S619 1 . 1 0 ]
+[v _LATDbits LATDbits `VES622  1 e 1 @3980 ]
 "2115
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "2336
@@ -280,30 +278,30 @@
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @4037 ]
 "5469
 [v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
-[s S565 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S564 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "5489
-[s S571 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S570 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S576 . 1 `S565 1 . 1 0 `S571 1 . 1 0 ]
-[v _SSPCON1bits SSPCON1bits `VES576  1 e 1 @4038 ]
+[u S575 . 1 `S564 1 . 1 0 `S570 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES575  1 e 1 @4038 ]
 "5538
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
-[s S423 . 1 `uc 1 . 1 0 :2:0 
+[s S422 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_NOT_W 1 0 :1:2 
 ]
 "5622
-[s S426 . 1 `uc 1 . 1 0 :5:0 
+[s S425 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 D_NOT_A 1 0 :1:5 
 ]
-[s S429 . 1 `uc 1 BF 1 0 :1:0 
+[s S428 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -312,55 +310,55 @@
 `uc 1 CKE 1 0 :1:6 
 `uc 1 SMP 1 0 :1:7 
 ]
-[s S438 . 1 `uc 1 . 1 0 :2:0 
+[s S437 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S443 . 1 `uc 1 . 1 0 :2:0 
+[s S442 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 A 1 0 :1:5 
 ]
-[s S448 . 1 `uc 1 . 1 0 :2:0 
+[s S447 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S453 . 1 `uc 1 . 1 0 :2:0 
+[s S452 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S458 . 1 `uc 1 . 1 0 :2:0 
+[s S457 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_WRITE 1 0 :1:2 
 ]
-[s S461 . 1 `uc 1 . 1 0 :5:0 
+[s S460 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_ADDRESS 1 0 :1:5 
 ]
-[s S464 . 1 `uc 1 . 1 0 :2:0 
+[s S463 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S469 . 1 `uc 1 . 1 0 :3:0 
+[s S468 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 START 1 0 :1:3 
 `uc 1 STOP 1 0 :1:4 
 ]
-[s S473 . 1 `uc 1 . 1 0 :5:0 
+[s S472 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S476 . 1 `uc 1 . 1 0 :2:0 
+[s S475 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 ]
-[s S479 . 1 `uc 1 . 1 0 :2:0 
+[s S478 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_W 1 0 :1:2 
 ]
-[s S482 . 1 `uc 1 . 1 0 :5:0 
+[s S481 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_A 1 0 :1:5 
 ]
-[u S485 . 1 `S423 1 . 1 0 `S426 1 . 1 0 `S429 1 . 1 0 `S438 1 . 1 0 `S443 1 . 1 0 `S448 1 . 1 0 `S453 1 . 1 0 `S458 1 . 1 0 `S461 1 . 1 0 `S464 1 . 1 0 `S469 1 . 1 0 `S473 1 . 1 0 `S476 1 . 1 0 `S479 1 . 1 0 `S482 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES485  1 e 1 @4039 ]
+[u S484 . 1 `S422 1 . 1 0 `S425 1 . 1 0 `S428 1 . 1 0 `S437 1 . 1 0 `S442 1 . 1 0 `S447 1 . 1 0 `S452 1 . 1 0 `S457 1 . 1 0 `S460 1 . 1 0 `S463 1 . 1 0 `S468 1 . 1 0 `S472 1 . 1 0 `S475 1 . 1 0 `S478 1 . 1 0 `S481 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES484  1 e 1 @4039 ]
 "5766
 [v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
 "5772
@@ -420,29 +418,29 @@
 [v _main main `(v  1 e 1 0 ]
 {
 "214
-[v main@i_796 i `i  1 a 2 29 ]
+[v main@i_795 i `i  1 a 2 29 ]
 "203
-[v main@i_793 i `i  1 a 2 27 ]
+[v main@i_792 i `i  1 a 2 27 ]
 "192
-[v main@i_790 i `i  1 a 2 25 ]
+[v main@i_789 i `i  1 a 2 25 ]
 "183
-[v main@i_786 i `i  1 a 2 37 ]
+[v main@i_785 i `i  1 a 2 37 ]
 "170
-[v main@i_777 i `i  1 a 2 35 ]
+[v main@i_776 i `i  1 a 2 35 ]
 "138
 [v main@c c `[10]uc  1 a 10 0 ]
 "118
-[v main@i_771 i `i  1 a 2 39 ]
+[v main@i_770 i `i  1 a 2 39 ]
 "116
-[v main@i_770 i `i  1 a 2 23 ]
+[v main@i_769 i `i  1 a 2 23 ]
 "68
-[v main@i_767 i `i  1 a 2 43 ]
+[v main@i_766 i `i  1 a 2 43 ]
 "246
-[v main@i_804 i `i  1 a 2 45 ]
+[v main@i_803 i `i  1 a 2 45 ]
 "237
-[v main@i_800 i `i  1 a 2 19 ]
+[v main@i_799 i `i  1 a 2 19 ]
 "226
-[v main@i_799 i `i  1 a 2 41 ]
+[v main@i_798 i `i  1 a 2 41 ]
 "67
 [v main@buffer buffer `[9]uc  1 a 9 10 ]
 "185
@@ -466,51 +464,51 @@
 [v main@F3695 F3695 `[1]uc  1 s 1 F3695 ]
 "263
 } 0
-"405
+"404
 [v _start_routine start_routine `(v  1 e 1 0 ]
 {
-"553
-[v start_routine@i_907 i `i  1 a 2 37 ]
-"551
-[v start_routine@i_906 i `i  1 a 2 30 ]
-"538
-[v start_routine@i_903 i `i  1 a 2 28 ]
-"525
-[v start_routine@i_900 i `i  1 a 2 26 ]
-"517
-[v start_routine@i_897 i `i  1 a 2 35 ]
-"495
-[v start_routine@i_894 i `i  1 a 2 44 ]
+"552
+[v start_routine@i_906 i `i  1 a 2 37 ]
+"550
+[v start_routine@i_905 i `i  1 a 2 30 ]
+"537
+[v start_routine@i_902 i `i  1 a 2 28 ]
+"524
+[v start_routine@i_899 i `i  1 a 2 26 ]
+"516
+[v start_routine@i_896 i `i  1 a 2 35 ]
 "494
-[v start_routine@b b `[3]uc  1 a 3 32 ]
-"503
-[v start_routine@error_msg error_msg `*.25uc  1 a 2 16 ]
+[v start_routine@i_893 i `i  1 a 2 44 ]
 "493
+[v start_routine@b b `[3]uc  1 a 3 32 ]
+"502
+[v start_routine@error_msg error_msg `*.25uc  1 a 2 16 ]
+"492
 [v start_routine@new_I2C_address new_I2C_address `uc  1 a 1 49 ]
-"452
+"451
 [v start_routine@I2C_new_ADDR I2C_new_ADDR `[3]uc  1 a 3 39 ]
-"437
-[v start_routine@i_882 i `i  1 a 2 24 ]
-"418
-[v start_routine@i_874 i `i  1 a 2 22 ]
-"413
+"436
+[v start_routine@i_881 i `i  1 a 2 24 ]
+"417
+[v start_routine@i_873 i `i  1 a 2 22 ]
+"412
 [v start_routine@i i `i  1 a 2 20 ]
-"445
+"444
 [v start_routine@n n `uc  1 a 1 48 ]
 [v start_routine@x x `uc  1 a 1 47 ]
-"422
+"421
 [v start_routine@dh dh `uc  1 a 1 46 ]
 [v start_routine@dt dt `uc  1 a 1 43 ]
 [v start_routine@a a `uc  1 a 1 42 ]
-"445
+"444
 [v start_routine@v v `uc  1 a 1 19 ]
-"422
+"421
 [v start_routine@d1 d1 `uc  1 a 1 18 ]
 [v start_routine@l l `uc  1 a 1 15 ]
 [v start_routine@h h `uc  1 a 1 14 ]
-"451
+"450
 [v start_routine@F3721 F3721 `[3]uc  1 s 3 F3721 ]
-"630
+"629
 } 0
 "85 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\menu.h
 [v _menu_progress_bar menu_progress_bar `(v  1 e 1 0 ]
@@ -518,11 +516,11 @@
 "92
 [v menu_progress_bar@ii ii `i  1 a 2 4 ]
 "106
-[v menu_progress_bar@i_725 i `i  1 a 2 12 ]
+[v menu_progress_bar@i_724 i `i  1 a 2 12 ]
 "102
-[v menu_progress_bar@i_724 i `i  1 a 2 10 ]
+[v menu_progress_bar@i_723 i `i  1 a 2 10 ]
 "97
-[v menu_progress_bar@i_723 i `i  1 a 2 8 ]
+[v menu_progress_bar@i_722 i `i  1 a 2 8 ]
 "89
 [v menu_progress_bar@i i `i  1 a 2 6 ]
 "88
@@ -595,16 +593,16 @@
 {
 "53
 } 0
-"319 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+"318 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
 [v _latch_keypad latch_keypad `(v  1 e 1 0 ]
 {
 [v latch_keypad@x x `*.39uc  1 p 2 23 ]
-"326
+"325
 } 0
-"294
+"295
 [v _read_keypad read_keypad `(uc  1 e 1 0 ]
 {
-"318
+"317
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -632,7 +630,7 @@
 "265 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
 [v _mcu_initialise mcu_initialise `(v  1 e 1 0 ]
 {
-"292
+"293
 } 0
 "20 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\eeprom.h
 [v _Eeprom_Read_Byte Eeprom_Read_Byte `(uc  1 e 1 0 ]
@@ -643,14 +641,14 @@
 [v Eeprom_Read_Byte@address address `uc  1 a 1 23 ]
 "36
 } 0
-"328 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+"327 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
 [v _load_reg_map load_reg_map `(v  1 e 1 0 ]
 {
-"339
-[v load_reg_map@i_840 i `i  1 a 2 29 ]
-"336
+"338
+[v load_reg_map@i_839 i `i  1 a 2 29 ]
+"335
 [v load_reg_map@i i `i  1 a 2 27 ]
-"341
+"340
 } 0
 "76 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\lcd.h
 [v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
@@ -675,17 +673,17 @@
 [v Lcd_Port@a a `uc  1 a 1 23 ]
 "37
 } 0
-"343 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+"342 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"345
+"344
 [v ISR@sspBuf sspBuf `uc  1 a 1 22 ]
-"403
+"402
 } 0
-"328
+"327
 [v i2_load_reg_map load_reg_map `(v  1 e 1 0 ]
 {
-[v i2load_reg_map@i_840 load_reg_map `i  1 a 2 6 ]
+[v i2load_reg_map@i_839 load_reg_map `i  1 a 2 6 ]
 [v i2load_reg_map@i load_reg_map `i  1 a 2 4 ]
-"341
+"340
 } 0

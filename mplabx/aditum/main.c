@@ -289,31 +289,30 @@ void mcu_initialise()
     PIE1bits.SSPIE = 1;             // Enable MSSP interrupt enable bit
     INTCONbits.GIE_GIEH  = 1;       // GIE/GIEH: Global Interrupt Enable bit
     INTCONbits.PEIE_GIEL = 1;       // PEIE/GIEL: Peripheral Interrupt Enable bit    
+    INTCONbits.RBIE = 0;            // Disable Interrupt on Change Pins (RB4:RB7) (This combined with LVP caused MCU reset on RB5 high))
 }
 
 unsigned char   read_keypad()
 {   
-    TRISB = 0b00011111;
-    TRISC = 0b00011000;
-    TRISD = 0b00000000;
-    PORTD = 0b00000001;
+    TRISB = 0b01111000;
+    PORTB = 0b00000001;
     //PORTB = 0b00100000;
-    if (Y4) {PORTC = 0x00; return '*';}
-    if (Y1) {PORTC = 0x00; return '1';}
-    if (Y2) {PORTC = 0x00; return '4';}
-    if (Y3) {PORTC = 0x00; return '7';}    
-    PORTD = 0b00000010;
+    if (Y4) {PORTB = 0x00; return '*';}
+    if (Y1) {PORTB = 0x00; return '1';}
+    if (Y2) {PORTB = 0x00; return '4';}
+    if (Y3) {PORTB = 0x00; return '7';}    
+    PORTB = 0b00000010;
     //PORTB = 0b01000000;
-    if (Y1) {PORTC = 0x00; return '2';}
-    if (Y2) {PORTC = 0x00; return '5';}
-    if (Y3) {PORTC = 0x00; return '8';}
-    if (Y4) {PORTC = 0x00; return '0';}
-    PORTD = 0b00000100;
+    if (Y1) {PORTB = 0x00; return '2';}
+    if (Y2) {PORTB = 0x00; return '5';}
+    if (Y3) {PORTB = 0x00; return '8';}
+    if (Y4) {PORTB = 0x00; return '0';}
+    PORTB = 0b00000100;
     //PORTB = 0b10000000;
-    if (Y1) {PORTC = 0x00; return '3';} 
-    if (Y2) {PORTC = 0x00; return '6';}
-    if (Y3) {PORTC = 0x00; return '9';}
-    if (Y4) {PORTC = 0x00; return '#';} 
+    if (Y1) {PORTB = 0x00; return '3';} 
+    if (Y2) {PORTB = 0x00; return '6';}
+    if (Y3) {PORTB = 0x00; return '9';}
+    if (Y4) {PORTB = 0x00; return '#';} 
     return '_';
 }
 void latch_keypad(unsigned char* x)
