@@ -1,0 +1,12 @@
+  [action] 	[status]					  [user ID 	   | user Name 		 ]	  [Time and Date]
+  ____________________________________________________________________________________________________  
+  [login]   [ID not in database]          [ 000000000  | unregistered    ]    Thu Sep  1 19:05:30 2016
+  [login]   [OK]                          [ 123456789  |  Test Account   ]    Thu Sep  1 19:05:58 2016
+  [login]   [ID not in database]          [ 123456789  | unregistered    ]    Thu Sep  1 19:10:37 2016
+  [login]   [OK]                          [ 123456789  |  Test Account   ]    Thu Sep  1 19:10:37 2016
+  [login]   [ID not in database]          [ 123456789  | unregistered    ]    Thu Sep  1 19:10:55 2016
+  [login]   [OK]                          [ 123456789  |  Test Account   ]    Thu Sep  1 19:10:56 2016
+  [login]   [ID not in database]          [ 015011420  | unregistered    ]    Thu Sep  1 19:32:41 2016
+  [login]   [OK]                          [ 015011420  | Kampman JC      ]    Thu Sep  1 19:32:41 2016
+  [login]   [ID not in database]          [ 000000555  | unregistered    ]    Thu Sep  1 19:32:47 2016
+  [login]   [ID not in database]          [ 000000000  | unregistered    ]    Thu Sep  1 19:33:45 2016
