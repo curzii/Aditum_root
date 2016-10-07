@@ -48,7 +48,7 @@ int main()
 	while(1)
 	{
 		vector<string> slave_addresses = dash_parser(exec_sys("i2cdetect -y 1"), detect_template);
-		mvprintw(10,0, "\n\nThe following slaves where found:");
+		mvprintw(10,0, "The following slaves where found:");
 		for (int i = 0; i < slave_addresses.size(); i++)
 		{
 			printw("%s ", slave_addresses[i].c_str());
@@ -57,8 +57,8 @@ int main()
 		/*SERVICE LOOP++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 		for (int n_iterations = 0; n_iterations < 1000; n_iterations++)
 		{
-			mvprintw(12,0, "\nThis is iteration number: \t\t%d", n_iterations);
-			mvprintw(13,0, "\nThis is iteration number: \t\t%s", exec_sys("ls").c_str());
+			mvprintw(12,0, "This is iteration number: \t\t%d", n_iterations);
+			mvprintw(14,0, "%s", exec_sys("ls").c_str());
 			refresh();
 		}
 		/*END SERVICE LOOP++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
