@@ -21,16 +21,18 @@ void latch_keypad(unsigned char*);
 void low_isr(void);
 void high_isr(void);
 void start_routine();
-void load_reg_map();
+void load_i2c_registers();
 
 //Variables
 volatile unsigned char  i2c_reg_addr     = 0;
-volatile unsigned char  i2c_r_reg[32] = {'0'};                 //register to read data from
-volatile unsigned char  i2c_w_reg[32] = {'0'};                 //register to write data to
-                        /*{0xAA,0xEE,0xDD,0xCC,0xBB,0xAA,0x99,0x88,
-                        0x77,0x66,0x55,0x44,0x33,0x22,0x11,0xFA,
-                        0xEA,0xDA,0xCA,0xBA,0xFB,0xFC,0xFD,0xFE,
-                        0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08};*/
+volatile unsigned char  i2c_r_reg[32] =    {'-','-','-','-','-','-','-','-', 
+                                            '-','-','-','-','-','-','-','-',
+                                            '-','-','-','-','-','-','-','-',
+                                            '-','-','-','-','-','-','-','-',};  //register to read data from
+volatile unsigned char  i2c_w_reg[32] =    {'-','-','-','-','-','-','-','-', 
+                                            '-','-','-','-','-','-','-','-',
+                                            '-','-','-','-','-','-','-','-',
+                                            '-','-','-','-','-','-','-','-',};  //register to write data to
 unsigned char           EEP_I2C_ADDR = 0x00;                    //Address in EEPROM of I2C address
 __EEPROM_DATA(0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00);  //Burnt in I2C address in EEPROM
 unsigned char           I2C_ADDR;
@@ -60,8 +62,11 @@ void main(void)
     //main loop
     while (1)
     {  
-        for (int i = 0; i < 32; i++)
-            i2c_w_reg[i] = '0';
+        for (int i = 0; i < 32; i++)                        //load i2c read and write registers full of -
+        {
+            i2c_w_reg[i] = '-';
+            i2c_r_reg[i] = '-';
+        }   
         while (credentials_accepted == 0 )                   //If no user prompt to log in
         {          
             unsigned char buffer[9];
@@ -122,8 +127,6 @@ void main(void)
             }
             Lcd_Clear();
             menu_progress_bar(100);
-            /*for (int i = 0; i < 10; i++)
-                __delay_ms(20);*/
             //PIN while
             p = 0;
             Lcd_Set_Cursor(1,1);
@@ -174,14 +177,14 @@ void main(void)
     /**************************************************************************/
             //PERFORM CREDENTIALS CHECK HERE
     /**************************************************************************/
-            load_reg_map();
-            while (i2c_w_reg[0] == '0')
+            load_i2c_registers();
+            while (i2c_w_reg[0] == '-')
             {
                 ; //wait to be serviced
             }
             INTCONbits.GIE_GIEH  = 0;       // Disable global interrupts
             for (int i = 0; i < 32; i++)
-                    i2c_r_reg[i] = '0';
+                    i2c_r_reg[i] = '-';
             unsigned char credential_state = i2c_w_reg[0];
             if (credential_state == 0xA1)
             {
@@ -324,25 +327,38 @@ void latch_keypad(unsigned char* x)
     *x = '_';
 }
 
-void load_reg_map()
+void load_i2c_registers()
 {
     //reg map structure:
     //bit   description
-    //0-9  Current User ID
+    //0-9   Current User ID
     //10-18 Current User PIN
-    
+    //31    Checksum
+    //INTCONbits.GIE_GIEH  = 0;       // Disable global interrupts
     //Load Current User
     for (int i = 0; i < 9; i++)
         i2c_r_reg[i] = current_user[i];
     //Load Current PIN
     for (int i = 9; i < 18; i++)
         i2c_r_reg[i] = current_pin[i - 9];    
+    
+    /*CHECKSUM ALGORITHM*/
+    int checksum = 0x00;
+    for (int i = 0; i < 31; i++)
+    {
+        checksum += i2c_r_reg[i];
+    }
+    checksum /= 32;
+    i2c_r_reg[31] = checksum;
+    /*END CHECKSUM ALGORITHM*/
+    
+    //INTCONbits.GIE_GIEH  = 1;       // Enable global interrupts
 }
 
 void interrupt ISR(void)
 {
     unsigned char    sspBuf;
-    load_reg_map();
+    //load_i2c_registers();
     if (PIR1bits.SSPIF) {
         
         if (!SSPSTATbits.D_NOT_A) {

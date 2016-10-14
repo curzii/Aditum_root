@@ -1,3 +1,4 @@
+#include <wiringPiI2C.h>
 #include <cstring>
 #include <iostream>
 #include <iomanip>
@@ -41,35 +42,90 @@ string logostring();																//reads logo from file
 
 int main()
 {
-	load_templates();
+	load_templates();			//*IMPORTANT - loads spefic file templates used in the parsing of system responses.
 	initscr();
+	curs_set(0);
 	mvprintw(0,0, "%s", logostring().c_str());	
+	refresh();
 	/*MAIN LOOP+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 	while(1)
 	{
 		vector<string> slave_addresses = dash_parser(exec_sys("i2cdetect -y 1"), detect_template);
-		mvprintw(10,0, "The following slaves where found:");
-		for (int i = 0; i < slave_addresses.size(); i++)
+		if (slave_addresses.empty())
 		{
-			printw("%s ", slave_addresses[i].c_str());
+			mvprintw(10,0, "No slaves where found.");
 			refresh();
 		}
-		/*SERVICE LOOP++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-		for (int n_iterations = 0; n_iterations < 1000; n_iterations++)
+		else
 		{
-			mvprintw(12,0, "This is iteration number: \t\t%d", n_iterations);
-			mvprintw(14,0, "%s", exec_sys("ls").c_str());
-			refresh();
+			mvprintw(10,0, "The following slaves where found:\n");
+			for (int i = 0; i < slave_addresses.size(); i++)
+			{
+				printw("%s ", slave_addresses[i].c_str());
+				refresh();
+			}
+			/*SERVICE LOOP++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+			for (int n_iterations = 0; n_iterations < 1000; n_iterations++)
+			{
+				for (int i = 0; i < slave_addresses.size(); i++)
+				{
+					mvprintw(13,0, "This is iteration number:  [%d]\t", n_iterations);
+					mvprintw(14,0, "Current device:            [%s]\t", slave_addresses[i].c_str());
+					slave_read(slave_addresses[i]);
+					refresh();
+				}
+			}
 		}
 		/*END SERVICE LOOP++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 	}
 	/*END MAIN LOOP+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-	
-	
 	getch();
 	endwin();
-	
 	return 0;
+}
+
+vector<char>  	slave_read(string read_address)											//reads data from specified slave and returns data as a char vector
+{
+	vector<char> data;
+	int devID = 16*hex_characters.find(toupper(read_address[0]))+hex_characters.find(toupper(read_address[1]));
+	mvprintw(19,0, "Service ID (string):       %s", read_address.c_str());
+	mvprintw(20,0, "Service ID (int):          %d", devID);
+	refresh();
+	try 
+	{ 
+		int fd = wiringPiI2CSetup(devID);	//select i2c device
+		mvprintw(21,0, "Code line number 96.");
+		refresh();
+		mvprintw(21,0, "Data stream:");
+		for (int i = 0; i < 32; i++)		//read 32 bytes form slave
+		{
+			char c_data = wiringPiI2CReadReg8(fd, i); 	//read byte from soecified address
+			if (data[0] == '-' )					 	//if first value is - assume the device does not need ot be serviced
+			{
+				mvprintw(21,0, "No data.                ");
+				break;
+			}	
+			data.push_back(c_data);						//add data to vector
+		} 
+		close(fd); //Close File descriptors to fix too many open files leak
+		/*CHECKSUM ALGORITHM*/
+		int checksum = 0x00;
+		for (int i = 0; i < 31; i++)
+		{
+			checksum += data[i];
+		}
+		checksum /= 32;
+		/*END CHECKSUM ALGORITHM*/
+		
+		for (int i = 0; i < 32; i++)
+			mvprintw(22,i, "%c", data[i]);
+		mvprintw(23,0, "Received Checksum: %d", (int)data[31]);
+		mvprintw(24,0, "Actual Checksum:   %d", checksum);
+		refresh();
+	} 
+	catch (...) { ; }
+	
+	return data;
 }
 
 vector<string> 	dash_parser(string data_string, const string template_string)			//parses a string, returning a vector of all data found in the -- postions of the string template
