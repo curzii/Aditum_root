@@ -4595,8 +4595,8 @@ asm("\tpsect eeprom_data,class=EEDATA,noexec"); asm("\tdb\t" "0x00" "," "0x00" "
 unsigned char I2C_ADDR;
 unsigned char Machine_ID;
 volatile unsigned char i2c_byte_count = 0;
-volatile unsigned char current_user[9] = {0};
-volatile unsigned char current_pin[9] = {0};
+volatile unsigned char current_user[9] = {0,0,0,0,0,0,0,0,0};
+volatile unsigned char current_pin[9] = {0,0,0,0,0,0,0,0,0};
 volatile unsigned char credentials_accepted = 0;
 
 char hx[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
@@ -4735,6 +4735,7 @@ menu_progress_bar(100);
 
 
 load_i2c_registers();
+i2c_w_reg[0] = '-';
 while (i2c_w_reg[0] == '-')
 {
 ;
@@ -4768,7 +4769,9 @@ _delay((unsigned long)((10)*(16000000/4000.0)));
 else
 {
 Lcd_Set_Cursor(1,1);
-Lcd_Write_String("[ System Error ]");
+Lcd_Write_String("[System Error ");
+Lcd_Write_Char(credential_state);
+Lcd_Write_String("]");
 Lcd_Set_Cursor(2,1);
 Lcd_Write_String("    [ Retry ]   ");
 for (int i = 0; i < 100; i++)
@@ -4887,7 +4890,7 @@ _delay((unsigned long)((20)*(16000000/4000.0)));
 void load_i2c_registers()
 {
 
-# 339
+# 342
 for (int i = 0; i < 9; i++)
 i2c_r_reg[i] = current_user[i];
 
@@ -5097,7 +5100,7 @@ Lcd_Clear();
 Lcd_Set_Cursor(1,1);
 Lcd_Write_String("I2C_ADDR>>EEPROM");
 
-# 553
+# 556
 for (int i = 0; i < 10; i++)
 _delay((unsigned long)((20)*(16000000/4000.0)));
 menu_progress_bar(500);
@@ -5124,7 +5127,7 @@ else
 {
 v = 1;
 
-# 641
+# 644
 }
 
 

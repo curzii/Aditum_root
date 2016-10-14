@@ -38,8 +38,8 @@ __EEPROM_DATA(0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00);  //Burnt in I2C a
 unsigned char           I2C_ADDR;
 unsigned char           Machine_ID;
 volatile unsigned char  i2c_byte_count   = 0;
-volatile unsigned char  current_user[9] = {0};
-volatile unsigned char  current_pin[9]  = {0};
+volatile unsigned char  current_user[9] = {0,0,0,0,0,0,0,0,0};
+volatile unsigned char  current_pin[9]  = {0,0,0,0,0,0,0,0,0};
 volatile unsigned char  credentials_accepted = 0;
 
 char hx[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
@@ -178,6 +178,7 @@ void main(void)
             //PERFORM CREDENTIALS CHECK HERE
     /**************************************************************************/
             load_i2c_registers();
+            i2c_w_reg[0] = '-';
             while (i2c_w_reg[0] == '-')
             {
                 ; //wait to be serviced
@@ -211,7 +212,9 @@ void main(void)
             else
             {
                 Lcd_Set_Cursor(1,1);
-                Lcd_Write_String("[ System Error ]");
+                Lcd_Write_String("[System Error ");
+                Lcd_Write_Char(credential_state);
+                Lcd_Write_String("]");
                 Lcd_Set_Cursor(2,1);
                 Lcd_Write_String("    [ Retry ]   ");
                 for (int i = 0; i < 100; i++)

@@ -23,17 +23,22 @@ using namespace std;
 const string hex_characters = "0123456789ABCDEF";	
 static string data_template; 
 static string detect_template;
+vector<vector<string>> database;
+vector<string> logbuffer;
+long long blocks_read, blocks_lost;
 			
 //Function Prototypes
 vector<string> 	dash_parser(string data_string, const string template_string);		//parses a string, returning a vector of all data found in the -- postions of the string template
 vector<char>  	slave_read(string read_address);									//reads data from specified slave and returns data as a char vector
-void			slave_write(string write_address, vector<string> slave_data);		//writes specified data to specified slave
+void 			slave_write(string write_address, vector<char> slave_data);			//writes specified data to specified slave
 string			exec_sys(const char* cmd); 											//executes a system command and returns the output to a string
 void load_templates();																//loads the templates of system outputs to be used in parsing functions
 string logostring();																//reads logo from file			
 string timestamp();																	//returns current time as a timestamp string
 vector<vector<string>> database_read();												//reads all credentials entries from database
 bool authenticate_slave(vector<char> data);											//authenticates slave in database
+int checksum(vector<char> data);													//calculate checksum
+void write_log(vector<string> log);
 
 //read + parse database
 	//find + parse slaves
@@ -46,15 +51,17 @@ bool authenticate_slave(vector<char> data);											//authenticates slave in d
 int main()
 {
 	load_templates();			//*IMPORTANT - loads spefic file templates used in the parsing of system responses.
-	initscr();
-	curs_set(0);
+	initscr();					//initiates ncurses window
+	curs_set(0);				//hides console cursor
+	blocks_read = 0;
+	blocks_lost = 0;
+	
 	/*MAIN LOOP+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 	while(1)
 	{
-		vector<vector<string>> database = database_read();	//load the credentials database
+		database = database_read();	//load the credentials database
 		vector<string> slave_addresses = dash_parser(exec_sys("i2cdetect -y 1"), detect_template);	//find all slaves connected to master
 		mvprintw(0,0, "%s", logostring().c_str());	//print an insanely slick banner
-		mvprintw(7,0, "%s", timestamp().c_str());	//print the current time
 		if (slave_addresses.empty())
 		{
 			mvprintw(10,0, "No devices are connected.");
@@ -71,16 +78,29 @@ int main()
 			/*SERVICE LOOP++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 			for (int n_iterations = 0; n_iterations < 1000; n_iterations++)
 			{
-				if ((n_iterations%10) == 0)
-						mvprintw(7,0, "%s", timestamp().c_str());	//print the current time every 10 iterations
+				vector<char> write_data;
+				write_data.clear();
+				if ((n_iterations%100) == 0)
+				{
+					mvprintw(7,0, "%s", timestamp().c_str());	//print the current time every 100 iterations
+					write_log(logbuffer);	//write and clear the log buffers every 100 iterations
+					logbuffer.clear();
+				}
 				for (int i = 0; i < slave_addresses.size(); i++)
 				{
 					mvprintw(13,0, "This is iteration number:  [%d]\t", n_iterations);
 					mvprintw(14,0, "Current device:            [%s]\t", slave_addresses[i].c_str());
 					refresh();
-					vector<char> slave_data = slave_read(slave_addresses[i]);	//read 32 bytes from slave
-					if (authenticate_slave(slave_read(slave_addresses[i])))
-						;
+					if (authenticate_slave(slave_read(slave_addresses[i]))) //read 32 bytes from slave and authenticate with database
+					{
+						write_data.push_back(static_cast<char>(0xA1));	//A1, means authentications succeeded.
+						slave_write(slave_addresses[i], write_data);
+					}
+					else
+					{
+						write_data.push_back(static_cast<char>(0xA0));	//A0, means authentications failed.
+						slave_write(slave_addresses[i], write_data);
+					}
 				}
 			}
 		}
@@ -93,7 +113,7 @@ int main()
 	return 0;
 }
 
-vector<char>  	slave_read(string read_address)											//reads data from specified slave and returns data as a char vector
+vector<char> slave_read(string read_address)											//reads data from specified slave and returns data as a char vector
 {
 	vector<char> data;
 	int devID = 16*hex_characters.find(toupper(read_address[0]))+hex_characters.find(toupper(read_address[1]));
@@ -105,37 +125,37 @@ vector<char>  	slave_read(string read_address)											//reads data from speci
 		int fd = wiringPiI2CSetup(devID);	//select i2c device
 		for (int i = 0; i < 32; i++)		//read 32 bytes form slave
 		{
-			char c_data = wiringPiI2CReadReg8(fd, i); 	//read byte from soecified address
+			char c_data = wiringPiI2CReadReg8(fd, i); 	//read byte from specified address
 			data.push_back(c_data);						//add data to vector
 			if (data[0] == '-' )					 	//if first value is - assume the device does not need ot be serviced
 			{
-				mvprintw(21,0, "No data.                ");
+				for (int e = 1; e < 31; e++)
+					data.push_back('-');
+				data.push_back(checksum(data));
 				break;
 			}	
-			
 		} 
 		close(fd); //Close File descriptors to fix too many open files error
-		
-		/*CHECKSUM ALGORITHM*/
-		int checksum = 0x00;
-		for (int i = 0; i < 31; i++)
-		{
-			checksum += data[i];
-		}
-		checksum /= 32;
-		/*END CHECKSUM ALGORITHM*/
-		
-		mvprintw(21,0, "Data stream:");
-		for (int i = 0; i < 32; i++)
-			mvprintw(22,i, "%c", data[i]);
-		
-		mvprintw(23,0, "Received Checksum: %d", (int)data[31]);
-		mvprintw(24,0, "Actual Checksum:   %d", checksum);
-		refresh();
 	} 
 	catch (...) { ; }
-	
 	return data;
+}
+
+void slave_write(string write_address, vector<char> slave_data)								//writes specified data to specified slave
+{
+	int devID = 16*hex_characters.find(toupper(write_address[0]))+hex_characters.find(toupper(write_address[1]));	//convert string to int for wiringPi
+	//int chk = checksum(slave_data);
+	try 
+	{ 
+		int fd = wiringPiI2CSetup(devID);				//select i2c device
+		for (int i = 0; i < slave_data.size(); i++)		//write vector to slave
+		{
+			int w = wiringPiI2CWriteReg8(fd, i, static_cast<int>(slave_data[i]));	//write byte to specified address
+		} 
+		close(fd); //Close File descriptors to fix too many open files error
+	} 
+	catch (...) { ; }
+	return;
 }
 
 vector<string> 	dash_parser(string data_string, const string template_string)			//parses a string, returning a vector of all data found in the -- postions of the string template
@@ -226,7 +246,85 @@ vector<vector<string>> database_read()
 
 bool authenticate_slave(vector<char> data)											//authenticates slave in database
 {
+	if (data[0] == '-')	//empty block
+		return false;
 	bool result = false;
-	//
+	char buffer[200];
+	string id = "?????????", pin = "?????????", name;
+	for (int i = 0; i < 9; i++)
+	{
+		id[i] = data[i];
+		pin[i] = data[9+i];
+	}
+	bool foundid = false, foundpin = false;
+	for (int i = 0; i < database.size(); i++)	//find pin in database
+			if (id == database[i][0])
+			{
+				foundid = true;
+				break;
+			}
+	for (int i = 0; i < database.size(); i++) 	//find id in database
+			if (pin == database[i][1])
+			{
+				foundpin = true;
+				name = database[i][2];
+				break;
+			}
+	int chk = checksum(data);
+	bool checksum_good = false;
+	if (chk == (int)data[31])
+		checksum_good = true;
+	if ((checksum_good)&&(foundid)&&(foundpin))	//verify data integrity as well as credentials
+	{
+		int trash = sprintf(buffer, "[   LOGIN    ] - [%s|%s|%s] ---> %s", id.c_str(), pin.c_str(), name.c_str(), timestamp().c_str());
+		logbuffer.push_back(buffer);
+		result = true;	
+	}	
+	else if (!checksum_good)
+	{
+		result = false;	//Do nothing, corrupted packet.
+	}
+	else if ((checksum_good)&&(!foundid))
+	{
+		int trash = sprintf(buffer, "[UNREGISTERED] - [%s|%s|UNREGISTERED] ---> %s", id.c_str(), pin.c_str(), timestamp().c_str());
+		logbuffer.push_back(buffer);
+	}
+	else if ((checksum_good)&&(foundid)&&(!foundpin))
+	{
+		int trash = sprintf(buffer, "[ WRONG  PIN ] - [%s|%s|%s] ---> %s", id.c_str(), pin.c_str(), name.c_str(), timestamp().c_str());
+		logbuffer.push_back(buffer);
+	}
+	mvprintw(21,0, "Data stream:");
+	for (int i = 0; i < 32; i++)
+		mvprintw(22,i, "%c", data[i]);
+	mvprintw(23,0, "Received Checksum: %d", (int)data[31]);
+	mvprintw(24,0, "Actual Checksum:   %d", chk);
+	mvprintw(25,0, "Username:          %s", id.c_str());
+	mvprintw(26,0, "Pin                %s", pin.c_str());
+	mvprintw(27,0, "Authenticated:     %d", result);
+	if (result)
+		mvprintw(28,0, "%s has been authenticated.", name.c_str());
+	refresh();
 	return result;
+}
+
+int checksum(vector<char> data)
+{
+	/*CHECKSUM ALGORITHM*/
+	int chk = 0;
+	for (int i = 0; i < 31; i++)
+	{
+		chk += (int)data[i];
+	}
+	chk /= 32;
+	/*END CHECKSUM ALGORITHM*/
+	return chk;
+}
+
+void write_log(vector<string> log)
+{
+	ofstream file("log.txt", ios_base::out | ios_base::app );
+	for (int i = 0; i < log.size(); i++)
+		file << log[i];
+	return;
 }
