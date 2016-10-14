@@ -177,28 +177,28 @@ void main(void)
             //PERFORM CREDENTIALS CHECK HERE
     /**************************************************************************/
             load_i2c_registers();
-            i2c_w_reg[0] = '-';
-            while (i2c_w_reg[0] == '-')
+            unsigned char credential_state = 0;
+            for (int i = 0; i < 32; i++)
+                    i2c_w_reg[i] = '-';
+            while ((i2c_w_reg[0] == '-')||(i2c_w_reg[31] == '-'))   //wait to be serviced
             {
-                ; //wait to be serviced
+                credential_state = i2c_w_reg[0];
+                for (int u = 0; u < 16; u++)
+                    logged_user[u] = i2c_w_reg[u+1]; 
             }
             for (int i = 0; i < 32; i++)
                     i2c_r_reg[i] = '-';
-            unsigned char credential_state = i2c_w_reg[0];
             if (credential_state == 0xA1)
             {
-                for (int u = 1; u < 17; u++)
-                    logged_user[u+1] = i2c_w_reg[u];
                 Lcd_Set_Cursor(1,1);
                 Lcd_Write_String("[Access Granted]");
                 menu_progress_bar(100);
-                Lcd_Set_Cursor(2,1);
+                Lcd_Set_Cursor(1,1);
                 Lcd_Write_String("   [ Welcome ]  ");
                 for (int i = 0; i < 30; i++)
                 {
                     __delay_ms(10);
-                }         
-                
+                }           
                 running_display();
             }
             else if (credential_state == 0xA0)
@@ -574,7 +574,7 @@ void running_display(void)
     {
         if (s == 0)
             break;
-        __delay_us(442);    //manually calibrated for time accuracy
+        __delay_us(265);    //manually calibrated for time accuracy
         ms += 1;
         if (ms == 1000)
         {

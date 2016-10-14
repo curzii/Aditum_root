@@ -80,7 +80,6 @@ int main()
 			for (int n_iterations = 0; n_iterations < 1000; n_iterations++)
 			{
 				vector<char> write_data;
-				write_data.clear();
 				if ((n_iterations%100) == 0)
 				{
 					mvprintw(7,0, "%s", timestamp().c_str());	//print the current time every 100 iterations
@@ -93,18 +92,21 @@ int main()
 					mvprintw(14,0, "Current device:            [%s]\t", slave_addresses[i].c_str());
 					refresh();
 					logged_user = "";
+					write_data.clear();
 					if (authenticate_slave(slave_read(slave_addresses[i]))) //read 32 bytes from slave and authenticate with database
 					{
 						write_data.push_back(static_cast<char>(0xA1));	//A1, means authentications succeeded.
-						for (int p = 0; p < (16 - logged_user.length()); p++)
+						for (int p = 0; ((p < logged_user.length())&&(p < 16)); p++)
 							write_data.push_back(logged_user[p]);
-						while(write_data.size() != 16)
+						while(write_data.size() != 32)
 							write_data.push_back(' ');
 						slave_write(slave_addresses[i], write_data);
 					}
 					else
 					{
 						write_data.push_back(static_cast<char>(0xA0));	//A0, means authentications failed.
+						while(write_data.size() != 32)
+							write_data.push_back(' ');
 						slave_write(slave_addresses[i], write_data);
 					}
 				}

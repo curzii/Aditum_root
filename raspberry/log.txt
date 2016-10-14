@@ -1,32 +1,1201 @@
-[UNREGISTERED] - [123456789|123456789|UNREGISTERED] ---> Fri Oct 14 15:12:53 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 15:13:02 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 15:13:20 2016
-[ WRONG  PIN ] - [015011420|015011425|] ---> Fri Oct 14 15:43:31 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 15:43:41 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 15:59:03 2016
-[UNREGISTERED] - [000000000|000000000|UNREGISTERED] ---> Fri Oct 14 15:59:40 2016
-[UNREGISTERED] - [000000000|000000000|UNREGISTERED] ---> Fri Oct 14 15:59:44 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 15:59:53 2016
-[UNREGISTERED] - [000002564|000000856|UNREGISTERED] ---> Fri Oct 14 16:02:32 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 16:02:42 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 16:07:28 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 16:07:46 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 16:11:40 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 16:13:16 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 16:18:16 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 16:26:17 2016
-[ WRONG  PIN ] - [015011420|150114200|] ---> Fri Oct 14 16:30:44 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 16:30:54 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 16:31:41 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 16:37:22 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 17:20:22 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 17:28:52 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 17:34:03 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 17:34:15 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 17:38:28 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 17:41:44 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 17:44:51 2016
-[   LOGIN    ] - [000012345|000054321|Lerato] ---> Fri Oct 14 17:45:16 2016
-[   LOGIN    ] - [008640882|000001253|JF Kampman ] ---> Fri Oct 14 17:47:08 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 17:48:08 2016
-[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 17:48:46 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:47 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:47 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:47 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:47 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:47 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:47 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:47 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:48 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:49 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:51 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:52 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:53 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:54 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:55 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:55 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:55 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:55 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:55 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:55 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:56 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:56 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:56 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:56 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:56 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:56 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:56 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:56 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:56 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:56 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:56 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:57 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:07:58 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:17 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:18 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:19 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:08:20 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:09:18 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:09:27 2016
+[   LOGIN    ] - [000000321|000000321|FEDCBA9876543210] ---> Fri Oct 14 21:09:34 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:09:44 2016
+[   LOGIN    ] - [015015336|015015336|Conradie M] ---> Fri Oct 14 21:09:56 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:11:28 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:41 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:42 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:43 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:44 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:45 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[UNREGISTERED] - [000001235|000001243|UNREGISTERED] ---> Fri Oct 14 21:11:46 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:12:45 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:12:57 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:13:08 2016
+[   LOGIN    ] - [000000321|000000321|FEDCBA9876543210] ---> Fri Oct 14 21:13:16 2016
+[   LOGIN    ] - [000000123|000000321|FEDCBA9876543210] ---> Fri Oct 14 21:13:23 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:13:52 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:14:00 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:15:11 2016
+[   LOGIN    ] - [000000321|000000321|FEDCBA9876543210] ---> Fri Oct 14 21:15:18 2016
+[   LOGIN    ] - [000000321|000000321|FEDCBA9876543210] ---> Fri Oct 14 21:15:31 2016
+[   LOGIN    ] - [123456789|123456789|0123456789ABCDEF] ---> Fri Oct 14 21:15:47 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:16:00 2016
+[   LOGIN    ] - [000000321|000000321|FEDCBA9876543210] ---> Fri Oct 14 21:17:13 2016
+[   LOGIN    ] - [000000321|000000321|FEDCBA9876543210] ---> Fri Oct 14 21:17:23 2016
+[UNREGISTERED] - [000000777|000000777|UNREGISTERED] ---> Fri Oct 14 21:17:47 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:17:55 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:18:23 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:18:52 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:19:54 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:20:39 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:20:49 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:20:57 2016
+[   LOGIN    ] - [000000321|000000321|FEDCBA9876543210] ---> Fri Oct 14 21:21:04 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:22:25 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:22:37 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:22:50 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:24:03 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:26:54 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:27:01 2016
+[   LOGIN    ] - [000000321|000000321|FEDCBA9876543210] ---> Fri Oct 14 21:27:22 2016
+[ WRONG  PIN ] - [000007777|000000777|] ---> Fri Oct 14 21:27:44 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:27:52 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:28:00 2016
+[   LOGIN    ] - [000007777|000007777|Jan die Wit Man] ---> Fri Oct 14 21:29:48 2016
+[UNREGISTERED] - [000002123|000000123|UNREGISTERED] ---> Fri Oct 14 21:29:57 2016
+[   LOGIN    ] - [000000321|000000321|FEDCBA9876543210] ---> Fri Oct 14 21:30:04 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:30:52 2016
+[   LOGIN    ] - [000000321|000000321|FEDCBA9876543210] ---> Fri Oct 14 21:31:03 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:31:14 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:31:24 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:31:37 2016
+[   LOGIN    ] - [015015336|015015336|Conradie M] ---> Fri Oct 14 21:31:47 2016
+[UNREGISTERED] - [000646464|000464644|UNREGISTERED] ---> Fri Oct 14 21:31:54 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:32:51 2016
+[   LOGIN    ] - [000000123|000000123|0123456789ABCDEF] ---> Fri Oct 14 21:32:59 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:33:10 2016
+[   LOGIN    ] - [015015336|015015336|Conradie M] ---> Fri Oct 14 21:33:22 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:35:03 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:35:21 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:35:31 2016
+[   LOGIN    ] - [015015336|015015336|Conradie M] ---> Fri Oct 14 21:49:35 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:49:50 2016
+[   LOGIN    ] - [015011420|015011420|Kampman JC] ---> Fri Oct 14 21:51:21 2016

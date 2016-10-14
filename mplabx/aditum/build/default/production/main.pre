@@ -4733,28 +4733,28 @@ menu_progress_bar(25);
 
 
 load_i2c_registers();
-i2c_w_reg[0] = '-';
-while (i2c_w_reg[0] == '-')
+unsigned char credential_state = 0;
+for (int i = 0; i < 32; i++)
+i2c_w_reg[i] = '-';
+while ((i2c_w_reg[0] == '-')||(i2c_w_reg[31] == '-'))
 {
-;
+credential_state = i2c_w_reg[0];
+for (int u = 0; u < 16; u++)
+logged_user[u] = i2c_w_reg[u+1];
 }
 for (int i = 0; i < 32; i++)
 i2c_r_reg[i] = '-';
-unsigned char credential_state = i2c_w_reg[0];
 if (credential_state == 0xA1)
 {
-for (int u = 0; u < 16; u++)
-logged_user[u] = i2c_w_reg[u+1];
 Lcd_Set_Cursor(1,1);
 Lcd_Write_String("[Access Granted]");
 menu_progress_bar(100);
-Lcd_Set_Cursor(2,1);
+Lcd_Set_Cursor(1,1);
 Lcd_Write_String("   [ Welcome ]  ");
 for (int i = 0; i < 30; i++)
 {
 _delay((unsigned long)((10)*(16000000/4000.0)));
 }
-
 running_display();
 }
 else if (credential_state == 0xA0)
@@ -5121,7 +5121,7 @@ while (read_keypad() != '#')
 {
 if (s == 0)
 break;
-_delay((unsigned long)((442)*(16000000/4000000.0)));
+_delay((unsigned long)((265)*(16000000/4000000.0)));
 ms += 1;
 if (ms == 1000)
 {
