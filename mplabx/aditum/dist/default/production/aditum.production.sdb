@@ -5,6 +5,8 @@
 [d frameptr 4065 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftadd.c
@@ -47,27 +49,29 @@
 [v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
 "111
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
-"47 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+"50 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
 [v _main main `(v  1 e 1 0 ]
-"271
+"230
 [v _mcu_initialise mcu_initialise `(v  1 e 1 0 ]
-"301
+"260
 [v _read_keypad read_keypad `(uc  1 e 1 0 ]
-"324
+"283
 [v _latch_keypad latch_keypad `(v  1 e 1 0 ]
-"333
+"292
 [v _load_i2c_registers load_i2c_registers `(v  1 e 1 0 ]
-"361
+"320
 [v _ISR ISR `II(v  1 e 1 0 ]
-"423
+"382
 [v _start_routine start_routine `(v  1 e 1 0 ]
-"62 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\menu.h
+"546
+[v _running_display running_display `(v  1 e 1 0 ]
+"61 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\menu.h
 [v _menu_seconds_to_mmss menu_seconds_to_mmss `(v  1 e 1 0 ]
-"85
+"84
 [v _menu_progress_bar menu_progress_bar `(v  1 e 1 0 ]
 "769 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f45k20.h
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
-[s S334 . 1 `uc 1 RB0 1 0 :1:0 
+[s S338 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -77,7 +81,7 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "822
-[s S343 . 1 `uc 1 INT0 1 0 :1:0 
+[s S347 . 1 `uc 1 INT0 1 0 :1:0 
 `uc 1 INT1 1 0 :1:1 
 `uc 1 INT2 1 0 :1:2 
 `uc 1 CCP2 1 0 :1:3 
@@ -86,7 +90,7 @@
 `uc 1 KBI2 1 0 :1:6 
 `uc 1 KBI3 1 0 :1:7 
 ]
-[s S352 . 1 `uc 1 AN12 1 0 :1:0 
+[s S356 . 1 `uc 1 AN12 1 0 :1:0 
 `uc 1 AN10 1 0 :1:1 
 `uc 1 AN8 1 0 :1:2 
 `uc 1 AN9 1 0 :1:3 
@@ -95,21 +99,21 @@
 `uc 1 PGC 1 0 :1:6 
 `uc 1 PGD 1 0 :1:7 
 ]
-[s S361 . 1 `uc 1 FLT0 1 0 :1:0 
+[s S365 . 1 `uc 1 FLT0 1 0 :1:0 
 `uc 1 C12IN3M 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 C12IN2M 1 0 :1:3 
 ]
-[s S366 . 1 `uc 1 . 1 0 :1:0 
+[s S370 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 C12IN3N 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 C12IN2N 1 0 :1:3 
 ]
-[s S371 . 1 `uc 1 . 1 0 :3:0 
+[s S375 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
-[u S374 . 1 `S334 1 . 1 0 `S343 1 . 1 0 `S352 1 . 1 0 `S361 1 . 1 0 `S366 1 . 1 0 `S371 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES374  1 e 1 @3969 ]
+[u S378 . 1 `S338 1 . 1 0 `S347 1 . 1 0 `S356 1 . 1 0 `S365 1 . 1 0 `S370 1 . 1 0 `S375 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES378  1 e 1 @3969 ]
 [s S21 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
@@ -141,7 +145,7 @@
 [v _PORTDbits PORTDbits `VES47  1 e 1 @3971 ]
 "1794
 [v _LATC LATC `VEuc  1 e 1 @3979 ]
-[s S590 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S594 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -151,31 +155,31 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "1974
-[s S599 . 1 `uc 1 LD0 1 0 :1:0 
+[s S603 . 1 `uc 1 LD0 1 0 :1:0 
 ]
-[s S601 . 1 `uc 1 . 1 0 :1:0 
+[s S605 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 ]
-[s S604 . 1 `uc 1 . 1 0 :2:0 
+[s S608 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LD2 1 0 :1:2 
 ]
-[s S607 . 1 `uc 1 . 1 0 :3:0 
+[s S611 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 LD3 1 0 :1:3 
 ]
-[s S610 . 1 `uc 1 . 1 0 :4:0 
+[s S614 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LD4 1 0 :1:4 
 ]
-[s S613 . 1 `uc 1 . 1 0 :5:0 
+[s S617 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 LD5 1 0 :1:5 
 ]
-[s S616 . 1 `uc 1 . 1 0 :6:0 
+[s S620 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 LD6 1 0 :1:6 
 ]
-[s S619 . 1 `uc 1 . 1 0 :7:0 
+[s S623 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S622 . 1 `S590 1 . 1 0 `S599 1 . 1 0 `S601 1 . 1 0 `S604 1 . 1 0 `S607 1 . 1 0 `S610 1 . 1 0 `S613 1 . 1 0 `S616 1 . 1 0 `S619 1 . 1 0 ]
-[v _LATDbits LATDbits `VES622  1 e 1 @3980 ]
+[u S626 . 1 `S594 1 . 1 0 `S603 1 . 1 0 `S605 1 . 1 0 `S608 1 . 1 0 `S611 1 . 1 0 `S614 1 . 1 0 `S617 1 . 1 0 `S620 1 . 1 0 `S623 1 . 1 0 ]
+[v _LATDbits LATDbits `VES626  1 e 1 @3980 ]
 "2115
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "2336
@@ -184,21 +188,21 @@
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
 "2778
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S228 . 1 `uc 1 TUN 1 0 :6:0 
+[s S183 . 1 `uc 1 TUN 1 0 :6:0 
 `uc 1 PLLEN 1 0 :1:6 
 `uc 1 INTSRC 1 0 :1:7 
 ]
 "3170
-[s S232 . 1 `uc 1 TUN0 1 0 :1:0 
+[s S187 . 1 `uc 1 TUN0 1 0 :1:0 
 `uc 1 TUN1 1 0 :1:1 
 `uc 1 TUN2 1 0 :1:2 
 `uc 1 TUN3 1 0 :1:3 
 `uc 1 TUN4 1 0 :1:4 
 `uc 1 TUN5 1 0 :1:5 
 ]
-[u S239 . 1 `S228 1 . 1 0 `S232 1 . 1 0 ]
-[v _OSCTUNEbits OSCTUNEbits `VES239  1 e 1 @3995 ]
-[s S298 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[u S194 . 1 `S183 1 . 1 0 `S187 1 . 1 0 ]
+[v _OSCTUNEbits OSCTUNEbits `VES194  1 e 1 @3995 ]
+[s S253 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -208,15 +212,15 @@
 `uc 1 PSPIE 1 0 :1:7 
 ]
 "3244
-[s S307 . 1 `uc 1 . 1 0 :5:0 
+[s S262 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RC1IE 1 0 :1:5 
 ]
-[s S310 . 1 `uc 1 . 1 0 :4:0 
+[s S265 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IE 1 0 :1:4 
 ]
-[u S313 . 1 `S298 1 . 1 0 `S307 1 . 1 0 `S310 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES313  1 e 1 @3997 ]
-[s S263 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S268 . 1 `S253 1 . 1 0 `S262 1 . 1 0 `S265 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES268  1 e 1 @3997 ]
+[s S218 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -226,14 +230,14 @@
 `uc 1 PSPIF 1 0 :1:7 
 ]
 "3323
-[s S272 . 1 `uc 1 . 1 0 :5:0 
+[s S227 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RC1IF 1 0 :1:5 
 ]
-[s S275 . 1 `uc 1 . 1 0 :4:0 
+[s S230 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IF 1 0 :1:4 
 ]
-[u S278 . 1 `S263 1 . 1 0 `S272 1 . 1 0 `S275 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES278  1 e 1 @3998 ]
+[u S233 . 1 `S218 1 . 1 0 `S227 1 . 1 0 `S230 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES233  1 e 1 @3998 ]
 [s S122 . 1 `uc 1 CCP2IF 1 0 :1:0 
 `uc 1 TMR3IF 1 0 :1:1 
 `uc 1 HLVDIF 1 0 :1:2 
@@ -277,30 +281,30 @@
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @4037 ]
 "5469
 [v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
-[s S564 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S568 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "5489
-[s S570 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S574 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S575 . 1 `S564 1 . 1 0 `S570 1 . 1 0 ]
-[v _SSPCON1bits SSPCON1bits `VES575  1 e 1 @4038 ]
+[u S579 . 1 `S568 1 . 1 0 `S574 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES579  1 e 1 @4038 ]
 "5538
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
-[s S422 . 1 `uc 1 . 1 0 :2:0 
+[s S426 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_NOT_W 1 0 :1:2 
 ]
 "5622
-[s S425 . 1 `uc 1 . 1 0 :5:0 
+[s S429 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 D_NOT_A 1 0 :1:5 
 ]
-[s S428 . 1 `uc 1 BF 1 0 :1:0 
+[s S432 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -309,62 +313,62 @@
 `uc 1 CKE 1 0 :1:6 
 `uc 1 SMP 1 0 :1:7 
 ]
-[s S437 . 1 `uc 1 . 1 0 :2:0 
+[s S441 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S442 . 1 `uc 1 . 1 0 :2:0 
+[s S446 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 A 1 0 :1:5 
 ]
-[s S447 . 1 `uc 1 . 1 0 :2:0 
+[s S451 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S452 . 1 `uc 1 . 1 0 :2:0 
+[s S456 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S457 . 1 `uc 1 . 1 0 :2:0 
+[s S461 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_WRITE 1 0 :1:2 
 ]
-[s S460 . 1 `uc 1 . 1 0 :5:0 
+[s S464 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_ADDRESS 1 0 :1:5 
 ]
-[s S463 . 1 `uc 1 . 1 0 :2:0 
+[s S467 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S468 . 1 `uc 1 . 1 0 :3:0 
+[s S472 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 START 1 0 :1:3 
 `uc 1 STOP 1 0 :1:4 
 ]
-[s S472 . 1 `uc 1 . 1 0 :5:0 
+[s S476 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S475 . 1 `uc 1 . 1 0 :2:0 
+[s S479 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 ]
-[s S478 . 1 `uc 1 . 1 0 :2:0 
+[s S482 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_W 1 0 :1:2 
 ]
-[s S481 . 1 `uc 1 . 1 0 :5:0 
+[s S485 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_A 1 0 :1:5 
 ]
-[u S484 . 1 `S422 1 . 1 0 `S425 1 . 1 0 `S428 1 . 1 0 `S437 1 . 1 0 `S442 1 . 1 0 `S447 1 . 1 0 `S452 1 . 1 0 `S457 1 . 1 0 `S460 1 . 1 0 `S463 1 . 1 0 `S468 1 . 1 0 `S472 1 . 1 0 `S475 1 . 1 0 `S478 1 . 1 0 `S481 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES484  1 e 1 @4039 ]
+[u S488 . 1 `S426 1 . 1 0 `S429 1 . 1 0 `S432 1 . 1 0 `S441 1 . 1 0 `S446 1 . 1 0 `S451 1 . 1 0 `S456 1 . 1 0 `S461 1 . 1 0 `S464 1 . 1 0 `S467 1 . 1 0 `S472 1 . 1 0 `S476 1 . 1 0 `S479 1 . 1 0 `S482 1 . 1 0 `S485 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES488  1 e 1 @4039 ]
 "5766
 [v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
 "5772
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
 "6513
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S178 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S288 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -374,7 +378,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "7107
-[s S187 . 1 `uc 1 . 1 0 :1:0 
+[s S297 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -383,150 +387,194 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S196 . 1 `uc 1 . 1 0 :6:0 
+[s S306 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S200 . 1 `S178 1 . 1 0 `S187 1 . 1 0 `S196 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES200  1 e 1 @4082 ]
-"27 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+[u S310 . 1 `S288 1 . 1 0 `S297 1 . 1 0 `S306 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES310  1 e 1 @4082 ]
+"28 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+[v _login_timeout login_timeout `i  1 e 2 0 ]
+"29
 [v _i2c_reg_addr i2c_reg_addr `VEuc  1 e 1 0 ]
-"28
+"30
 [v _i2c_r_reg i2c_r_reg `VE[32]uc  1 e 32 0 ]
-"32
+"34
 [v _i2c_w_reg i2c_w_reg `VE[32]uc  1 e 32 0 ]
-"36
-[v _EEP_I2C_ADDR EEP_I2C_ADDR `uc  1 e 1 0 ]
 "38
-[v _I2C_ADDR I2C_ADDR `uc  1 e 1 0 ]
-"39
-[v _Machine_ID Machine_ID `uc  1 e 1 0 ]
+[v _EEP_I2C_ADDR EEP_I2C_ADDR `uc  1 e 1 0 ]
 "40
-[v _i2c_byte_count i2c_byte_count `VEuc  1 e 1 0 ]
+[v _I2C_ADDR I2C_ADDR `uc  1 e 1 0 ]
 "41
-[v _current_user current_user `VE[9]uc  1 e 9 0 ]
+[v _Machine_ID Machine_ID `uc  1 e 1 0 ]
 "42
-[v _current_pin current_pin `VE[9]uc  1 e 9 0 ]
+[v _i2c_byte_count i2c_byte_count `VEuc  1 e 1 0 ]
 "43
-[v _credentials_accepted credentials_accepted `VEuc  1 e 1 0 ]
+[v _current_user current_user `VE[9]uc  1 e 9 0 ]
+"44
+[v _current_pin current_pin `VE[9]uc  1 e 9 0 ]
 "45
-[v _hx hx `[16]uc  1 e 16 0 ]
+[v _logged_user logged_user `VE[16]uc  1 e 16 0 ]
 "46
+[v _credentials_accepted credentials_accepted `VEuc  1 e 1 0 ]
+"48
+[v _hx hx `[16]uc  1 e 16 0 ]
+"49
 [v _c c `[10]uc  1 e 10 0 ]
-"47
+"50
 [v _main main `(v  1 e 1 0 ]
 {
-"220
-[v main@i_796 i `i  1 a 2 28 ]
-"207
-[v main@i_792 i `i  1 a 2 26 ]
-"196
-[v main@i_789 i `i  1 a 2 24 ]
-"187
-[v main@i_785 i `i  1 a 2 35 ]
+"221
+[v main@i_793 i `i  1 a 2 24 ]
+"210
+[v main@i_790 i `i  1 a 2 22 ]
+"197
+[v main@i_787 i `i  1 a 2 20 ]
+"190
+[v main@u u `i  1 a 2 34 ]
+"185
+[v main@i_782 i `i  1 a 2 28 ]
 "173
-[v main@i_776 i `i  1 a 2 33 ]
+[v main@i_781 i `i  1 a 2 26 ]
 "141
 [v main@c c `[10]uc  1 a 10 0 ]
-"123
-[v main@i_770 i `i  1 a 2 39 ]
-"121
-[v main@i_769 i `i  1 a 2 22 ]
-"73
-[v main@i_766 i `i  1 a 2 43 ]
-"252
-[v main@i_804 i `i  1 a 2 45 ]
-"243
-[v main@i_800 i `i  1 a 2 19 ]
-"232
-[v main@i_799 i `i  1 a 2 41 ]
-"72
+"124
+[v main@i_775 i `i  1 a 2 32 ]
+"76
+[v main@i_772 i `i  1 a 2 36 ]
+"75
 [v main@buffer buffer `[9]uc  1 a 9 10 ]
-"189
-[v main@credential_state credential_state `uc  1 a 1 31 ]
-"65
-[v main@i i `i  1 a 2 37 ]
-"246
-[v main@digits digits `uc  1 a 1 47 ]
-[v main@a a `uc  1 a 1 32 ]
-"231
-[v main@is_leading_zero is_leading_zero `uc  1 a 1 30 ]
-[v main@n_c n_c `uc  1 a 1 21 ]
-"52
-[v main@x x `uc  1 a 1 50 ]
-"51
-[v main@n n `uc  1 a 1 49 ]
-[v main@p p `uc  1 a 1 48 ]
+"187
+[v main@credential_state credential_state `uc  1 a 1 19 ]
+"68
+[v main@i i `i  1 a 2 30 ]
+"55
+[v main@x x `uc  1 a 1 40 ]
+"54
+[v main@n n `uc  1 a 1 39 ]
+[v main@p p `uc  1 a 1 38 ]
 "140
-[v main@F3679 F3679 `[10]uc  1 s 10 F3679 ]
-"246
-[v main@F3695 F3695 `[1]uc  1 s 1 F3695 ]
-"269
+[v main@F3681 F3681 `[10]uc  1 s 10 F3681 ]
+"228
 } 0
-"423
+"382
 [v _start_routine start_routine `(v  1 e 1 0 ]
 {
-"571
-[v start_routine@i_909 i `i  1 a 2 23 ]
-"569
-[v start_routine@i_908 i `i  1 a 2 16 ]
-"556
-[v start_routine@i_905 i `i  1 a 2 14 ]
-"543
-[v start_routine@i_902 i `i  1 a 2 12 ]
-"535
-[v start_routine@i_899 i `i  1 a 2 21 ]
-"513
-[v start_routine@i_896 i `i  1 a 2 30 ]
-"512
-[v start_routine@b b `[3]uc  1 a 3 18 ]
-"521
-[v start_routine@error_msg error_msg `*.25uc  1 a 2 2 ]
-"511
-[v start_routine@new_I2C_address new_I2C_address `uc  1 a 1 35 ]
+"530
+[v start_routine@i_905 i `i  1 a 2 27 ]
+"528
+[v start_routine@i_904 i `i  1 a 2 20 ]
+"515
+[v start_routine@i_901 i `i  1 a 2 18 ]
+"502
+[v start_routine@i_898 i `i  1 a 2 16 ]
+"494
+[v start_routine@i_895 i `i  1 a 2 25 ]
+"472
+[v start_routine@i_892 i `i  1 a 2 34 ]
+"471
+[v start_routine@b b `[3]uc  1 a 3 22 ]
+"480
+[v start_routine@error_msg error_msg `*.25uc  1 a 2 6 ]
 "470
-[v start_routine@I2C_new_ADDR I2C_new_ADDR `[3]uc  1 a 3 25 ]
-"455
-[v start_routine@i_884 i `i  1 a 2 10 ]
-"436
-[v start_routine@i_876 i `i  1 a 2 8 ]
-"431
-[v start_routine@i i `i  1 a 2 6 ]
-"463
-[v start_routine@n n `uc  1 a 1 34 ]
-[v start_routine@x x `uc  1 a 1 33 ]
-"440
-[v start_routine@dh dh `uc  1 a 1 32 ]
-[v start_routine@dt dt `uc  1 a 1 29 ]
-[v start_routine@a a `uc  1 a 1 28 ]
-"463
-[v start_routine@v v `uc  1 a 1 5 ]
-"440
-[v start_routine@d1 d1 `uc  1 a 1 4 ]
-[v start_routine@l l `uc  1 a 1 1 ]
-[v start_routine@h h `uc  1 a 1 0 ]
-"469
-[v start_routine@F3723 F3723 `[3]uc  1 s 3 F3723 ]
-"648
+[v start_routine@new_I2C_address new_I2C_address `uc  1 a 1 39 ]
+"429
+[v start_routine@I2C_new_ADDR I2C_new_ADDR `[3]uc  1 a 3 29 ]
+"414
+[v start_routine@i_880 i `i  1 a 2 14 ]
+"395
+[v start_routine@i_872 i `i  1 a 2 12 ]
+"390
+[v start_routine@i i `i  1 a 2 10 ]
+"422
+[v start_routine@n n `uc  1 a 1 38 ]
+[v start_routine@x x `uc  1 a 1 37 ]
+"399
+[v start_routine@dh dh `uc  1 a 1 36 ]
+[v start_routine@dt dt `uc  1 a 1 33 ]
+[v start_routine@a a `uc  1 a 1 32 ]
+"422
+[v start_routine@v v `uc  1 a 1 9 ]
+"399
+[v start_routine@d1 d1 `uc  1 a 1 8 ]
+[v start_routine@l l `uc  1 a 1 5 ]
+[v start_routine@h h `uc  1 a 1 4 ]
+"428
+[v start_routine@F3718 F3718 `[3]uc  1 s 3 F3718 ]
+"544
 } 0
-"85 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\menu.h
+"283
+[v _latch_keypad latch_keypad `(v  1 e 1 0 ]
+{
+[v latch_keypad@x x `*.39uc  1 p 2 15 ]
+"290
+} 0
+"43 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\eeprom.h
+[v _Eeprom_Write_Byte Eeprom_Write_Byte `(v  1 e 1 0 ]
+{
+[v Eeprom_Write_Byte@address address `uc  1 a 1 wreg ]
+[v Eeprom_Write_Byte@address address `uc  1 a 1 wreg ]
+[v Eeprom_Write_Byte@data data `uc  1 p 1 15 ]
+"46
+[v Eeprom_Write_Byte@address address `uc  1 a 1 16 ]
+"67
+} 0
+"546 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+[v _running_display running_display `(v  1 e 1 0 ]
+{
+"584
+[v running_display@n n `[10]uc  1 a 10 7 ]
+"586
+[v running_display@second second `i  1 a 2 32 ]
+"587
+[v running_display@minute minute `i  1 a 2 24 ]
+"585
+[v running_display@hour hour `i  1 a 2 5 ]
+"566
+[v running_display@i_912 i `i  1 a 2 26 ]
+"563
+[v running_display@i_911 i `i  1 a 2 18 ]
+"552
+[v running_display@i i `i  1 a 2 30 ]
+"572
+[v running_display@t t `[5]uc  1 a 5 0 ]
+"571
+[v running_display@s s `i  1 a 2 28 ]
+[v running_display@ms ms `i  1 a 2 22 ]
+"551
+[v running_display@n_c n_c `uc  1 a 1 21 ]
+[v running_display@is_leading_zero is_leading_zero `uc  1 a 1 20 ]
+"548
+[v running_display@exit_running exit_running `uc  1 a 1 17 ]
+"571
+[v running_display@F3741 F3741 `[5]uc  1 s 5 F3741 ]
+"582
+[v running_display@F3744 F3744 `[10]uc  1 s 10 F3744 ]
+"602
+} 0
+"260
+[v _read_keypad read_keypad `(uc  1 e 1 0 ]
+{
+"282
+} 0
+"84 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\menu.h
 [v _menu_progress_bar menu_progress_bar `(v  1 e 1 0 ]
 {
-"92
+"91
 [v menu_progress_bar@ii ii `i  1 a 2 38 ]
-"106
-[v menu_progress_bar@i_724 i `i  1 a 2 46 ]
-"102
-[v menu_progress_bar@i_723 i `i  1 a 2 44 ]
-"97
-[v menu_progress_bar@i_722 i `i  1 a 2 42 ]
-"89
-[v menu_progress_bar@i i `i  1 a 2 40 ]
+"105
+[v menu_progress_bar@i_728 i `i  1 a 2 46 ]
+"101
+[v menu_progress_bar@i_727 i `i  1 a 2 44 ]
+"96
+[v menu_progress_bar@i_726 i `i  1 a 2 42 ]
 "88
+[v menu_progress_bar@i i `i  1 a 2 40 ]
+"87
 [v menu_progress_bar@d d `ul  1 a 4 34 ]
-"85
+"84
 [v menu_progress_bar@load_time_ms load_time_ms `us  1 p 2 28 ]
-"111
+"110
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -592,31 +640,21 @@
 {
 "53
 } 0
-"324 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
-[v _latch_keypad latch_keypad `(v  1 e 1 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
 {
-[v latch_keypad@x x `*.39uc  1 p 2 15 ]
-"331
+"11
+[v ___awmod@sign sign `uc  1 a 1 20 ]
+[v ___awmod@counter counter `uc  1 a 1 19 ]
+"8
+[v ___awmod@dividend dividend `i  1 p 2 15 ]
+[v ___awmod@divisor divisor `i  1 p 2 17 ]
+"35
 } 0
-"301
-[v _read_keypad read_keypad `(uc  1 e 1 0 ]
-{
-"323
-} 0
-"43 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\eeprom.h
-[v _Eeprom_Write_Byte Eeprom_Write_Byte `(v  1 e 1 0 ]
-{
-[v Eeprom_Write_Byte@address address `uc  1 a 1 wreg ]
-[v Eeprom_Write_Byte@address address `uc  1 a 1 wreg ]
-[v Eeprom_Write_Byte@data data `uc  1 p 1 15 ]
-"46
-[v Eeprom_Write_Byte@address address `uc  1 a 1 16 ]
-"67
-} 0
-"271 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+"230 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
 [v _mcu_initialise mcu_initialise `(v  1 e 1 0 ]
 {
-"299
+"258
 } 0
 "20 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\eeprom.h
 [v _Eeprom_Read_Byte Eeprom_Read_Byte `(uc  1 e 1 0 ]
@@ -627,18 +665,18 @@
 [v Eeprom_Read_Byte@address address `uc  1 a 1 15 ]
 "36
 } 0
-"333 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+"292 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
 [v _load_i2c_registers load_i2c_registers `(v  1 e 1 0 ]
 {
-"350
-[v load_i2c_registers@i_842 i `i  1 a 2 29 ]
-"345
-[v load_i2c_registers@i_840 i `i  1 a 2 33 ]
-"342
+"309
+[v load_i2c_registers@i_838 i `i  1 a 2 29 ]
+"304
+[v load_i2c_registers@i_836 i `i  1 a 2 33 ]
+"301
 [v load_i2c_registers@i i `i  1 a 2 31 ]
-"349
+"308
 [v load_i2c_registers@checksum checksum `i  1 a 2 27 ]
-"359
+"318
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -676,10 +714,10 @@
 [v Lcd_Port@a a `uc  1 a 1 15 ]
 "37
 } 0
-"361 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+"320 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"363
+"322
 [v ISR@sspBuf sspBuf `uc  1 a 1 14 ]
-"421
+"380
 } 0

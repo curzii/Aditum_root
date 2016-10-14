@@ -22,8 +22,10 @@ void low_isr(void);
 void high_isr(void);
 void start_routine();
 void load_i2c_registers();
-
+void running_display(void);
+        
 //Variables
+int login_timeout = 1800; //login timout in seconds
 volatile unsigned char  i2c_reg_addr     = 0;
 volatile unsigned char  i2c_r_reg[32] =    {'-','-','-','-','-','-','-','-', 
                                             '-','-','-','-','-','-','-','-',
@@ -34,12 +36,13 @@ volatile unsigned char  i2c_w_reg[32] =    {'-','-','-','-','-','-','-','-',
                                             '-','-','-','-','-','-','-','-',
                                             '-','-','-','-','-','-','-','-',};  //register to write data to
 unsigned char           EEP_I2C_ADDR = 0x00;                    //Address in EEPROM of I2C address
-__EEPROM_DATA(0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00);  //Burnt in I2C address in EEPROM
+__EEPROM_DATA(0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00);  //Burnt in I2C address in EEPROM. Modify the first value for preprogrammed addresses.
 unsigned char           I2C_ADDR;
 unsigned char           Machine_ID;
 volatile unsigned char  i2c_byte_count   = 0;
 volatile unsigned char  current_user[9] = {0,0,0,0,0,0,0,0,0};
 volatile unsigned char  current_pin[9]  = {0,0,0,0,0,0,0,0,0};
+volatile unsigned char  logged_user[16];
 volatile unsigned char  credentials_accepted = 0;
 
 char hx[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
@@ -118,15 +121,12 @@ void main(void)
                     }
                 }                
             }
-            for (int i = 0; i < 10; i++)
-                __delay_ms(10);
             for (int i = 0; i < n; i++)            //load buffer into current user and clear buffer
             {
                 current_user[8 - i] = buffer[(n-1) - i]; 
                 buffer[(n-1) - i] = '0';
             }
-            Lcd_Clear();
-            menu_progress_bar(100);
+            menu_progress_bar(25);
             //PIN while
             p = 0;
             Lcd_Set_Cursor(1,1);
@@ -172,8 +172,7 @@ void main(void)
             }
             for (int i = 0; i < p; i++)            //load buffer into pin
                 current_pin[8 - i] = buffer[(p-1) - i];            
-            Lcd_Clear();
-            menu_progress_bar(100);
+            menu_progress_bar(25);
     /**************************************************************************/
             //PERFORM CREDENTIALS CHECK HERE
     /**************************************************************************/
@@ -183,20 +182,24 @@ void main(void)
             {
                 ; //wait to be serviced
             }
-            INTCONbits.GIE_GIEH  = 0;       // Disable global interrupts
             for (int i = 0; i < 32; i++)
                     i2c_r_reg[i] = '-';
             unsigned char credential_state = i2c_w_reg[0];
             if (credential_state == 0xA1)
             {
+                for (int u = 1; u < 17; u++)
+                    logged_user[u+1] = i2c_w_reg[u];
                 Lcd_Set_Cursor(1,1);
                 Lcd_Write_String("[Access Granted]");
+                menu_progress_bar(100);
                 Lcd_Set_Cursor(2,1);
-                Lcd_Write_String("    [Welcome]   ");
-                for (int i = 0; i < 100; i++)
+                Lcd_Write_String("   [ Welcome ]  ");
+                for (int i = 0; i < 30; i++)
                 {
                     __delay_ms(10);
-                }
+                }         
+                
+                running_display();
             }
             else if (credential_state == 0xA0)
             {
@@ -212,9 +215,7 @@ void main(void)
             else
             {
                 Lcd_Set_Cursor(1,1);
-                Lcd_Write_String("[System Error ");
-                Lcd_Write_Char(credential_state);
-                Lcd_Write_String("]");
+                Lcd_Write_String("[ System Error ]");
                 Lcd_Set_Cursor(2,1);
                 Lcd_Write_String("    [ Retry ]   ");
                 for (int i = 0; i < 100; i++)
@@ -222,50 +223,8 @@ void main(void)
                     __delay_ms(10);
                 }
             }
-            INTCONbits.GIE_GIEH  = 1;       // Re enable global interrupts
-        }
-        /***********************************************************************/
-                    //MACHINE RUNNING DISPLAY IN WHILE(1)
-        /**************************************************************************/  
-        Lcd_Set_Cursor(1,1);
-        unsigned char is_leading_zero = 1, n_c = 0;
-        for (int i = 0; i < 9; i++)
-        {
-            if ((current_user[i] == '0')&&(is_leading_zero))
-                continue;
-            else 
-            {
-                is_leading_zero = 0;
-                n_c++;
-                Lcd_Write_Char(current_user[i]);
-            }
-        }
-        for (int i = 0; i < 13 - n_c; i++)
-            Lcd_Write_Char(' ');        
-        Lcd_Set_Cursor(1,14);
-        unsigned char a, digits[] = {' '};
-        a = I2C_ADDR - 0x0F;
-        digits[0] = (a / 100);
-        digits[1] = (((a-(digits[0]*100))) / 10);
-        digits[2] = (a - (digits[0]*100+digits[1]*10));
-        is_leading_zero = 1;
-        for (int i = 0; i < 3; i++)
-        {
-            digits[i] = c[digits[i]];
-            if ((digits[i] == '0')&&(is_leading_zero))
-            {
-                Lcd_Write_Char(' ');
-                continue;
-            }
-            else 
-            {
-                is_leading_zero = 0;
-                Lcd_Write_Char(digits[i]);
-            }
-        }
-        Lcd_Set_Cursor(2,1);
-        Lcd_Write_String("                ");
-    } //while(1) end 
+        }      
+    }
 }
 
 void mcu_initialise()
@@ -578,77 +537,66 @@ void start_routine()
     else
     {
         v = 1;  //Continue to interface
-        /*while (!i2c_r_reg[0])
-        {       
-            Lcd_Set_Cursor(1,1);
-            Lcd_Write_String("I2C disconnected");
-            Lcd_Set_Cursor(2,1);
-            Lcd_Write_String("[ * ]  to bypass");
-            Lcd_Set_Cursor(1,1);
-            unsigned char x = '_';
-            x = read_keypad();        
-            if (x != '_')
-            {
-                if ((x - '*') == 0)
-                {
-                    char r_password[] = "1234";
-                    char password[4] = {'#','#','#','#'};
-                    unsigned char n = 0, k = 0;
-                    Lcd_Clear();
-                    Lcd_Set_Cursor(1, 1);
-                    Lcd_Write_String("Enter password: ");
-                    Lcd_Set_Cursor(2,1);
-                    Lcd_Write_Char('_');
-                    Lcd_Set_Cursor(2,1);
-                    latch_keypad(&x);
-                    while (n != 4)
-                    {                        
-                        x = read_keypad();
-                        if (x != '_')
-                        {
-                            password[n] = x;
-                            Lcd_Write_Char('*');
-                            n++; 
-                            latch_keypad(&x); 
-                        }
-
-                    }
-                    n = 0;
-                    if ((password[0] - r_password[0]) == 0)
-                            if ((password[1] - r_password[1]) == 0)
-                                if ((password[2] - r_password[2]) == 0)
-                                    if ((password[3] - r_password[3]) == 0) 
-                                        k = 1;
-                    Lcd_Clear();
-                    Lcd_Set_Cursor(1,1);
-                    if (k)
-                    {                        
-                        Lcd_Write_String("Correct         ");                    
-                        Lcd_Set_Cursor(2,1);
-                        Lcd_Write_String("Access Granted ");
-                        Lcd_Write_Char(0xFF);
-                    }
-                    else   
-                    {
-                        Lcd_Write_String("Incorrect       ");
-                        Lcd_Set_Cursor(2,1);
-                        Lcd_Write_String("Access Denied  X");
-                    }
-                    for (int i = 0; i < 100; i++)
-                        __delay_ms(20);
-                }
-                latch_keypad(&x);            
-                x = '_';
-            }
-        }*/
     } 
     /**************************************************************************/
     //Wait for I2C Connection
         
 }
 
-
-
-
-
-
+void running_display(void)
+{
+    unsigned char exit_running = 0x00;
+    Lcd_Clear();
+    Lcd_Set_Cursor(1,1);
+    unsigned char is_leading_zero = 1, n_c = 0;
+    for (int i = 0; i < 9; i++)
+    {
+        if ((current_user[i] == '0')&&(is_leading_zero))
+            continue;
+        else 
+        {
+            is_leading_zero = 0;
+            n_c++;
+            Lcd_Write_Char(current_user[i]);
+        }
+    }
+    for (int i = 0; i < 13 - n_c; i++)
+        Lcd_Write_Char(' ');   
+    Lcd_Set_Cursor(2,1);
+    for (int i = 0; i < 16; i++)
+        Lcd_Write_Char(logged_user[i]);
+    
+    Lcd_Set_Cursor(1,12);
+    Lcd_Write_String("00:00");
+    int s = login_timeout, ms = 0;
+    char t[] = {'0', '0', ':', '0', '0'};
+    while (read_keypad() != '#')
+    {
+        if (s == 0)
+            break;
+        __delay_us(442);    //manually calibrated for time accuracy
+        ms += 1;
+        if (ms == 1000)
+        {
+            s -= 1;
+            ms = 0;
+            //Convert seconds to time format mm:ss
+            char n[] = {'0','1','2','3','4','5','6','7','8','9'};     
+            int hour=s/3600;
+            int second=s % 3600;
+            int minute=second/60;
+            second %= 60;
+            Lcd_Set_Cursor(1,12);
+            Lcd_Write_Char(n[minute/10]);
+            Lcd_Write_Char(n[minute%10]);
+            Lcd_Write_Char(':');
+            Lcd_Write_Char(n[second/10]);
+            Lcd_Write_Char(n[second%10]);
+        }       
+    }
+    Lcd_Clear();
+    Lcd_Set_Cursor(1,1);
+    Lcd_Write_String("Logging you out.");
+    menu_progress_bar(200);
+    return;
+}

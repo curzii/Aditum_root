@@ -47,7 +47,6 @@ void menu_main(char* user_id, unsigned int user_time, unsigned char i2c_address)
     return;
 }
 
-
 void menu_animation_i2c(void)
 {
     Lcd_Set_Cursor(1,15);

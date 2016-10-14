@@ -26,6 +26,7 @@ static string detect_template;
 vector<vector<string>> database;
 vector<string> logbuffer;
 long long blocks_read, blocks_lost;
+string logged_user = "";
 			
 //Function Prototypes
 vector<string> 	dash_parser(string data_string, const string template_string);		//parses a string, returning a vector of all data found in the -- postions of the string template
@@ -91,9 +92,14 @@ int main()
 					mvprintw(13,0, "This is iteration number:  [%d]\t", n_iterations);
 					mvprintw(14,0, "Current device:            [%s]\t", slave_addresses[i].c_str());
 					refresh();
+					logged_user = "";
 					if (authenticate_slave(slave_read(slave_addresses[i]))) //read 32 bytes from slave and authenticate with database
 					{
 						write_data.push_back(static_cast<char>(0xA1));	//A1, means authentications succeeded.
+						for (int p = 0; p < (16 - logged_user.length()); p++)
+							write_data.push_back(logged_user[p]);
+						while(write_data.size() != 16)
+							write_data.push_back(' ');
 						slave_write(slave_addresses[i], write_data);
 					}
 					else
@@ -278,6 +284,7 @@ bool authenticate_slave(vector<char> data)											//authenticates slave in da
 	{
 		int trash = sprintf(buffer, "[   LOGIN    ] - [%s|%s|%s] ---> %s", id.c_str(), pin.c_str(), name.c_str(), timestamp().c_str());
 		logbuffer.push_back(buffer);
+		logged_user = name;
 		result = true;	
 	}	
 	else if (!checksum_good)
