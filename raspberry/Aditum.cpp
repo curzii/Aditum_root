@@ -31,6 +31,9 @@ void			slave_write(string write_address, vector<string> slave_data);		//writes s
 string			exec_sys(const char* cmd); 											//executes a system command and returns the output to a string
 void load_templates();																//loads the templates of system outputs to be used in parsing functions
 string logostring();																//reads logo from file			
+string timestamp();																	//returns current time as a timestamp string
+vector<vector<string>> database_read();												//reads all credentials entries from database
+bool authenticate_slave(vector<char> data);											//authenticates slave in database
 
 //read + parse database
 	//find + parse slaves
@@ -45,15 +48,16 @@ int main()
 	load_templates();			//*IMPORTANT - loads spefic file templates used in the parsing of system responses.
 	initscr();
 	curs_set(0);
-	mvprintw(0,0, "%s", logostring().c_str());	
-	refresh();
 	/*MAIN LOOP+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 	while(1)
 	{
-		vector<string> slave_addresses = dash_parser(exec_sys("i2cdetect -y 1"), detect_template);
+		vector<vector<string>> database = database_read();	//load the credentials database
+		vector<string> slave_addresses = dash_parser(exec_sys("i2cdetect -y 1"), detect_template);	//find all slaves connected to master
+		mvprintw(0,0, "%s", logostring().c_str());	//print an insanely slick banner
+		mvprintw(7,0, "%s", timestamp().c_str());	//print the current time
 		if (slave_addresses.empty())
 		{
-			mvprintw(10,0, "No slaves where found.");
+			mvprintw(10,0, "No devices are connected.");
 			refresh();
 		}
 		else
@@ -67,16 +71,21 @@ int main()
 			/*SERVICE LOOP++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 			for (int n_iterations = 0; n_iterations < 1000; n_iterations++)
 			{
+				if ((n_iterations%10) == 0)
+						mvprintw(7,0, "%s", timestamp().c_str());	//print the current time every 10 iterations
 				for (int i = 0; i < slave_addresses.size(); i++)
 				{
 					mvprintw(13,0, "This is iteration number:  [%d]\t", n_iterations);
 					mvprintw(14,0, "Current device:            [%s]\t", slave_addresses[i].c_str());
-					slave_read(slave_addresses[i]);
 					refresh();
+					vector<char> slave_data = slave_read(slave_addresses[i]);	//read 32 bytes from slave
+					if (authenticate_slave(slave_read(slave_addresses[i])))
+						;
 				}
 			}
 		}
 		/*END SERVICE LOOP++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+		clear();	//clear ncurses display
 	}
 	/*END MAIN LOOP+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 	getch();
@@ -94,20 +103,19 @@ vector<char>  	slave_read(string read_address)											//reads data from speci
 	try 
 	{ 
 		int fd = wiringPiI2CSetup(devID);	//select i2c device
-		mvprintw(21,0, "Code line number 96.");
-		refresh();
-		mvprintw(21,0, "Data stream:");
 		for (int i = 0; i < 32; i++)		//read 32 bytes form slave
 		{
 			char c_data = wiringPiI2CReadReg8(fd, i); 	//read byte from soecified address
+			data.push_back(c_data);						//add data to vector
 			if (data[0] == '-' )					 	//if first value is - assume the device does not need ot be serviced
 			{
 				mvprintw(21,0, "No data.                ");
 				break;
 			}	
-			data.push_back(c_data);						//add data to vector
+			
 		} 
-		close(fd); //Close File descriptors to fix too many open files leak
+		close(fd); //Close File descriptors to fix too many open files error
+		
 		/*CHECKSUM ALGORITHM*/
 		int checksum = 0x00;
 		for (int i = 0; i < 31; i++)
@@ -117,8 +125,10 @@ vector<char>  	slave_read(string read_address)											//reads data from speci
 		checksum /= 32;
 		/*END CHECKSUM ALGORITHM*/
 		
+		mvprintw(21,0, "Data stream:");
 		for (int i = 0; i < 32; i++)
 			mvprintw(22,i, "%c", data[i]);
+		
 		mvprintw(23,0, "Received Checksum: %d", (int)data[31]);
 		mvprintw(24,0, "Actual Checksum:   %d", checksum);
 		refresh();
@@ -148,10 +158,9 @@ string exec_sys(const char* cmd)
     std::string result = "";
     std::shared_ptr<FILE> pipe(popen(cmd, "r"), pclose);
     if (!pipe) throw std::runtime_error("popen() failed!");
-    while (!feof(pipe.get())) {
+    while (!feof(pipe.get()))
         if (fgets(buffer, 128, pipe.get()) != NULL)
             result += buffer;
-    }
     return result;
 }
 
@@ -173,6 +182,51 @@ string logostring()
 	return "            _ _   \n   /\\      | (_)_               \n  /  \\   _ | |_| |_ _   _ ____  \n / /\\ \\ / || | |  _) | | |    \\ \n| |__| ( (_| | | |_| |_| | | | |\n|______|\\____|_|\\___)____|_|_|_|";
 }
 
+string timestamp()
+{
+	time_t rawtime;
+	struct tm * timeinfo;
+	time ( &rawtime );
+	timeinfo = localtime ( &rawtime );
+	string t_stamp = static_cast<string>(asctime(timeinfo));
+	return t_stamp;
+}
 
+vector<vector<string>> database_read()
+{
+	vector<string> row;
+	vector<vector<string>> data;
+	std::string::size_type x,y,z = 0;					//variable used for finding all the "," occurences		
+	std::ifstream file("database.csv");					//open database file
+    std::string raw; 
+    while (std::getline(file, raw))
+    {
+		string id, pin, name;
+        x = raw.find(",");
+		id = raw.substr(0, x);								//Student Number
+		y = raw.find(",", x + 1);
+		pin = raw.substr(x + 1, raw.find(",", y) - x - 1);	//Password
+		z = raw.find(",", y + 1);
+		name = raw.substr(y + 1, raw.length() - y - 1);		//Surname and Initials
+		int l = id.length();
+		for (int u = 0; u < (9 - l); u++)					//Add leading zeros
+			id.insert(0, "0");
+		l = pin.length();
+		for (int u = 0; u < (9 - l); u++)					//Add leading zeros
+			pin.insert(0, "0");
+		row.push_back(id);
+		row.push_back(pin);
+		row.push_back(name);
+		data.push_back(row);
+		row.clear();
+	}
+	file.close();
+	return data;
+}
 
-
+bool authenticate_slave(vector<char> data)											//authenticates slave in database
+{
+	bool result = false;
+	//
+	return result;
+}
