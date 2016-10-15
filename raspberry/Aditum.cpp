@@ -83,8 +83,9 @@ int main()
 				if ((n_iterations%100) == 0)
 				{
 					mvprintw(7,0, "%s", timestamp().c_str());	//print the current time every 100 iterations
-					write_log(logbuffer);	//write and clear the log buffers every 100 iterations
+					write_log(logbuffer);						//write and clear the log buffers every 100 iterations
 					logbuffer.clear();
+					refresh();									//refresh display every 100 iterations
 				}
 				for (int i = 0; i < slave_addresses.size(); i++)
 				{
@@ -137,9 +138,9 @@ vector<char> slave_read(string read_address)											//reads data from specifi
 			data.push_back(c_data);						//add data to vector
 			if (data[0] == '-' )					 	//if first value is - assume the device does not need ot be serviced
 			{
-				for (int e = 1; e < 31; e++)
+				for (int e = 1; e < 32; e++)
 					data.push_back('-');
-				data.push_back(checksum(data));
+				//data.push_back(checksum(data));
 				break;
 			}	
 		} 
@@ -156,7 +157,7 @@ void slave_write(string write_address, vector<char> slave_data)								//writes 
 	try 
 	{ 
 		int fd = wiringPiI2CSetup(devID);				//select i2c device
-		for (int i = 0; i < slave_data.size(); i++)		//write vector to slave
+		for (int i = 0; ((i < slave_data.size())&&(i < 32)); i++)		//write vector to slave
 		{
 			int w = wiringPiI2CWriteReg8(fd, i, static_cast<int>(slave_data[i]));	//write byte to specified address
 		} 
@@ -265,26 +266,28 @@ bool authenticate_slave(vector<char> data)											//authenticates slave in da
 		pin[i] = data[9+i];
 	}
 	bool foundid = false, foundpin = false;
-	for (int i = 0; i < database.size(); i++)	//find pin in database
+	for (int i = 0; i < database.size(); i++)	//find id in database
 			if (id == database[i][0])
 			{
 				foundid = true;
+				name = database[i][2];
+				if (pin == database[i][1])		//find pin in database matching id
+					foundpin = true;
 				break;
 			}
-	for (int i = 0; i < database.size(); i++) 	//find id in database
+	/*for (int i = 0; i < database.size(); i++) 	
 			if (pin == database[i][1])
 			{
-				foundpin = true;
-				name = database[i][2];
+				foundpin = true;			
 				break;
-			}
+			}*/
 	int chk = checksum(data);
 	bool checksum_good = false;
 	if (chk == (int)data[31])
 		checksum_good = true;
 	if ((checksum_good)&&(foundid)&&(foundpin))	//verify data integrity as well as credentials
 	{
-		int trash = sprintf(buffer, "[   LOGIN    ] - [%s|%s|%s] ---> %s", id.c_str(), pin.c_str(), name.c_str(), timestamp().c_str());
+		int trash = sprintf(buffer, "[   LOGIN    ] - [    %s    |    %s    |    %-16s    ] ---> %s", id.c_str(), pin.c_str(), name.c_str(), timestamp().c_str());
 		logbuffer.push_back(buffer);
 		logged_user = name;
 		result = true;	
@@ -295,12 +298,12 @@ bool authenticate_slave(vector<char> data)											//authenticates slave in da
 	}
 	else if ((checksum_good)&&(!foundid))
 	{
-		int trash = sprintf(buffer, "[UNREGISTERED] - [%s|%s|UNREGISTERED] ---> %s", id.c_str(), pin.c_str(), timestamp().c_str());
+		int trash = sprintf(buffer, "[UNREGISTERED] - [    %s    |    %s    |    UNREGISTERED        ] ---> %s", id.c_str(), pin.c_str(), timestamp().c_str());
 		logbuffer.push_back(buffer);
 	}
 	else if ((checksum_good)&&(foundid)&&(!foundpin))
 	{
-		int trash = sprintf(buffer, "[ WRONG  PIN ] - [%s|%s|%s] ---> %s", id.c_str(), pin.c_str(), name.c_str(), timestamp().c_str());
+		int trash = sprintf(buffer, "[ WRONG  PIN ] - [    %s    |    %s    |    %-16s    ] ---> %s", id.c_str(), pin.c_str(), name.c_str(), timestamp().c_str());
 		logbuffer.push_back(buffer);
 	}
 	mvprintw(21,0, "Data stream:");

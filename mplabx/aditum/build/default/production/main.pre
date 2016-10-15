@@ -4621,6 +4621,7 @@ start_routine();
 
 while (1)
 {
+PORTDbits.RD7 = 0;
 for (int i = 0; i < 32; i++)
 {
 i2c_w_reg[i] = '-';
@@ -4729,6 +4730,10 @@ latch_keypad(&x);
 for (int i = 0; i < p; i++)
 current_pin[8 - i] = buffer[(p-1) - i];
 menu_progress_bar(25);
+Lcd_Set_Cursor(1,1);
+Lcd_Write_String("Waiting System  ");
+Lcd_Set_Cursor(2,1);
+Lcd_Write_String("Response...     ");
 
 
 
@@ -4736,14 +4741,15 @@ load_i2c_registers();
 unsigned char credential_state = 0;
 for (int i = 0; i < 32; i++)
 i2c_w_reg[i] = '-';
+
 while ((i2c_w_reg[0] == '-')||(i2c_w_reg[31] == '-'))
 {
+;
+}
+i2c_r_reg[0] = '-';
 credential_state = i2c_w_reg[0];
 for (int u = 0; u < 16; u++)
 logged_user[u] = i2c_w_reg[u+1];
-}
-for (int i = 0; i < 32; i++)
-i2c_r_reg[i] = '-';
 if (credential_state == 0xA1)
 {
 Lcd_Set_Cursor(1,1);
@@ -4751,7 +4757,7 @@ Lcd_Write_String("[Access Granted]");
 menu_progress_bar(100);
 Lcd_Set_Cursor(1,1);
 Lcd_Write_String("   [ Welcome ]  ");
-for (int i = 0; i < 30; i++)
+for (int i = 0; i < 20; i++)
 {
 _delay((unsigned long)((10)*(16000000/4000.0)));
 }
@@ -4759,6 +4765,7 @@ running_display();
 }
 else if (credential_state == 0xA0)
 {
+PORTDbits.RD7 = 0;
 Lcd_Set_Cursor(1,1);
 Lcd_Write_String("[Access  Denied]");
 Lcd_Set_Cursor(2,1);
@@ -4770,6 +4777,7 @@ _delay((unsigned long)((10)*(16000000/4000.0)));
 }
 else
 {
+PORTDbits.RD7 = 0;
 Lcd_Set_Cursor(1,1);
 Lcd_Write_String("[ System Error ]");
 Lcd_Set_Cursor(2,1);
@@ -4796,7 +4804,8 @@ OSCTUNEbits.PLLEN = 0;
 TRISA = 0x00;
 TRISB = 0x01;
 TRISC = 0b00011000;
-TRISD = 0x00;
+TRISD = 0b00000000;
+PORTD = 0b00000000;
 LATC = 0b00011000;
 
 SSPADD = I2C_ADDR * 2;
@@ -4811,6 +4820,7 @@ PIE1bits.SSPIE = 1;
 INTCONbits.GIE_GIEH = 1;
 INTCONbits.PEIE_GIEL = 1;
 INTCONbits.RBIE = 0;
+
 }
 
 unsigned char read_keypad()
@@ -4848,7 +4858,7 @@ _delay((unsigned long)((20)*(16000000/4000.0)));
 void load_i2c_registers()
 {
 
-# 301
+# 311
 for (int i = 0; i < 9; i++)
 i2c_r_reg[i] = current_user[i];
 
@@ -5058,7 +5068,7 @@ Lcd_Clear();
 Lcd_Set_Cursor(1,1);
 Lcd_Write_String("I2C_ADDR>>EEPROM");
 
-# 515
+# 525
 for (int i = 0; i < 10; i++)
 _delay((unsigned long)((20)*(16000000/4000.0)));
 menu_progress_bar(500);
@@ -5092,6 +5102,7 @@ v = 1;
 
 void running_display(void)
 {
+PORTDbits.RD7 = 1;
 unsigned char exit_running = 0x00;
 Lcd_Clear();
 Lcd_Set_Cursor(1,1);
@@ -5145,5 +5156,6 @@ Lcd_Clear();
 Lcd_Set_Cursor(1,1);
 Lcd_Write_String("Logging you out.");
 menu_progress_bar(200);
+PORTDbits.RD7 = 0;
 return;
 }

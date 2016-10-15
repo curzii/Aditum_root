@@ -53,6 +53,9 @@
 #define D5 PORTDbits.RD1
 #define D6 PORTDbits.RD2
 #define D7 PORTDbits.RD3
+//Machine Control
+#define MACHINE_ACTIVE PORTDbits.RD7
+
 
 // Keypad
 //        | y

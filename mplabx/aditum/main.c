@@ -65,6 +65,7 @@ void main(void)
     //main loop
     while (1)
     {  
+        MACHINE_ACTIVE = 0;
         for (int i = 0; i < 32; i++)                        //load i2c read and write registers full of -
         {
             i2c_w_reg[i] = '-';
@@ -173,6 +174,10 @@ void main(void)
             for (int i = 0; i < p; i++)            //load buffer into pin
                 current_pin[8 - i] = buffer[(p-1) - i];            
             menu_progress_bar(25);
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("Waiting System  ");
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_String("Response...     ");
     /**************************************************************************/
             //PERFORM CREDENTIALS CHECK HERE
     /**************************************************************************/
@@ -180,14 +185,15 @@ void main(void)
             unsigned char credential_state = 0;
             for (int i = 0; i < 32; i++)
                     i2c_w_reg[i] = '-';
+            
             while ((i2c_w_reg[0] == '-')||(i2c_w_reg[31] == '-'))   //wait to be serviced
             {
-                credential_state = i2c_w_reg[0];
-                for (int u = 0; u < 16; u++)
-                    logged_user[u] = i2c_w_reg[u+1]; 
+                ;   //slave assumes writing operation is finished if 32 bytes have been received.
             }
-            for (int i = 0; i < 32; i++)
-                    i2c_r_reg[i] = '-';
+            i2c_r_reg[0] = '-';
+            credential_state = i2c_w_reg[0];
+            for (int u = 0; u < 16; u++)
+                logged_user[u] = i2c_w_reg[u+1]; 
             if (credential_state == 0xA1)
             {
                 Lcd_Set_Cursor(1,1);
@@ -195,7 +201,7 @@ void main(void)
                 menu_progress_bar(100);
                 Lcd_Set_Cursor(1,1);
                 Lcd_Write_String("   [ Welcome ]  ");
-                for (int i = 0; i < 30; i++)
+                for (int i = 0; i < 20; i++)
                 {
                     __delay_ms(10);
                 }           
@@ -203,6 +209,7 @@ void main(void)
             }
             else if (credential_state == 0xA0)
             {
+                MACHINE_ACTIVE = 0;
                 Lcd_Set_Cursor(1,1);
                 Lcd_Write_String("[Access  Denied]");
                 Lcd_Set_Cursor(2,1);
@@ -214,6 +221,7 @@ void main(void)
             }
             else
             {
+                MACHINE_ACTIVE = 0;
                 Lcd_Set_Cursor(1,1);
                 Lcd_Write_String("[ System Error ]");
                 Lcd_Set_Cursor(2,1);
@@ -240,7 +248,8 @@ void mcu_initialise()
     TRISA = 0x00;
     TRISB = 0x01;
     TRISC = 0b00011000;             //RC3 and RC$ as inputs for I2c
-    TRISD = 0x00;                   //PORTD as output to drive LCD and keypad scanning
+    TRISD = 0b00000000;                   //PORTD as output to drive LCD and keypad scanning
+    PORTD = 0b00000000;
     LATC           = 0b00011000;     
     //MSSP in 7 bit I2C Slave mode        
     SSPADD         = I2C_ADDR * 2;  // Set I2C address
@@ -255,6 +264,7 @@ void mcu_initialise()
     INTCONbits.GIE_GIEH  = 1;       // GIE/GIEH: Global Interrupt Enable bit
     INTCONbits.PEIE_GIEL = 1;       // PEIE/GIEL: Peripheral Interrupt Enable bit    
     INTCONbits.RBIE = 0;            // Disable Interrupt on Change Pins (RB4:RB7) (This combined with LVP caused MCU reset on RB5 high))
+    
 }
 
 unsigned char   read_keypad()
@@ -545,6 +555,7 @@ void start_routine()
 
 void running_display(void)
 {
+    MACHINE_ACTIVE = 1;        //turn on machine
     unsigned char exit_running = 0x00;
     Lcd_Clear();
     Lcd_Set_Cursor(1,1);
@@ -598,5 +609,6 @@ void running_display(void)
     Lcd_Set_Cursor(1,1);
     Lcd_Write_String("Logging you out.");
     menu_progress_bar(200);
+    MACHINE_ACTIVE = 0;                //turn of running machine
     return;
 }
