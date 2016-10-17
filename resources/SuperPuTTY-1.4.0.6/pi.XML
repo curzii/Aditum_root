@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSessionData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SessionData SessionId="pi" SessionName="pi" ImageKey="monitor" Host="10.0.0.6" Port="22" Proto="SSH" PuttySession="Default Settings" Username="pi" ExtraArgs="" />
+</ArrayOfSessionData>
