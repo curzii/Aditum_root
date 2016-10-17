@@ -160,6 +160,10 @@ void slave_write(string write_address, vector<char> slave_data)								//writes 
 		for (int i = 0; ((i < slave_data.size())&&(i < 32)); i++)		//write vector to slave
 		{
 			int w = wiringPiI2CWriteReg8(fd, i, static_cast<int>(slave_data[i]));	//write byte to specified address
+			/*char c_data = wiringPiI2CReadReg8(fd, i);								//verify the written byte is correct, if not, rewrite the corrupted byte.
+			mvprintw(20,0, "W/R : [ %s | %s ]", slave_data[i], c_data);				//this commented code will only work if the slave loads the write reg into the read reg.
+			if (c_data != slave_data[i])
+				i--;*/
 		} 
 		close(fd); //Close File descriptors to fix too many open files error
 	} 

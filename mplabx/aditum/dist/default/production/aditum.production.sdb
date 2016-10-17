@@ -51,19 +51,19 @@
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
 "50 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
 [v _main main `(v  1 e 1 0 ]
-"238
+"243
 [v _mcu_initialise mcu_initialise `(v  1 e 1 0 ]
-"270
+"275
 [v _read_keypad read_keypad `(uc  1 e 1 0 ]
-"293
+"298
 [v _latch_keypad latch_keypad `(v  1 e 1 0 ]
-"302
+"307
 [v _load_i2c_registers load_i2c_registers `(v  1 e 1 0 ]
-"330
+"335
 [v _ISR ISR `II(v  1 e 1 0 ]
-"392
+"397
 [v _start_routine start_routine `(v  1 e 1 0 ]
-"556
+"561
 [v _running_display running_display `(v  1 e 1 0 ]
 "61 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\menu.h
 [v _menu_seconds_to_mmss menu_seconds_to_mmss `(v  1 e 1 0 ]
@@ -426,90 +426,94 @@
 "50
 [v _main main `(v  1 e 1 0 ]
 {
-"229
-[v main@i_796 i `i  1 a 2 23 ]
-"217
-[v main@i_793 i `i  1 a 2 21 ]
-"204
-[v main@i_790 i `i  1 a 2 19 ]
-"195
-[v main@u u `i  1 a 2 34 ]
+"234
+[v main@i_798 i `i  1 a 2 24 ]
+"222
+[v main@i_795 i `i  1 a 2 22 ]
+"209
+[v main@i_792 i `i  1 a 2 20 ]
+"194
+[v main@i_788 i `i  1 a 2 31 ]
+"200
+[v main@u u `i  1 a 2 37 ]
 "186
-[v main@i_786 i `i  1 a 2 28 ]
+[v main@i_786 i `i  1 a 2 29 ]
 "174
-[v main@i_782 i `i  1 a 2 26 ]
+[v main@i_782 i `i  1 a 2 27 ]
 "142
 [v main@c c `[10]uc  1 a 10 0 ]
 "125
-[v main@i_776 i `i  1 a 2 32 ]
+[v main@i_776 i `i  1 a 2 35 ]
 "77
-[v main@i_773 i `i  1 a 2 36 ]
+[v main@i_773 i `i  1 a 2 39 ]
 "76
 [v main@buffer buffer `[9]uc  1 a 9 10 ]
 "185
-[v main@credential_state credential_state `uc  1 a 1 25 ]
+[v main@credential_state credential_state `uc  1 a 1 26 ]
+"189
+[v main@write_busy write_busy `uc  1 a 1 19 ]
 "69
-[v main@i i `i  1 a 2 30 ]
+[v main@i i `i  1 a 2 33 ]
 "55
-[v main@x x `uc  1 a 1 40 ]
+[v main@x x `uc  1 a 1 43 ]
 "54
-[v main@n n `uc  1 a 1 39 ]
-[v main@p p `uc  1 a 1 38 ]
+[v main@n n `uc  1 a 1 42 ]
+[v main@p p `uc  1 a 1 41 ]
 "141
 [v main@F3681 F3681 `[10]uc  1 s 10 F3681 ]
-"236
+"241
 } 0
-"392
+"397
 [v _start_routine start_routine `(v  1 e 1 0 ]
 {
-"540
-[v start_routine@i_908 i `i  1 a 2 37 ]
-"538
-[v start_routine@i_907 i `i  1 a 2 30 ]
-"525
-[v start_routine@i_904 i `i  1 a 2 28 ]
-"512
-[v start_routine@i_901 i `i  1 a 2 26 ]
-"504
-[v start_routine@i_898 i `i  1 a 2 35 ]
-"482
-[v start_routine@i_895 i `i  1 a 2 44 ]
-"481
+"545
+[v start_routine@i_910 i `i  1 a 2 37 ]
+"543
+[v start_routine@i_909 i `i  1 a 2 30 ]
+"530
+[v start_routine@i_906 i `i  1 a 2 28 ]
+"517
+[v start_routine@i_903 i `i  1 a 2 26 ]
+"509
+[v start_routine@i_900 i `i  1 a 2 35 ]
+"487
+[v start_routine@i_897 i `i  1 a 2 44 ]
+"486
 [v start_routine@b b `[3]uc  1 a 3 32 ]
-"490
+"495
 [v start_routine@error_msg error_msg `*.25uc  1 a 2 16 ]
-"480
+"485
 [v start_routine@new_I2C_address new_I2C_address `uc  1 a 1 49 ]
-"439
+"444
 [v start_routine@I2C_new_ADDR I2C_new_ADDR `[3]uc  1 a 3 39 ]
-"424
-[v start_routine@i_883 i `i  1 a 2 24 ]
+"429
+[v start_routine@i_885 i `i  1 a 2 24 ]
+"410
+[v start_routine@i_877 i `i  1 a 2 22 ]
 "405
-[v start_routine@i_875 i `i  1 a 2 22 ]
-"400
 [v start_routine@i i `i  1 a 2 20 ]
-"432
+"437
 [v start_routine@n n `uc  1 a 1 48 ]
 [v start_routine@x x `uc  1 a 1 47 ]
-"409
+"414
 [v start_routine@dh dh `uc  1 a 1 46 ]
 [v start_routine@dt dt `uc  1 a 1 43 ]
 [v start_routine@a a `uc  1 a 1 42 ]
-"432
+"437
 [v start_routine@v v `uc  1 a 1 19 ]
-"409
+"414
 [v start_routine@d1 d1 `uc  1 a 1 18 ]
 [v start_routine@l l `uc  1 a 1 15 ]
 [v start_routine@h h `uc  1 a 1 14 ]
-"438
-[v start_routine@F3718 F3718 `[3]uc  1 s 3 F3718 ]
-"554
+"443
+[v start_routine@F3720 F3720 `[3]uc  1 s 3 F3720 ]
+"559
 } 0
-"293
+"298
 [v _latch_keypad latch_keypad `(v  1 e 1 0 ]
 {
 [v latch_keypad@x x `*.39uc  1 p 2 15 ]
-"300
+"305
 } 0
 "43 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\eeprom.h
 [v _Eeprom_Write_Byte Eeprom_Write_Byte `(v  1 e 1 0 ]
@@ -521,43 +525,43 @@
 [v Eeprom_Write_Byte@address address `uc  1 a 1 16 ]
 "67
 } 0
-"556 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+"561 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
 [v _running_display running_display `(v  1 e 1 0 ]
 {
-"595
+"600
 [v running_display@n n `[10]uc  1 a 10 21 ]
-"597
+"602
 [v running_display@second second `i  1 a 2 46 ]
-"598
+"603
 [v running_display@minute minute `i  1 a 2 38 ]
-"596
+"601
 [v running_display@hour hour `i  1 a 2 19 ]
-"577
-[v running_display@i_915 i `i  1 a 2 40 ]
-"574
-[v running_display@i_914 i `i  1 a 2 32 ]
-"563
-[v running_display@i i `i  1 a 2 44 ]
-"583
-[v running_display@t t `[5]uc  1 a 5 14 ]
 "582
+[v running_display@i_917 i `i  1 a 2 40 ]
+"579
+[v running_display@i_916 i `i  1 a 2 32 ]
+"568
+[v running_display@i i `i  1 a 2 44 ]
+"588
+[v running_display@t t `[5]uc  1 a 5 14 ]
+"587
 [v running_display@s s `i  1 a 2 42 ]
 [v running_display@ms ms `i  1 a 2 36 ]
-"562
+"567
 [v running_display@n_c n_c `uc  1 a 1 35 ]
 [v running_display@is_leading_zero is_leading_zero `uc  1 a 1 34 ]
-"559
+"564
 [v running_display@exit_running exit_running `uc  1 a 1 31 ]
-"582
-[v running_display@F3741 F3741 `[5]uc  1 s 5 F3741 ]
-"593
-[v running_display@F3744 F3744 `[10]uc  1 s 10 F3744 ]
-"614
+"587
+[v running_display@F3743 F3743 `[5]uc  1 s 5 F3743 ]
+"598
+[v running_display@F3746 F3746 `[10]uc  1 s 10 F3746 ]
+"619
 } 0
-"270
+"275
 [v _read_keypad read_keypad `(uc  1 e 1 0 ]
 {
-"292
+"297
 } 0
 "84 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\menu.h
 [v _menu_progress_bar menu_progress_bar `(v  1 e 1 0 ]
@@ -653,10 +657,10 @@
 [v ___awmod@divisor divisor `i  1 p 2 17 ]
 "35
 } 0
-"238 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+"243 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
 [v _mcu_initialise mcu_initialise `(v  1 e 1 0 ]
 {
-"268
+"273
 } 0
 "20 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\eeprom.h
 [v _Eeprom_Read_Byte Eeprom_Read_Byte `(uc  1 e 1 0 ]
@@ -667,18 +671,18 @@
 [v Eeprom_Read_Byte@address address `uc  1 a 1 15 ]
 "36
 } 0
-"302 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+"307 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
 [v _load_i2c_registers load_i2c_registers `(v  1 e 1 0 ]
 {
+"324
+[v load_i2c_registers@i_843 i `i  1 a 2 29 ]
 "319
-[v load_i2c_registers@i_841 i `i  1 a 2 29 ]
-"314
-[v load_i2c_registers@i_839 i `i  1 a 2 33 ]
-"311
+[v load_i2c_registers@i_841 i `i  1 a 2 33 ]
+"316
 [v load_i2c_registers@i i `i  1 a 2 31 ]
-"318
+"323
 [v load_i2c_registers@checksum checksum `i  1 a 2 27 ]
-"328
+"333
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -716,10 +720,10 @@
 [v Lcd_Port@a a `uc  1 a 1 15 ]
 "37
 } 0
-"330 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
+"335 C:\Users\Administrator\Desktop\Aditum_root\mplabx\aditum\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"332
+"337
 [v ISR@sspBuf sspBuf `uc  1 a 1 14 ]
-"390
+"395
 } 0

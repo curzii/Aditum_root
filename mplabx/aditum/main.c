@@ -186,11 +186,16 @@ void main(void)
             for (int i = 0; i < 32; i++)
                     i2c_w_reg[i] = '-';
             
-            while ((i2c_w_reg[0] == '-')||(i2c_w_reg[31] == '-'))   //wait to be serviced
+            unsigned char write_busy;
+            //while (write_busy)//(i2c_w_reg[0] == '-')||(i2c_w_reg[31] == '-'))   //wait to be serviced
+            do
             {
-                ;   //slave assumes writing operation is finished if 32 bytes have been received.
-            }
-            i2c_r_reg[0] = '-';
+                write_busy = 0x00;
+                for (int i = 0; i < 32; i++)
+                    if (i2c_w_reg[i] == '-')
+                        write_busy = 0x01;                         
+            } while (write_busy); //slave assumes writing operation is finished if only if 32 bytes have been rewritten.
+            i2c_r_reg[0] = '-'; //notify master that to no longer read
             credential_state = i2c_w_reg[0];
             for (int u = 0; u < 16; u++)
                 logged_user[u] = i2c_w_reg[u+1]; 

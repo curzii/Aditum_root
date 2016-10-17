@@ -4742,10 +4742,15 @@ unsigned char credential_state = 0;
 for (int i = 0; i < 32; i++)
 i2c_w_reg[i] = '-';
 
-while ((i2c_w_reg[0] == '-')||(i2c_w_reg[31] == '-'))
+unsigned char write_busy;
+
+do
 {
-;
-}
+write_busy = 0x00;
+for (int i = 0; i < 32; i++)
+if (i2c_w_reg[i] == '-')
+write_busy = 0x01;
+} while (write_busy);
 i2c_r_reg[0] = '-';
 credential_state = i2c_w_reg[0];
 for (int u = 0; u < 16; u++)
@@ -4858,7 +4863,7 @@ _delay((unsigned long)((20)*(16000000/4000.0)));
 void load_i2c_registers()
 {
 
-# 311
+# 316
 for (int i = 0; i < 9; i++)
 i2c_r_reg[i] = current_user[i];
 
@@ -5068,7 +5073,7 @@ Lcd_Clear();
 Lcd_Set_Cursor(1,1);
 Lcd_Write_String("I2C_ADDR>>EEPROM");
 
-# 525
+# 530
 for (int i = 0; i < 10; i++)
 _delay((unsigned long)((20)*(16000000/4000.0)));
 menu_progress_bar(500);
