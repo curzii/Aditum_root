@@ -1,0 +1,19 @@
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\obj\Debug\Aditum.frmMain.resources
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\obj\Debug\Aditum.Properties.Resources.resources
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\obj\Debug\Aditum.csproj.GenerateResource.Cache
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\bin\Debug\Aditum.exe.config
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\bin\Debug\Aditum.exe.manifest
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\bin\Debug\Aditum.application
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\bin\Debug\Aditum.exe
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\bin\Debug\Aditum.pdb
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\bin\Debug\Renci.SshNet.dll
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\bin\Debug\Renci.SshNet.xml
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\obj\Debug\Aditum.exe.manifest
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\obj\Debug\Aditum.application
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\obj\Debug\Aditum.exe
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\obj\Debug\Aditum.pdb
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\obj\Debug\Aditum.csprojResolveAssemblyReference.cache
+C:\Users\Curze\Documents\Visual Studio 2015\Projects\Aditum\bin\Debug\CheckComboBox.dll
+C:\Users\Administrator\Desktop\Aditum_root\windows\Aditum\bin\Debug\Aditum.exe.config
+C:\Users\Administrator\Desktop\Aditum_root\windows\Aditum\obj\Debug\Aditum.exe
+C:\Users\Administrator\Desktop\Aditum_root\windows\Aditum\obj\Debug\Aditum.pdb

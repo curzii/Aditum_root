@@ -1,2 +1,0 @@
-Working i2c Slave code for PIC18f45k20
-Working LCD and keypad code for PIC18f45k20

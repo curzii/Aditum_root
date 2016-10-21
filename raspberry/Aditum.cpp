@@ -25,6 +25,7 @@ static string data_template;
 static string detect_template;
 vector<vector<string>> database;
 vector<string> logbuffer;
+vector<string> csvlogbuffer;
 long long blocks_read, blocks_lost;
 string logged_user = "";
 			
@@ -39,7 +40,7 @@ string timestamp();																	//returns current time as a timestamp string
 vector<vector<string>> database_read();												//reads all credentials entries from database
 bool authenticate_slave(vector<char> data);											//authenticates slave in database
 int checksum(vector<char> data);													//calculate checksum
-void write_log(vector<string> log);
+void write_log(vector<string> log, vector<string> csv);
 
 //read + parse database
 	//find + parse slaves
@@ -83,8 +84,9 @@ int main()
 				if ((n_iterations%100) == 0)
 				{
 					mvprintw(7,0, "%s", timestamp().c_str());	//print the current time every 100 iterations
-					write_log(logbuffer);						//write and clear the log buffers every 100 iterations
+					write_log(logbuffer, csvlogbuffer);			//write and clear the log buffers every 100 iterations
 					logbuffer.clear();
+					csvlogbuffer.clear();
 					refresh();									//refresh display every 100 iterations
 				}
 				for (int i = 0; i < slave_addresses.size(); i++)
@@ -293,6 +295,8 @@ bool authenticate_slave(vector<char> data)											//authenticates slave in da
 	{
 		int trash = sprintf(buffer, "[   LOGIN    ] - [    %s    |    %s    |    %-16s    ] ---> %s", id.c_str(), pin.c_str(), name.c_str(), timestamp().c_str());
 		logbuffer.push_back(buffer);
+		trash = sprintf(buffer, "LOGIN,%s,%s,%s,%s", id.c_str(), pin.c_str(), name.c_str(), timestamp().c_str()); 
+		csvlogbuffer.push_back(buffer);
 		logged_user = name;
 		result = true;	
 	}	
@@ -304,11 +308,16 @@ bool authenticate_slave(vector<char> data)											//authenticates slave in da
 	{
 		int trash = sprintf(buffer, "[UNREGISTERED] - [    %s    |    %s    |    UNREGISTERED        ] ---> %s", id.c_str(), pin.c_str(), timestamp().c_str());
 		logbuffer.push_back(buffer);
+		trash = sprintf(buffer, "UNREGISTERED,%s,%s,UNREGISTERED,%s", id.c_str(), pin.c_str(), timestamp().c_str());
+		csvlogbuffer.push_back(buffer);
 	}
 	else if ((checksum_good)&&(foundid)&&(!foundpin))
 	{
 		int trash = sprintf(buffer, "[ WRONG  PIN ] - [    %s    |    %s    |    %-16s    ] ---> %s", id.c_str(), pin.c_str(), name.c_str(), timestamp().c_str());
 		logbuffer.push_back(buffer);
+		trash = sprintf(buffer, "WRONG  PIN,%s,%s,%s,%s", id.c_str(), pin.c_str(), name.c_str(), timestamp().c_str());
+		csvlogbuffer.push_back(buffer);
+		
 	}
 	mvprintw(21,0, "Data stream:");
 	for (int i = 0; i < 32; i++)
@@ -337,10 +346,15 @@ int checksum(vector<char> data)
 	return chk;
 }
 
-void write_log(vector<string> log)
+void write_log(vector<string> log, vector<string> csv)
 {
 	ofstream file("log.txt", ios_base::out | ios_base::app );
 	for (int i = 0; i < log.size(); i++)
 		file << log[i];
+	file.close();
+	ofstream csvfile("log.csv", ios_base::out | ios_base::app );
+	for (int i = 0; i < csv.size(); i++)
+		csvfile << csv[i];
+	csvfile.close();
 	return;
 }
