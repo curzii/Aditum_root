@@ -341,5 +341,10 @@ namespace Aditum
                 rtbxOutput.AppendText(DateTime.Now.ToString("[HH:mm:ss] ") + "[-] Host " + tbxHostIP.Text + " is down.");
             }
         }
+
+        private void btnRefreshLogs_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

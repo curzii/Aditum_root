@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRegister = new System.Windows.Forms.Button();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.tbxStudentID = new System.Windows.Forms.TextBox();
@@ -43,6 +43,8 @@
             this.clbxHideSelected = new System.Windows.Forms.CheckedListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Options = new System.Windows.Forms.TabPage();
+            this.btnRebootPi = new System.Windows.Forms.Button();
+            this.btnRunAditumServer = new System.Windows.Forms.Button();
             this.lblHostPassword = new System.Windows.Forms.Label();
             this.lblHostUsername = new System.Windows.Forms.Label();
             this.lblHostIP = new System.Windows.Forms.Label();
@@ -51,8 +53,7 @@
             this.btnOptionsVerify = new System.Windows.Forms.Button();
             this.tbxHostUsername = new System.Windows.Forms.TextBox();
             this.rtbxOutput = new System.Windows.Forms.RichTextBox();
-            this.btnRunAditumServer = new System.Windows.Forms.Button();
-            this.btnRebootPi = new System.Windows.Forms.Button();
+            this.btnRefreshLogs = new System.Windows.Forms.Button();
             this.tbcMain.SuspendLayout();
             this.Register.SuspendLayout();
             this.Logs.SuspendLayout();
@@ -74,21 +75,21 @@
             // 
             this.tbxName.Location = new System.Drawing.Point(22, 35);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(141, 31);
+            this.tbxName.Size = new System.Drawing.Size(141, 20);
             this.tbxName.TabIndex = 0;
             // 
             // tbxStudentID
             // 
             this.tbxStudentID.Location = new System.Drawing.Point(22, 97);
             this.tbxStudentID.Name = "tbxStudentID";
-            this.tbxStudentID.Size = new System.Drawing.Size(141, 31);
+            this.tbxStudentID.Size = new System.Drawing.Size(141, 20);
             this.tbxStudentID.TabIndex = 1;
             // 
             // tbxStudentPIN
             // 
             this.tbxStudentPIN.Location = new System.Drawing.Point(22, 159);
             this.tbxStudentPIN.Name = "tbxStudentPIN";
-            this.tbxStudentPIN.Size = new System.Drawing.Size(141, 31);
+            this.tbxStudentPIN.Size = new System.Drawing.Size(141, 20);
             this.tbxStudentPIN.TabIndex = 2;
             // 
             // tbcMain
@@ -112,10 +113,10 @@
             this.Register.Controls.Add(this.tbxStudentPIN);
             this.Register.Controls.Add(this.btnRegister);
             this.Register.Controls.Add(this.tbxStudentID);
-            this.Register.Location = new System.Drawing.Point(8, 39);
+            this.Register.Location = new System.Drawing.Point(4, 22);
             this.Register.Name = "Register";
             this.Register.Padding = new System.Windows.Forms.Padding(3);
-            this.Register.Size = new System.Drawing.Size(690, 514);
+            this.Register.Size = new System.Drawing.Size(698, 535);
             this.Register.TabIndex = 0;
             this.Register.Text = "Register";
             this.Register.UseVisualStyleBackColor = true;
@@ -126,7 +127,7 @@
             this.lblStudentPIN.AutoSize = true;
             this.lblStudentPIN.Location = new System.Drawing.Point(17, 131);
             this.lblStudentPIN.Name = "lblStudentPIN";
-            this.lblStudentPIN.Size = new System.Drawing.Size(126, 25);
+            this.lblStudentPIN.Size = new System.Drawing.Size(65, 13);
             this.lblStudentPIN.TabIndex = 6;
             this.lblStudentPIN.Text = "Student PIN";
             // 
@@ -135,7 +136,7 @@
             this.lblStudentID.AutoSize = true;
             this.lblStudentID.Location = new System.Drawing.Point(17, 69);
             this.lblStudentID.Name = "lblStudentID";
-            this.lblStudentID.Size = new System.Drawing.Size(112, 25);
+            this.lblStudentID.Size = new System.Drawing.Size(58, 13);
             this.lblStudentID.TabIndex = 5;
             this.lblStudentID.Text = "Student ID";
             // 
@@ -144,19 +145,20 @@
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(17, 7);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(148, 25);
+            this.lblName.Size = new System.Drawing.Size(75, 13);
             this.lblName.TabIndex = 4;
             this.lblName.Text = "Student Name";
             // 
             // Logs
             // 
+            this.Logs.Controls.Add(this.btnRefreshLogs);
             this.Logs.Controls.Add(this.lblHideSelected);
             this.Logs.Controls.Add(this.clbxHideSelected);
             this.Logs.Controls.Add(this.dataGridView1);
-            this.Logs.Location = new System.Drawing.Point(8, 39);
+            this.Logs.Location = new System.Drawing.Point(4, 22);
             this.Logs.Name = "Logs";
             this.Logs.Padding = new System.Windows.Forms.Padding(3);
-            this.Logs.Size = new System.Drawing.Size(690, 514);
+            this.Logs.Size = new System.Drawing.Size(698, 535);
             this.Logs.TabIndex = 1;
             this.Logs.Text = "Logs";
             this.Logs.UseVisualStyleBackColor = true;
@@ -167,7 +169,7 @@
             this.lblHideSelected.AutoSize = true;
             this.lblHideSelected.Location = new System.Drawing.Point(3, 425);
             this.lblHideSelected.Name = "lblHideSelected";
-            this.lblHideSelected.Size = new System.Drawing.Size(152, 25);
+            this.lblHideSelected.Size = new System.Drawing.Size(77, 13);
             this.lblHideSelected.TabIndex = 3;
             this.lblHideSelected.Text = "Hide Selected:";
             // 
@@ -177,7 +179,7 @@
             this.clbxHideSelected.FormattingEnabled = true;
             this.clbxHideSelected.Location = new System.Drawing.Point(0, 440);
             this.clbxHideSelected.Name = "clbxHideSelected";
-            this.clbxHideSelected.Size = new System.Drawing.Size(239, 82);
+            this.clbxHideSelected.Size = new System.Drawing.Size(239, 94);
             this.clbxHideSelected.TabIndex = 2;
             this.clbxHideSelected.SelectedIndexChanged += new System.EventHandler(this.clbxHideSelected_SelectedIndexChanged);
             // 
@@ -186,13 +188,13 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 30);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(706, 392);
+            this.dataGridView1.Size = new System.Drawing.Size(698, 422);
             this.dataGridView1.TabIndex = 1;
             // 
             // Options
@@ -206,21 +208,41 @@
             this.Options.Controls.Add(this.tbxHostPassword);
             this.Options.Controls.Add(this.btnOptionsVerify);
             this.Options.Controls.Add(this.tbxHostUsername);
-            this.Options.Location = new System.Drawing.Point(8, 39);
+            this.Options.Location = new System.Drawing.Point(4, 22);
             this.Options.Name = "Options";
             this.Options.Padding = new System.Windows.Forms.Padding(3);
-            this.Options.Size = new System.Drawing.Size(690, 514);
+            this.Options.Size = new System.Drawing.Size(698, 535);
             this.Options.TabIndex = 2;
             this.Options.Text = "Options";
             this.Options.UseVisualStyleBackColor = true;
             this.Options.Click += new System.EventHandler(this.Options_Click);
+            // 
+            // btnRebootPi
+            // 
+            this.btnRebootPi.Location = new System.Drawing.Point(470, 68);
+            this.btnRebootPi.Name = "btnRebootPi";
+            this.btnRebootPi.Size = new System.Drawing.Size(201, 40);
+            this.btnRebootPi.TabIndex = 15;
+            this.btnRebootPi.Text = "Reboot Raspberry";
+            this.btnRebootPi.UseVisualStyleBackColor = true;
+            this.btnRebootPi.Click += new System.EventHandler(this.btnRebootPi_Click);
+            // 
+            // btnRunAditumServer
+            // 
+            this.btnRunAditumServer.Location = new System.Drawing.Point(470, 22);
+            this.btnRunAditumServer.Name = "btnRunAditumServer";
+            this.btnRunAditumServer.Size = new System.Drawing.Size(201, 40);
+            this.btnRunAditumServer.TabIndex = 14;
+            this.btnRunAditumServer.Text = "Run Aditum Server";
+            this.btnRunAditumServer.UseVisualStyleBackColor = true;
+            this.btnRunAditumServer.Click += new System.EventHandler(this.btnRunAditumServer_Click);
             // 
             // lblHostPassword
             // 
             this.lblHostPassword.AutoSize = true;
             this.lblHostPassword.Location = new System.Drawing.Point(6, 127);
             this.lblHostPassword.Name = "lblHostPassword";
-            this.lblHostPassword.Size = new System.Drawing.Size(106, 25);
+            this.lblHostPassword.Size = new System.Drawing.Size(53, 13);
             this.lblHostPassword.TabIndex = 13;
             this.lblHostPassword.Text = "Password";
             // 
@@ -229,7 +251,7 @@
             this.lblHostUsername.AutoSize = true;
             this.lblHostUsername.Location = new System.Drawing.Point(6, 65);
             this.lblHostUsername.Name = "lblHostUsername";
-            this.lblHostUsername.Size = new System.Drawing.Size(218, 25);
+            this.lblHostUsername.Size = new System.Drawing.Size(107, 13);
             this.lblHostUsername.TabIndex = 12;
             this.lblHostUsername.Text = "Username (default pi)";
             // 
@@ -238,7 +260,7 @@
             this.lblHostIP.AutoSize = true;
             this.lblHostIP.Location = new System.Drawing.Point(6, 3);
             this.lblHostIP.Name = "lblHostIP";
-            this.lblHostIP.Size = new System.Drawing.Size(298, 25);
+            this.lblHostIP.Size = new System.Drawing.Size(149, 13);
             this.lblHostIP.TabIndex = 11;
             this.lblHostIP.Text = "Host IP (default 192.168.42.1)";
             // 
@@ -246,7 +268,7 @@
             // 
             this.tbxHostIP.Location = new System.Drawing.Point(11, 31);
             this.tbxHostIP.Name = "tbxHostIP";
-            this.tbxHostIP.Size = new System.Drawing.Size(141, 31);
+            this.tbxHostIP.Size = new System.Drawing.Size(141, 20);
             this.tbxHostIP.TabIndex = 0;
             this.tbxHostIP.Text = "192.168.42.1";
             // 
@@ -254,7 +276,7 @@
             // 
             this.tbxHostPassword.Location = new System.Drawing.Point(11, 155);
             this.tbxHostPassword.Name = "tbxHostPassword";
-            this.tbxHostPassword.Size = new System.Drawing.Size(141, 31);
+            this.tbxHostPassword.Size = new System.Drawing.Size(141, 20);
             this.tbxHostPassword.TabIndex = 2;
             this.tbxHostPassword.Text = "raspberry";
             // 
@@ -272,7 +294,7 @@
             // 
             this.tbxHostUsername.Location = new System.Drawing.Point(11, 93);
             this.tbxHostUsername.Name = "tbxHostUsername";
-            this.tbxHostUsername.Size = new System.Drawing.Size(141, 31);
+            this.tbxHostUsername.Size = new System.Drawing.Size(141, 20);
             this.tbxHostUsername.TabIndex = 1;
             this.tbxHostUsername.Text = "pi";
             // 
@@ -290,25 +312,15 @@
             this.rtbxOutput.TabIndex = 1;
             this.rtbxOutput.Text = "";
             // 
-            // btnRunAditumServer
+            // btnRefreshLogs
             // 
-            this.btnRunAditumServer.Location = new System.Drawing.Point(470, 22);
-            this.btnRunAditumServer.Name = "btnRunAditumServer";
-            this.btnRunAditumServer.Size = new System.Drawing.Size(201, 40);
-            this.btnRunAditumServer.TabIndex = 14;
-            this.btnRunAditumServer.Text = "Run Aditum Server";
-            this.btnRunAditumServer.UseVisualStyleBackColor = true;
-            this.btnRunAditumServer.Click += new System.EventHandler(this.btnRunAditumServer_Click);
-            // 
-            // btnRebootPi
-            // 
-            this.btnRebootPi.Location = new System.Drawing.Point(470, 68);
-            this.btnRebootPi.Name = "btnRebootPi";
-            this.btnRebootPi.Size = new System.Drawing.Size(201, 40);
-            this.btnRebootPi.TabIndex = 15;
-            this.btnRebootPi.Text = "Reboot Raspberry";
-            this.btnRebootPi.UseVisualStyleBackColor = true;
-            this.btnRebootPi.Click += new System.EventHandler(this.btnRebootPi_Click);
+            this.btnRefreshLogs.Location = new System.Drawing.Point(552, 440);
+            this.btnRefreshLogs.Name = "btnRefreshLogs";
+            this.btnRefreshLogs.Size = new System.Drawing.Size(140, 33);
+            this.btnRefreshLogs.TabIndex = 4;
+            this.btnRefreshLogs.Text = "Refresh Logs";
+            this.btnRefreshLogs.UseVisualStyleBackColor = true;
+            this.btnRefreshLogs.Click += new System.EventHandler(this.btnRefreshLogs_Click);
             // 
             // frmMain
             // 
@@ -359,6 +371,7 @@
         private System.Windows.Forms.CheckedListBox clbxHideSelected;
         private System.Windows.Forms.Button btnRunAditumServer;
         private System.Windows.Forms.Button btnRebootPi;
+        private System.Windows.Forms.Button btnRefreshLogs;
     }
 }
 
