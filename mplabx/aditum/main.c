@@ -45,10 +45,11 @@ volatile unsigned char  current_pin[9]  = {0,0,0,0,0,0,0,0,0};
 volatile unsigned char  logged_user[16];
 volatile unsigned char  credentials_accepted = 0;
 
+
 char hx[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
 char c[]  = {'0','1','2','3','4','5','6','7','8','9'};
 void main(void)
-{     
+{    
     /**************************************************************************/
     //Variables in main scope
     unsigned char n = 0, p = 0;
@@ -66,7 +67,7 @@ void main(void)
     while (1)
     {  
         MACHINE_ACTIVE = 0;
-        for (int i = 0; i < 32; i++)                        //load i2c read and write registers full of -
+        for (int i = 0; i < 32; i++)                        //load i2c read && write registers full of -
         {
             i2c_w_reg[i] = '-';
             i2c_r_reg[i] = '-';
@@ -122,7 +123,7 @@ void main(void)
                     }
                 }                
             }
-            for (int i = 0; i < n; i++)            //load buffer into current user and clear buffer
+            for (int i = 0; i < n; i++)            //load buffer into current user && clear buffer
             {
                 current_user[8 - i] = buffer[(n-1) - i]; 
                 buffer[(n-1) - i] = '0';
@@ -251,14 +252,14 @@ void mcu_initialise()
     OSCTUNEbits.PLLEN = 0;          // x4 PLL disabled
     //IO
     TRISA = 0x00;
-    TRISB = 0x01;
-    TRISC = 0b00011000;             //RC3 and RC$ as inputs for I2c
-    TRISD = 0b00000000;                   //PORTD as output to drive LCD and keypad scanning
+    TRISB = 0x00;
+    TRISC = 0b00011000;             //RC3 && RC$ as inputs for I2c
+    TRISD = 0b00000000;                   //PORTD as output to drive LCD && keypad scanning
     PORTD = 0b00000000;
     LATC           = 0b00011000;     
     //MSSP in 7 bit I2C Slave mode        
     SSPADD         = I2C_ADDR * 2;  // Set I2C address
-    SSPCON1        = 0x36;          // SSPEN: Synchronous Serial Port Enable bit - Enables the serial port and configures the SDA and SCL pins as the serial port pins
+    SSPCON1        = 0x36;          // SSPEN: Synchronous Serial Port Enable bit - Enables the serial port && configures the SDA && SCL pins as the serial port pins
                                     // CKP: SCK Release Control bit              - Release clock
                                     // SSPM3:SSPM0: SSP Mode Select bits         - 0110 = I2C Slave mode, 7-bit address    
     SSPSTAT        = 0x00;
@@ -268,31 +269,36 @@ void mcu_initialise()
     PIE1bits.SSPIE = 1;             // Enable MSSP interrupt enable bit
     INTCONbits.GIE_GIEH  = 1;       // GIE/GIEH: Global Interrupt Enable bit
     INTCONbits.PEIE_GIEL = 1;       // PEIE/GIEL: Peripheral Interrupt Enable bit    
-    INTCONbits.RBIE = 0;            // Disable Interrupt on Change Pins (RB4:RB7) (This combined with LVP caused MCU reset on RB5 high))
-    
+    INTCONbits.RBIE = 0;            // Disable Interrupt on Change Pins (RB4:RB7) (This combined with LVP caused MCU reset on RB5 high
+    //INTCON2bits.NOT_RBPU = 0;
+    //INTCONbits.RBIF = 0;
+    //WPUB = 0xFF;
+    //IOCB = 0x00;
 }
 
 unsigned char   read_keypad()
-{   
-    TRISB = 0b01111000;
-    PORTB = 0b00000001;
-    //PORTB = 0b00100000;
-    if (Y4) {PORTB = 0x00; return '*';}
-    if (Y1) {PORTB = 0x00; return '1';}
-    if (Y2) {PORTB = 0x00; return '4';}
-    if (Y3) {PORTB = 0x00; return '7';}    
-    PORTB = 0b00000010;
-    //PORTB = 0b01000000;
-    if (Y1) {PORTB = 0x00; return '2';}
-    if (Y2) {PORTB = 0x00; return '5';}
-    if (Y3) {PORTB = 0x00; return '8';}
-    if (Y4) {PORTB = 0x00; return '0';}
-    PORTB = 0b00000100;
-    //PORTB = 0b10000000;
-    if (Y1) {PORTB = 0x00; return '3';} 
-    if (Y2) {PORTB = 0x00; return '6';}
-    if (Y3) {PORTB = 0x00; return '9';}
-    if (Y4) {PORTB = 0x00; return '#';} 
+{
+    //WARNING: DUE TO SINGLE BIT R/W PORT MODIFICATION THE KEPAD ROUTINE DOES NOT USE THE COLUMN DEFINES
+    TRISB = 0b11101010;
+    PORTB = 0b00000100; //#define X1 PORTDbits.RB2
+    //PORTB = 0b11111011; //#define X1 PORTDbits.RB2
+    if (Y1 && !Y2 && !Y3 && !Y4) {PORTB = 0x00; return '1';}
+    if (!Y1 && Y2 && !Y3 && !Y4) {PORTB = 0x00; return '4';}
+    if (!Y1 && !Y2 && Y3 && !Y4) {PORTB = 0x00; return '7';} 
+    if (!Y1 && !Y2 && !Y3 && Y4) {PORTB = 0x00; return '*';}
+    PORTB = 0b00000001; //#define X2 PORTDbits.RB0
+    //PORTB = 0b11111110; //#define X2 PORTDbits.RB0
+    if (Y1 && !Y2 && !Y3 && !Y4) {PORTB = 0x00; return '2';}
+    if (!Y1 && Y2 && !Y3 && !Y4) {PORTB = 0x00; return '5';}
+    if (!Y1 && !Y2 && Y3 && !Y4) {PORTB = 0x00; return '8';}
+    if (!Y1 && !Y2 && !Y3 && Y4) {PORTB = 0x00; return '0';}
+    PORTB = 0b00010000; //#define X3 PORTDbits.RB4
+    //PORTB = 0b11101111; //#define X3 PORTDbits.RB4
+    if (Y1 && !Y2 && !Y3 && !Y4) {PORTB = 0x00; return '3';} 
+    if (!Y1 && Y2 && !Y3 && !Y4) {PORTB = 0x00; return '6';}
+    if (!Y1 && !Y2 && Y3 && !Y4) {PORTB = 0x00; return '9';}
+    if (!Y1 && !Y2 && !Y3 && Y4) {PORTB = 0x00; return '#';} 
+    PORTB = 0x00;
     return '_';
 }
 void latch_keypad(unsigned char* x)
@@ -491,7 +497,7 @@ void start_routine()
             new_I2C_address +=   (1)*(I2C_new_ADDR[2] - '0');
             Machine_ID = new_I2C_address;
             new_I2C_address += 0x0F; //first I2C address is at 0x10       
-            //I2C address should be between 1 and 100
+            //I2C address should be between 1 && 100
             char* error_msg;
             if ( ((b[0]==0)&&((b[1]!=0)|(b[2]!=0))) | ((b[0]==1)&&(b[1]==0)&&(b[2]==0)) )   //If Address is valid
             {        
@@ -617,3 +623,4 @@ void running_display(void)
     MACHINE_ACTIVE = 0;                //turn of running machine
     return;
 }
+

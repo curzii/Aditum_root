@@ -14,8 +14,8 @@
 #pragma config CCP2MX = PORTC   // CCP2 MUX bit (CCP2 input/output is multiplexed with RC1)
 #pragma config PBADEN = OFF     // PORTB A/D Enable bit (PORTB<4:0> pins are configured as digital I/O on Reset)
 #pragma config LPT1OSC = OFF    // Low-Power Timer1 Oscillator Enable bit (Timer1 configured for higher power operation)
-#pragma config HFOFST = ON      // HFINTOSC Fast Start-up (HFINTOSC starts clocking the CPU without waiting for the oscillator to stablize.)
-#pragma config MCLRE = ON       // MCLR Pin Enable bit (MCLR pin enabled; RE3 input pin disabled)
+#pragma config HFOFST = OFF      // HFINTOSC Fast Start-up (HFINTOSC starts clocking the CPU without waiting for the oscillator to stablize.)
+#pragma config MCLRE = OFF       // MCLR Pin Enable bit (MCLR pin enabled; RE3 input pin disabled)
 #pragma config STVREN = ON      // Stack Full/Underflow Reset Enable bit (Stack full/underflow will cause Reset)
 #pragma config LVP = OFF        // Single-Supply ICSP Enable bit (Single-Supply ICSP enabled)
 #pragma config XINST = OFF      // Extended Instruction Set Enable bit (Instruction set extension and Indexed Addressing mode disabled (Legacy mode))
@@ -67,13 +67,15 @@
 //Header rear view:
 //      x           3       1       2
 //      y   2   3   0   4   0   1   0
-#define X1 PORTDbits.RB0
-#define X2 PORTDbits.RB1
-#define X3 PORTDbits.RB2
-#define Y1 PORTBbits.RB3
-#define Y2 PORTBbits.RB4
+//     RB   6   5   4   3   2   1   0
+//WARNING: DUE TO SINGLE BIT R/W PORT MODIFICATION THE KEPAD ROUTINE DOES NOT USE THE COLUMN DEFINES
+#define X1 PORTDbits.RB2
+#define X2 PORTDbits.RB0
+#define X3 PORTDbits.RB4
+#define Y1 PORTBbits.RB1
+#define Y2 PORTBbits.RB6
 #define Y3 PORTBbits.RB5
-#define Y4 PORTBbits.RB6
+#define Y4 PORTBbits.RB3
 //__________________________________________________________________________________________________________________________________________
 
 #endif	/* MCU_CONFIG_H */

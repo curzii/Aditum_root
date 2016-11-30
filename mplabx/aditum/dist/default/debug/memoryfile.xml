@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/debug\aditum_node.X.debug.hex">
+  <executable name="dist/default/debug\aditum.debug.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>7848</used>
-      <free>24920</free>
+      <used>7645</used>
+      <free>25123</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>1536</length>
-      <used>318</used>
-      <free>1218</free>
+      <used>316</used>
+      <free>1220</free>
     </memory>
   </executable>
 </project>

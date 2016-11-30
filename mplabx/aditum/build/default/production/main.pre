@@ -4194,8 +4194,8 @@ extern __nonreentrant void _delay3(unsigned char);
 #pragma config CCP2MX = PORTC
 #pragma config PBADEN = OFF
 #pragma config LPT1OSC = OFF
-#pragma config HFOFST = ON
-#pragma config MCLRE = ON
+#pragma config HFOFST = OFF
+#pragma config MCLRE = OFF
 #pragma config STVREN = ON
 #pragma config LVP = OFF
 #pragma config XINST = OFF
@@ -4601,6 +4601,7 @@ volatile unsigned char current_pin[9] = {0,0,0,0,0,0,0,0,0};
 volatile unsigned char logged_user[16];
 volatile unsigned char credentials_accepted = 0;
 
+
 char hx[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
 char c[] = {'0','1','2','3','4','5','6','7','8','9'};
 void main(void)
@@ -4807,7 +4808,7 @@ OSCCON = 0x60;
 OSCTUNEbits.PLLEN = 0;
 
 TRISA = 0x00;
-TRISB = 0x01;
+TRISB = 0x00;
 TRISC = 0b00011000;
 TRISD = 0b00000000;
 PORTD = 0b00000000;
@@ -4826,29 +4827,34 @@ INTCONbits.GIE_GIEH = 1;
 INTCONbits.PEIE_GIEL = 1;
 INTCONbits.RBIE = 0;
 
+
+
+
 }
 
 unsigned char read_keypad()
 {
-TRISB = 0b01111000;
-PORTB = 0b00000001;
 
-if (PORTBbits.RB6) {PORTB = 0x00; return '*';}
-if (PORTBbits.RB3) {PORTB = 0x00; return '1';}
-if (PORTBbits.RB4) {PORTB = 0x00; return '4';}
-if (PORTBbits.RB5) {PORTB = 0x00; return '7';}
-PORTB = 0b00000010;
-
-if (PORTBbits.RB3) {PORTB = 0x00; return '2';}
-if (PORTBbits.RB4) {PORTB = 0x00; return '5';}
-if (PORTBbits.RB5) {PORTB = 0x00; return '8';}
-if (PORTBbits.RB6) {PORTB = 0x00; return '0';}
+TRISB = 0b11101010;
 PORTB = 0b00000100;
 
-if (PORTBbits.RB3) {PORTB = 0x00; return '3';}
-if (PORTBbits.RB4) {PORTB = 0x00; return '6';}
-if (PORTBbits.RB5) {PORTB = 0x00; return '9';}
-if (PORTBbits.RB6) {PORTB = 0x00; return '#';}
+if (PORTBbits.RB1 && !PORTBbits.RB6 && !PORTBbits.RB5 && !PORTBbits.RB3) {PORTB = 0x00; return '1';}
+if (!PORTBbits.RB1 && PORTBbits.RB6 && !PORTBbits.RB5 && !PORTBbits.RB3) {PORTB = 0x00; return '4';}
+if (!PORTBbits.RB1 && !PORTBbits.RB6 && PORTBbits.RB5 && !PORTBbits.RB3) {PORTB = 0x00; return '7';}
+if (!PORTBbits.RB1 && !PORTBbits.RB6 && !PORTBbits.RB5 && PORTBbits.RB3) {PORTB = 0x00; return '*';}
+PORTB = 0b00000001;
+
+if (PORTBbits.RB1 && !PORTBbits.RB6 && !PORTBbits.RB5 && !PORTBbits.RB3) {PORTB = 0x00; return '2';}
+if (!PORTBbits.RB1 && PORTBbits.RB6 && !PORTBbits.RB5 && !PORTBbits.RB3) {PORTB = 0x00; return '5';}
+if (!PORTBbits.RB1 && !PORTBbits.RB6 && PORTBbits.RB5 && !PORTBbits.RB3) {PORTB = 0x00; return '8';}
+if (!PORTBbits.RB1 && !PORTBbits.RB6 && !PORTBbits.RB5 && PORTBbits.RB3) {PORTB = 0x00; return '0';}
+PORTB = 0b00010000;
+
+if (PORTBbits.RB1 && !PORTBbits.RB6 && !PORTBbits.RB5 && !PORTBbits.RB3) {PORTB = 0x00; return '3';}
+if (!PORTBbits.RB1 && PORTBbits.RB6 && !PORTBbits.RB5 && !PORTBbits.RB3) {PORTB = 0x00; return '6';}
+if (!PORTBbits.RB1 && !PORTBbits.RB6 && PORTBbits.RB5 && !PORTBbits.RB3) {PORTB = 0x00; return '9';}
+if (!PORTBbits.RB1 && !PORTBbits.RB6 && !PORTBbits.RB5 && PORTBbits.RB3) {PORTB = 0x00; return '#';}
+PORTB = 0x00;
 return '_';
 }
 void latch_keypad(unsigned char* x)
@@ -4863,7 +4869,7 @@ _delay((unsigned long)((20)*(16000000/4000.0)));
 void load_i2c_registers()
 {
 
-# 316
+# 322
 for (int i = 0; i < 9; i++)
 i2c_r_reg[i] = current_user[i];
 
@@ -5073,7 +5079,7 @@ Lcd_Clear();
 Lcd_Set_Cursor(1,1);
 Lcd_Write_String("I2C_ADDR>>EEPROM");
 
-# 530
+# 536
 for (int i = 0; i < 10; i++)
 _delay((unsigned long)((20)*(16000000/4000.0)));
 menu_progress_bar(500);
@@ -5164,3 +5170,4 @@ menu_progress_bar(200);
 PORTDbits.RD7 = 0;
 return;
 }
+
