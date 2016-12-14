@@ -1,0 +1,4 @@
+test.out: test.cpp
+        g++ -std=c++11 -o3 test.cpp -o test.out -lwiringPi -lncurses
+run: test.out
+        ./test.out

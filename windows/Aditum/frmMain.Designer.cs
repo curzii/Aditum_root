@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRegister = new System.Windows.Forms.Button();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.tbxStudentID = new System.Windows.Forms.TextBox();
@@ -42,18 +39,17 @@
             this.lblStudentID = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.Logs = new System.Windows.Forms.TabPage();
-            this.lblDateTo = new System.Windows.Forms.Label();
-            this.lblDateFrom = new System.Windows.Forms.Label();
-            this.tbxDateFrom = new System.Windows.Forms.TextBox();
-            this.tbxDateTo = new System.Windows.Forms.TextBox();
-            this.MonthCalendar = new System.Windows.Forms.MonthCalendar();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnApplyDateFilter = new System.Windows.Forms.Button();
+            this.lblTo = new System.Windows.Forms.Label();
+            this.lblFrom = new System.Windows.Forms.Label();
+            this.btnClearDateFilter = new System.Windows.Forms.Button();
             this.btnRefreshLogs = new System.Windows.Forms.Button();
             this.lblHideSelected = new System.Windows.Forms.Label();
             this.clbxHideSelected = new System.Windows.Forms.CheckedListBox();
-            this.dgv = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Options = new System.Windows.Forms.TabPage();
-            this.btnShutdown = new System.Windows.Forms.Button();
-            this.btnTimeSync = new System.Windows.Forms.Button();
             this.btnRebootPi = new System.Windows.Forms.Button();
             this.btnRunAditumServer = new System.Windows.Forms.Button();
             this.lblHostPassword = new System.Windows.Forms.Label();
@@ -65,11 +61,10 @@
             this.tbxHostUsername = new System.Windows.Forms.TextBox();
             this.rtbxOutput = new System.Windows.Forms.RichTextBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.tbcMain.SuspendLayout();
             this.Register.SuspendLayout();
             this.Logs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Options.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,7 +107,7 @@
             this.tbcMain.Location = new System.Drawing.Point(0, 0);
             this.tbcMain.Name = "tbcMain";
             this.tbcMain.SelectedIndex = 0;
-            this.tbcMain.Size = new System.Drawing.Size(1005, 589);
+            this.tbcMain.Size = new System.Drawing.Size(789, 589);
             this.tbcMain.TabIndex = 0;
             this.tbcMain.SelectedIndexChanged += new System.EventHandler(this.tbcMain_SelectedIndexChanged);
             // 
@@ -128,7 +123,7 @@
             this.Register.Location = new System.Drawing.Point(4, 22);
             this.Register.Name = "Register";
             this.Register.Padding = new System.Windows.Forms.Padding(3);
-            this.Register.Size = new System.Drawing.Size(997, 563);
+            this.Register.Size = new System.Drawing.Size(944, 563);
             this.Register.TabIndex = 0;
             this.Register.Text = "Register";
             this.Register.UseVisualStyleBackColor = true;
@@ -163,70 +158,92 @@
             // 
             // Logs
             // 
-            this.Logs.Controls.Add(this.button1);
-            this.Logs.Controls.Add(this.lblDateTo);
-            this.Logs.Controls.Add(this.lblDateFrom);
-            this.Logs.Controls.Add(this.tbxDateFrom);
-            this.Logs.Controls.Add(this.tbxDateTo);
-            this.Logs.Controls.Add(this.MonthCalendar);
+            this.Logs.Controls.Add(this.comboBox2);
+            this.Logs.Controls.Add(this.comboBox1);
+            this.Logs.Controls.Add(this.btnApplyDateFilter);
+            this.Logs.Controls.Add(this.lblTo);
+            this.Logs.Controls.Add(this.lblFrom);
+            this.Logs.Controls.Add(this.btnClearDateFilter);
             this.Logs.Controls.Add(this.btnRefreshLogs);
             this.Logs.Controls.Add(this.lblHideSelected);
             this.Logs.Controls.Add(this.clbxHideSelected);
-            this.Logs.Controls.Add(this.dgv);
+            this.Logs.Controls.Add(this.dataGridView1);
             this.Logs.Location = new System.Drawing.Point(4, 22);
             this.Logs.Name = "Logs";
             this.Logs.Padding = new System.Windows.Forms.Padding(3);
-            this.Logs.Size = new System.Drawing.Size(997, 563);
+            this.Logs.Size = new System.Drawing.Size(781, 563);
             this.Logs.TabIndex = 1;
             this.Logs.Text = "Logs";
             this.Logs.UseVisualStyleBackColor = true;
             this.Logs.Enter += new System.EventHandler(this.Logs_Enter);
             // 
-            // lblDateTo
+            // comboBox2
             // 
-            this.lblDateTo.AutoSize = true;
-            this.lblDateTo.Location = new System.Drawing.Point(734, 180);
-            this.lblDateTo.Name = "lblDateTo";
-            this.lblDateTo.Size = new System.Drawing.Size(23, 13);
-            this.lblDateTo.TabIndex = 17;
-            this.lblDateTo.Text = "To:";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(549, 48);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 13;
             // 
-            // lblDateFrom
+            // comboBox1
             // 
-            this.lblDateFrom.AutoSize = true;
-            this.lblDateFrom.Location = new System.Drawing.Point(613, 180);
-            this.lblDateFrom.Name = "lblDateFrom";
-            this.lblDateFrom.Size = new System.Drawing.Size(33, 13);
-            this.lblDateFrom.TabIndex = 16;
-            this.lblDateFrom.Text = "From:";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"});
+            this.comboBox1.Location = new System.Drawing.Point(549, 21);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 12;
             // 
-            // tbxDateFrom
+            // btnApplyDateFilter
             // 
-            this.tbxDateFrom.Location = new System.Drawing.Point(652, 177);
-            this.tbxDateFrom.Name = "tbxDateFrom";
-            this.tbxDateFrom.Size = new System.Drawing.Size(79, 20);
-            this.tbxDateFrom.TabIndex = 15;
+            this.btnApplyDateFilter.Location = new System.Drawing.Point(549, 231);
+            this.btnApplyDateFilter.Name = "btnApplyDateFilter";
+            this.btnApplyDateFilter.Size = new System.Drawing.Size(227, 23);
+            this.btnApplyDateFilter.TabIndex = 11;
+            this.btnApplyDateFilter.Text = "Apply Date Filter";
+            this.btnApplyDateFilter.UseVisualStyleBackColor = true;
+            this.btnApplyDateFilter.Click += new System.EventHandler(this.btnApplyDateFilter_Click);
             // 
-            // tbxDateTo
+            // lblTo
             // 
-            this.tbxDateTo.Location = new System.Drawing.Point(763, 177);
-            this.tbxDateTo.Name = "tbxDateTo";
-            this.tbxDateTo.Size = new System.Drawing.Size(79, 20);
-            this.tbxDateTo.TabIndex = 14;
+            this.lblTo.AutoSize = true;
+            this.lblTo.Location = new System.Drawing.Point(545, 215);
+            this.lblTo.Name = "lblTo";
+            this.lblTo.Size = new System.Drawing.Size(23, 13);
+            this.lblTo.TabIndex = 8;
+            this.lblTo.Text = "To:";
             // 
-            // MonthCalendar
+            // lblFrom
             // 
-            this.MonthCalendar.Location = new System.Drawing.Point(616, 9);
-            this.MonthCalendar.MaxSelectionCount = 10000;
-            this.MonthCalendar.Name = "MonthCalendar";
-            this.MonthCalendar.TabIndex = 12;
-            this.MonthCalendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.MonthCalendar_DateSelected);
+            this.lblFrom.AutoSize = true;
+            this.lblFrom.Location = new System.Drawing.Point(545, 4);
+            this.lblFrom.Name = "lblFrom";
+            this.lblFrom.Size = new System.Drawing.Size(33, 13);
+            this.lblFrom.TabIndex = 7;
+            this.lblFrom.Text = "From:";
+            // 
+            // btnClearDateFilter
+            // 
+            this.btnClearDateFilter.Location = new System.Drawing.Point(549, 260);
+            this.btnClearDateFilter.Name = "btnClearDateFilter";
+            this.btnClearDateFilter.Size = new System.Drawing.Size(227, 23);
+            this.btnClearDateFilter.TabIndex = 6;
+            this.btnClearDateFilter.Text = "Clear Date Filter";
+            this.btnClearDateFilter.UseVisualStyleBackColor = true;
+            this.btnClearDateFilter.Click += new System.EventHandler(this.btnClearDateFilter_Click);
             // 
             // btnRefreshLogs
             // 
-            this.btnRefreshLogs.Location = new System.Drawing.Point(627, 525);
+            this.btnRefreshLogs.Location = new System.Drawing.Point(549, 525);
             this.btnRefreshLogs.Name = "btnRefreshLogs";
-            this.btnRefreshLogs.Size = new System.Drawing.Size(149, 33);
+            this.btnRefreshLogs.Size = new System.Drawing.Size(227, 33);
             this.btnRefreshLogs.TabIndex = 4;
             this.btnRefreshLogs.Text = "Refresh Logs";
             this.btnRefreshLogs.UseVisualStyleBackColor = true;
@@ -235,7 +252,7 @@
             // lblHideSelected
             // 
             this.lblHideSelected.AutoSize = true;
-            this.lblHideSelected.Location = new System.Drawing.Point(624, 409);
+            this.lblHideSelected.Location = new System.Drawing.Point(546, 313);
             this.lblHideSelected.Name = "lblHideSelected";
             this.lblHideSelected.Size = new System.Drawing.Size(77, 13);
             this.lblHideSelected.TabIndex = 3;
@@ -245,55 +262,28 @@
             // 
             this.clbxHideSelected.CheckOnClick = true;
             this.clbxHideSelected.FormattingEnabled = true;
-            this.clbxHideSelected.Location = new System.Drawing.Point(627, 425);
+            this.clbxHideSelected.Location = new System.Drawing.Point(549, 329);
             this.clbxHideSelected.Name = "clbxHideSelected";
-            this.clbxHideSelected.Size = new System.Drawing.Size(149, 94);
+            this.clbxHideSelected.Size = new System.Drawing.Size(227, 94);
             this.clbxHideSelected.TabIndex = 2;
             this.clbxHideSelected.SelectedIndexChanged += new System.EventHandler(this.clbxHideSelected_SelectedIndexChanged);
             // 
-            // dgv
+            // dataGridView1
             // 
-            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
-            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv.DefaultCellStyle = dataGridViewCellStyle30;
-            this.dgv.Location = new System.Drawing.Point(0, 0);
-            this.dgv.Name = "dgv";
-            this.dgv.ReadOnly = true;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle31;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle32;
-            this.dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv.RowTemplate.Height = 33;
-            this.dgv.Size = new System.Drawing.Size(604, 563);
-            this.dgv.TabIndex = 1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.RowTemplate.Height = 33;
+            this.dataGridView1.Size = new System.Drawing.Size(543, 563);
+            this.dataGridView1.TabIndex = 1;
             // 
             // Options
             // 
-            this.Options.Controls.Add(this.btnShutdown);
-            this.Options.Controls.Add(this.btnTimeSync);
             this.Options.Controls.Add(this.btnRebootPi);
             this.Options.Controls.Add(this.btnRunAditumServer);
             this.Options.Controls.Add(this.lblHostPassword);
@@ -306,35 +296,15 @@
             this.Options.Location = new System.Drawing.Point(4, 22);
             this.Options.Name = "Options";
             this.Options.Padding = new System.Windows.Forms.Padding(3);
-            this.Options.Size = new System.Drawing.Size(997, 563);
+            this.Options.Size = new System.Drawing.Size(798, 563);
             this.Options.TabIndex = 2;
             this.Options.Text = "Options";
             this.Options.UseVisualStyleBackColor = true;
             this.Options.Click += new System.EventHandler(this.Options_Click);
             // 
-            // btnShutdown
-            // 
-            this.btnShutdown.Location = new System.Drawing.Point(6, 152);
-            this.btnShutdown.Name = "btnShutdown";
-            this.btnShutdown.Size = new System.Drawing.Size(201, 40);
-            this.btnShutdown.TabIndex = 17;
-            this.btnShutdown.Text = "Shutdown Raspberry";
-            this.btnShutdown.UseVisualStyleBackColor = true;
-            this.btnShutdown.Click += new System.EventHandler(this.btnShutdown_Click);
-            // 
-            // btnTimeSync
-            // 
-            this.btnTimeSync.Location = new System.Drawing.Point(6, 6);
-            this.btnTimeSync.Name = "btnTimeSync";
-            this.btnTimeSync.Size = new System.Drawing.Size(201, 40);
-            this.btnTimeSync.TabIndex = 16;
-            this.btnTimeSync.Text = "Synchronize Time";
-            this.btnTimeSync.UseVisualStyleBackColor = true;
-            this.btnTimeSync.Click += new System.EventHandler(this.btnTimeSync_Click);
-            // 
             // btnRebootPi
             // 
-            this.btnRebootPi.Location = new System.Drawing.Point(6, 106);
+            this.btnRebootPi.Location = new System.Drawing.Point(26, 300);
             this.btnRebootPi.Name = "btnRebootPi";
             this.btnRebootPi.Size = new System.Drawing.Size(201, 40);
             this.btnRebootPi.TabIndex = 15;
@@ -344,7 +314,7 @@
             // 
             // btnRunAditumServer
             // 
-            this.btnRunAditumServer.Location = new System.Drawing.Point(6, 56);
+            this.btnRunAditumServer.Location = new System.Drawing.Point(24, 254);
             this.btnRunAditumServer.Name = "btnRunAditumServer";
             this.btnRunAditumServer.Size = new System.Drawing.Size(201, 40);
             this.btnRunAditumServer.TabIndex = 14;
@@ -355,16 +325,16 @@
             // lblHostPassword
             // 
             this.lblHostPassword.AutoSize = true;
-            this.lblHostPassword.Location = new System.Drawing.Point(240, 82);
+            this.lblHostPassword.Location = new System.Drawing.Point(21, 143);
             this.lblHostPassword.Name = "lblHostPassword";
-            this.lblHostPassword.Size = new System.Drawing.Size(140, 13);
+            this.lblHostPassword.Size = new System.Drawing.Size(53, 13);
             this.lblHostPassword.TabIndex = 13;
-            this.lblHostPassword.Text = "Password (default raspberry)";
+            this.lblHostPassword.Text = "Password";
             // 
             // lblHostUsername
             // 
             this.lblHostUsername.AutoSize = true;
-            this.lblHostUsername.Location = new System.Drawing.Point(240, 45);
+            this.lblHostUsername.Location = new System.Drawing.Point(21, 81);
             this.lblHostUsername.Name = "lblHostUsername";
             this.lblHostUsername.Size = new System.Drawing.Size(107, 13);
             this.lblHostUsername.TabIndex = 12;
@@ -373,7 +343,7 @@
             // lblHostIP
             // 
             this.lblHostIP.AutoSize = true;
-            this.lblHostIP.Location = new System.Drawing.Point(240, 6);
+            this.lblHostIP.Location = new System.Drawing.Point(21, 19);
             this.lblHostIP.Name = "lblHostIP";
             this.lblHostIP.Size = new System.Drawing.Size(149, 13);
             this.lblHostIP.TabIndex = 11;
@@ -381,7 +351,7 @@
             // 
             // tbxHostIP
             // 
-            this.tbxHostIP.Location = new System.Drawing.Point(243, 22);
+            this.tbxHostIP.Location = new System.Drawing.Point(26, 47);
             this.tbxHostIP.Name = "tbxHostIP";
             this.tbxHostIP.Size = new System.Drawing.Size(141, 20);
             this.tbxHostIP.TabIndex = 0;
@@ -389,7 +359,7 @@
             // 
             // tbxHostPassword
             // 
-            this.tbxHostPassword.Location = new System.Drawing.Point(243, 98);
+            this.tbxHostPassword.Location = new System.Drawing.Point(26, 171);
             this.tbxHostPassword.Name = "tbxHostPassword";
             this.tbxHostPassword.Size = new System.Drawing.Size(141, 20);
             this.tbxHostPassword.TabIndex = 2;
@@ -397,9 +367,9 @@
             // 
             // btnOptionsVerify
             // 
-            this.btnOptionsVerify.Location = new System.Drawing.Point(243, 121);
+            this.btnOptionsVerify.Location = new System.Drawing.Point(26, 208);
             this.btnOptionsVerify.Name = "btnOptionsVerify";
-            this.btnOptionsVerify.Size = new System.Drawing.Size(141, 25);
+            this.btnOptionsVerify.Size = new System.Drawing.Size(201, 40);
             this.btnOptionsVerify.TabIndex = 3;
             this.btnOptionsVerify.Text = "Verify and Apply";
             this.btnOptionsVerify.UseVisualStyleBackColor = true;
@@ -407,7 +377,7 @@
             // 
             // tbxHostUsername
             // 
-            this.tbxHostUsername.Location = new System.Drawing.Point(243, 61);
+            this.tbxHostUsername.Location = new System.Drawing.Point(26, 109);
             this.tbxHostUsername.Name = "tbxHostUsername";
             this.tbxHostUsername.Size = new System.Drawing.Size(141, 20);
             this.tbxHostUsername.TabIndex = 1;
@@ -420,17 +390,17 @@
             this.rtbxOutput.Font = new System.Drawing.Font("Consolas", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbxOutput.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.rtbxOutput.HideSelection = false;
-            this.rtbxOutput.Location = new System.Drawing.Point(1007, 22);
+            this.rtbxOutput.Location = new System.Drawing.Point(791, 21);
             this.rtbxOutput.Name = "rtbxOutput";
             this.rtbxOutput.ReadOnly = true;
             this.rtbxOutput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.rtbxOutput.Size = new System.Drawing.Size(351, 504);
+            this.rtbxOutput.Size = new System.Drawing.Size(371, 504);
             this.rtbxOutput.TabIndex = 1;
             this.rtbxOutput.Text = "";
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(1241, 536);
+            this.btnClose.Location = new System.Drawing.Point(1045, 531);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(117, 49);
             this.btnClose.TabIndex = 2;
@@ -438,20 +408,10 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(616, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(226, 33);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Apply Filter";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1358, 585);
+            this.ClientSize = new System.Drawing.Size(1169, 583);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.rtbxOutput);
             this.Controls.Add(this.tbcMain);
@@ -466,7 +426,7 @@
             this.Register.PerformLayout();
             this.Logs.ResumeLayout(false);
             this.Logs.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.Options.ResumeLayout(false);
             this.Options.PerformLayout();
             this.ResumeLayout(false);
@@ -493,7 +453,7 @@
         private System.Windows.Forms.TextBox tbxHostPassword;
         private System.Windows.Forms.Button btnOptionsVerify;
         private System.Windows.Forms.TextBox tbxHostUsername;
-        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.RichTextBox rtbxOutput;
         private System.Windows.Forms.Label lblHideSelected;
         private System.Windows.Forms.CheckedListBox clbxHideSelected;
@@ -501,14 +461,12 @@
         private System.Windows.Forms.Button btnRebootPi;
         private System.Windows.Forms.Button btnRefreshLogs;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnTimeSync;
-        private System.Windows.Forms.Button btnShutdown;
-        private System.Windows.Forms.MonthCalendar MonthCalendar;
-        private System.Windows.Forms.Label lblDateTo;
-        private System.Windows.Forms.Label lblDateFrom;
-        private System.Windows.Forms.TextBox tbxDateFrom;
-        private System.Windows.Forms.TextBox tbxDateTo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClearDateFilter;
+        private System.Windows.Forms.Label lblTo;
+        private System.Windows.Forms.Label lblFrom;
+        private System.Windows.Forms.Button btnApplyDateFilter;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 
