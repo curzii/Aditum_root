@@ -338,9 +338,34 @@ namespace Aditum
                     dt.Columns.Add("ID", typeof(string));
                     dt.Columns.Add("PIN", typeof(string));
                     dt.Columns.Add("DETAILS", typeof(string));
-                    dt.Columns.Add("TIME", typeof(string));
-                    rows.ForEach(x => {
-                        dt.Rows.Add(x);
+                    dt.Columns.Add("TIME", typeof(DateTime));
+                    rows.ForEach(x => 
+                    {
+                        List<string> l = x[4].Split(' ').ToList();
+                        int day     = Convert.ToInt32(l[2]);
+                        int month;
+                        switch (x[4].Substring(4, 3))
+                        {
+                            case "Jan": { month = 1;  break; }
+                            case "Feb": { month = 2;  break; }
+                            case "Mar": { month = 3;  break; }
+                            case "Apr": { month = 4;  break; }
+                            case "May": { month = 5;  break; }
+                            case "Jun": { month = 6;  break; }
+                            case "Jul": { month = 7;  break; }
+                            case "Aug": { month = 8;  break; }
+                            case "Sep": { month = 9;  break; }
+                            case "Oct": { month = 10; break; }
+                            case "Nov": { month = 11; break; }
+                            case "Dec": { month = 12; break; }
+                            default   : { month = 1;  break; }
+                        }
+                        int year    = Convert.ToInt32(l[4]);
+                        int time_h  = Convert.ToInt32(l[3].Substring(0, 2));
+                        int time_m  = Convert.ToInt32(l[3].Substring(3, 2));
+                        int time_s  = Convert.ToInt32(l[3].Substring(6, 2));
+                        DateTime t  = new DateTime(year, month, day, time_h, time_m, time_s); //(2000, 01, 01, 13, 37, 42); 2000 - 01 - 01 13:37:42
+                        dt.Rows.Add(x[0], x[1], x[2], x[3], t);
                     });
                     dt.AcceptChanges();
                     dgv.Refresh();
@@ -505,35 +530,53 @@ namespace Aditum
 
         private void MonthCalendar_DateSelected(object sender, DateRangeEventArgs e)
         {
-            tbxDateFrom.Text = MonthCalendar.SelectionStart.ToString("dd/MM/yyy");
-            tbxDateTo.Text = MonthCalendar.SelectionEnd.ToString("dd/MM/yyyy");
+            tbxDateFrom.Text = MonthCalendar.SelectionStart.ToString("dd/MM/yyy") + " 00:00:00";
+            tbxDateTo.Text = MonthCalendar.SelectionEnd.ToString("dd/MM/yyyy")+" 00:00:00";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //DGV Time format: Wed Dec 14 12:00:00 2016
-            //TBX Time format: 07-12-2016
-            string from_day = "01";
-            string from_month = "01";
-            string from_year = "2000";
+            //TBX Time format: 07-12-2016 12:00:00
+            int from_day    = 01;
+            int from_month  = 01;
+            int from_year   = 2000;
+            int from_time_h = 00;
+            int from_time_m = 00;
+            int from_time_s = 00;
+            int to_day      = 01;
+            int to_month    = 01;
+            int to_year     = 2000;
+            int to_time_h   = 00;
+            int to_time_m   = 00;
+            int to_time_s   = 00;
             try
             {
 
-                from_day = tbxDateFrom.Text.Substring(0, 2);
-                from_month = tbxDateFrom.Text.Substring(3, 2);
-                from_year = tbxDateFrom.Text.Substring(6, 4);
-                
+                from_day    = Convert.ToInt32(tbxDateFrom.Text.Substring(0, 2));
+                from_month  = Convert.ToInt32(tbxDateFrom.Text.Substring(3, 2));
+                from_year   = Convert.ToInt32(tbxDateFrom.Text.Substring(6, 4));
+                from_time_h = Convert.ToInt32(tbxDateFrom.Text.Substring(11,2));
+                from_time_m = Convert.ToInt32(tbxDateFrom.Text.Substring(14, 2));
+                from_time_s = Convert.ToInt32(tbxDateFrom.Text.Substring(17, 2));
+                to_day      = Convert.ToInt32(tbxDateTo.Text.Substring(0, 2));
+                to_month    = Convert.ToInt32(tbxDateTo.Text.Substring(3, 2));
+                to_year     = Convert.ToInt32(tbxDateTo.Text.Substring(6, 4));
+                to_time_h   = Convert.ToInt32(tbxDateTo.Text.Substring(11, 2));
+                to_time_m   = Convert.ToInt32(tbxDateTo.Text.Substring(14, 2));
+                to_time_s   = Convert.ToInt32(tbxDateTo.Text.Substring(17, 2));
             }
             catch (Exception)
             {
                 MessageBox.Show("Incorrect Time Format.");
             }
 
-            DateTime DateFrom = new DateTime(Convert.ToInt32(from_year), Convert.ToInt32(from_month), Convert.ToInt32(from_day), 00, 00, 00); //(2000, 01, 01, 13, 37, 42); 2000-01-01 13:37:42
-            string sDateFrom = DateFrom.ToString("ddd MMM d " +"*"+ " yyyy");
-            MessageBox.Show(sDateFrom);
+            DateTime DateFrom   = new DateTime(from_year, from_month, from_day, from_time_h, from_time_m, from_time_s); //(2000, 01, 01, 13, 37, 42); 2000-01-01 13:37:42
+            DateTime DateTo     = new DateTime(to_year, to_month, to_day, to_time_h, to_time_m, to_time_s);             //(2000, 01, 01, 13, 37, 42); 2000-01-01 13:37:42
+            string s = string.Format("TIME >= #{0}# AND TIME <= #{1}#", DateFrom, DateTo);//DateFrom.ToString("ddd MMM dd HH:mm:ss"), DateTo.ToString("ddd MMM dd HH:mm:ss")); //Wed Dec 14 12:00:00 2016
+            MessageBox.Show(s);
             DataView dv = new DataView(dt);
-            dv.RowFilter = string.Format("TIME LIKE '%{0}%' AND TIME LIKE '%{1}%'", DateFrom.ToString("ddd MMM d"+"%"), DateFrom.ToString("%" + "yyyy"));
+            dv.RowFilter = string.Format(s);
             dgv.DataSource = dv;    
         }
     }
