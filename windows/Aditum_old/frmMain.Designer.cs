@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRegister = new System.Windows.Forms.Button();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.tbxStudentID = new System.Windows.Forms.TextBox();
@@ -42,15 +42,14 @@
             this.lblStudentID = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.Logs = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblDateTo = new System.Windows.Forms.Label();
             this.lblDateFrom = new System.Windows.Forms.Label();
             this.tbxDateFrom = new System.Windows.Forms.TextBox();
             this.tbxDateTo = new System.Windows.Forms.TextBox();
             this.MonthCalendar = new System.Windows.Forms.MonthCalendar();
             this.btnRefreshLogs = new System.Windows.Forms.Button();
-            this.lblHideSelected = new System.Windows.Forms.Label();
-            this.clbxHideSelected = new System.Windows.Forms.CheckedListBox();
+            this.lblShowSelected = new System.Windows.Forms.Label();
+            this.clbxShowSelected = new System.Windows.Forms.CheckedListBox();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.Options = new System.Windows.Forms.TabPage();
             this.btnShutdown = new System.Windows.Forms.Button();
@@ -66,6 +65,7 @@
             this.tbxHostUsername = new System.Windows.Forms.TextBox();
             this.rtbxOutput = new System.Windows.Forms.RichTextBox();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnClearFilters = new System.Windows.Forms.Button();
             this.tbcMain.SuspendLayout();
             this.Register.SuspendLayout();
             this.Logs.SuspendLayout();
@@ -163,15 +163,15 @@
             // 
             // Logs
             // 
-            this.Logs.Controls.Add(this.button1);
+            this.Logs.Controls.Add(this.btnClearFilters);
             this.Logs.Controls.Add(this.lblDateTo);
             this.Logs.Controls.Add(this.lblDateFrom);
             this.Logs.Controls.Add(this.tbxDateFrom);
             this.Logs.Controls.Add(this.tbxDateTo);
             this.Logs.Controls.Add(this.MonthCalendar);
             this.Logs.Controls.Add(this.btnRefreshLogs);
-            this.Logs.Controls.Add(this.lblHideSelected);
-            this.Logs.Controls.Add(this.clbxHideSelected);
+            this.Logs.Controls.Add(this.lblShowSelected);
+            this.Logs.Controls.Add(this.clbxShowSelected);
             this.Logs.Controls.Add(this.dgv);
             this.Logs.Location = new System.Drawing.Point(4, 22);
             this.Logs.Name = "Logs";
@@ -182,53 +182,47 @@
             this.Logs.UseVisualStyleBackColor = true;
             this.Logs.Enter += new System.EventHandler(this.Logs_Enter);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(781, 177);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 46);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Apply Filter";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // lblDateTo
             // 
             this.lblDateTo.AutoSize = true;
-            this.lblDateTo.Location = new System.Drawing.Point(613, 201);
+            this.lblDateTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTo.Location = new System.Drawing.Point(607, 209);
             this.lblDateTo.Name = "lblDateTo";
-            this.lblDateTo.Size = new System.Drawing.Size(23, 13);
+            this.lblDateTo.Size = new System.Drawing.Size(28, 16);
             this.lblDateTo.TabIndex = 17;
             this.lblDateTo.Text = "To:";
             // 
             // lblDateFrom
             // 
             this.lblDateFrom.AutoSize = true;
-            this.lblDateFrom.Location = new System.Drawing.Point(613, 177);
+            this.lblDateFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateFrom.Location = new System.Drawing.Point(607, 177);
             this.lblDateFrom.Name = "lblDateFrom";
-            this.lblDateFrom.Size = new System.Drawing.Size(33, 13);
+            this.lblDateFrom.Size = new System.Drawing.Size(42, 16);
             this.lblDateFrom.TabIndex = 16;
             this.lblDateFrom.Text = "From:";
             // 
             // tbxDateFrom
             // 
-            this.tbxDateFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxDateFrom.Location = new System.Drawing.Point(646, 177);
+            this.tbxDateFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxDateFrom.Location = new System.Drawing.Point(652, 177);
             this.tbxDateFrom.Name = "tbxDateFrom";
-            this.tbxDateFrom.Size = new System.Drawing.Size(129, 21);
+            this.tbxDateFrom.Size = new System.Drawing.Size(185, 26);
             this.tbxDateFrom.TabIndex = 15;
+            this.tbxDateFrom.TextChanged += new System.EventHandler(this.tbxDateFrom_TextChanged);
             // 
             // tbxDateTo
             // 
-            this.tbxDateTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxDateTo.Location = new System.Drawing.Point(646, 201);
+            this.tbxDateTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxDateTo.Location = new System.Drawing.Point(652, 209);
             this.tbxDateTo.Name = "tbxDateTo";
-            this.tbxDateTo.Size = new System.Drawing.Size(129, 21);
+            this.tbxDateTo.Size = new System.Drawing.Size(185, 26);
             this.tbxDateTo.TabIndex = 14;
+            this.tbxDateTo.TextChanged += new System.EventHandler(this.tbxDateTo_TextChanged);
             // 
             // MonthCalendar
             // 
-            this.MonthCalendar.Location = new System.Drawing.Point(616, 9);
+            this.MonthCalendar.Location = new System.Drawing.Point(610, 9);
             this.MonthCalendar.MaxSelectionCount = 10000;
             this.MonthCalendar.Name = "MonthCalendar";
             this.MonthCalendar.TabIndex = 12;
@@ -236,67 +230,68 @@
             // 
             // btnRefreshLogs
             // 
-            this.btnRefreshLogs.Location = new System.Drawing.Point(627, 525);
+            this.btnRefreshLogs.Location = new System.Drawing.Point(610, 514);
             this.btnRefreshLogs.Name = "btnRefreshLogs";
-            this.btnRefreshLogs.Size = new System.Drawing.Size(149, 33);
+            this.btnRefreshLogs.Size = new System.Drawing.Size(239, 40);
             this.btnRefreshLogs.TabIndex = 4;
             this.btnRefreshLogs.Text = "Refresh Logs";
             this.btnRefreshLogs.UseVisualStyleBackColor = true;
             this.btnRefreshLogs.Click += new System.EventHandler(this.btnRefreshLogs_Click);
             // 
-            // lblHideSelected
+            // lblShowSelected
             // 
-            this.lblHideSelected.AutoSize = true;
-            this.lblHideSelected.Location = new System.Drawing.Point(624, 409);
-            this.lblHideSelected.Name = "lblHideSelected";
-            this.lblHideSelected.Size = new System.Drawing.Size(77, 13);
-            this.lblHideSelected.TabIndex = 3;
-            this.lblHideSelected.Text = "Hide Selected:";
+            this.lblShowSelected.AutoSize = true;
+            this.lblShowSelected.Location = new System.Drawing.Point(855, 9);
+            this.lblShowSelected.Name = "lblShowSelected";
+            this.lblShowSelected.Size = new System.Drawing.Size(106, 13);
+            this.lblShowSelected.TabIndex = 3;
+            this.lblShowSelected.Text = "Only Show Selected:";
             // 
-            // clbxHideSelected
+            // clbxShowSelected
             // 
-            this.clbxHideSelected.CheckOnClick = true;
-            this.clbxHideSelected.FormattingEnabled = true;
-            this.clbxHideSelected.Location = new System.Drawing.Point(627, 425);
-            this.clbxHideSelected.Name = "clbxHideSelected";
-            this.clbxHideSelected.Size = new System.Drawing.Size(149, 94);
-            this.clbxHideSelected.TabIndex = 2;
-            this.clbxHideSelected.SelectedIndexChanged += new System.EventHandler(this.clbxHideSelected_SelectedIndexChanged);
+            this.clbxShowSelected.CheckOnClick = true;
+            this.clbxShowSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clbxShowSelected.FormattingEnabled = true;
+            this.clbxShowSelected.Location = new System.Drawing.Point(855, 25);
+            this.clbxShowSelected.Name = "clbxShowSelected";
+            this.clbxShowSelected.Size = new System.Drawing.Size(139, 466);
+            this.clbxShowSelected.TabIndex = 2;
+            this.clbxShowSelected.SelectedIndexChanged += new System.EventHandler(this.clbxShowSelected_SelectedIndexChanged);
             // 
             // dgv
             // 
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgv.Location = new System.Drawing.Point(0, 0);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv.RowTemplate.Height = 33;
             this.dgv.Size = new System.Drawing.Size(604, 563);
@@ -450,6 +445,16 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnClearFilters
+            // 
+            this.btnClearFilters.Location = new System.Drawing.Point(855, 514);
+            this.btnClearFilters.Name = "btnClearFilters";
+            this.btnClearFilters.Size = new System.Drawing.Size(139, 40);
+            this.btnClearFilters.TabIndex = 18;
+            this.btnClearFilters.Text = "Clear Filters";
+            this.btnClearFilters.UseVisualStyleBackColor = true;
+            this.btnClearFilters.Click += new System.EventHandler(this.btnClearFilters_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -497,8 +502,6 @@
         private System.Windows.Forms.TextBox tbxHostUsername;
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.RichTextBox rtbxOutput;
-        private System.Windows.Forms.Label lblHideSelected;
-        private System.Windows.Forms.CheckedListBox clbxHideSelected;
         private System.Windows.Forms.Button btnRunAditumServer;
         private System.Windows.Forms.Button btnRebootPi;
         private System.Windows.Forms.Button btnRefreshLogs;
@@ -510,7 +513,9 @@
         private System.Windows.Forms.Label lblDateFrom;
         private System.Windows.Forms.TextBox tbxDateFrom;
         private System.Windows.Forms.TextBox tbxDateTo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblShowSelected;
+        private System.Windows.Forms.CheckedListBox clbxShowSelected;
+        private System.Windows.Forms.Button btnClearFilters;
     }
 }
 

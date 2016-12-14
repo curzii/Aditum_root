@@ -173,22 +173,23 @@ namespace Aditum
             }
         }
 
-        private void clbxHideSelected_SelectedIndexChanged(object sender, EventArgs e)
+        private void clbxShowSelected_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int checkeditemcount = clbxHideSelected.CheckedItems.Count;
+            int checkeditemcount = clbxShowSelected.CheckedItems.Count;
+            DataView dv = new DataView(dt);
             if (checkeditemcount != 0)
             {
                 try
                 {
-                    string s = "1=1";
-                    foreach (string item in clbxHideSelected.CheckedItems)
+                    string s = "1=0";
+                    foreach (string item in clbxShowSelected.CheckedItems)
                     {
                         if (checkeditemcount == 1)
-                            s += string.Format(" AND STUDENTNAME NOT LIKE '%{0}%'", item);
+                            s += string.Format(" OR ID LIKE '%{0}%'", item);
                         else if (checkeditemcount > 1)
-                            s += string.Format(" AND STUDENTNAME NOT LIKE '%{0}%'", item);                           
+                            s += string.Format(" OR ID LIKE '%{0}%'", item);                           
                     }
-                    dt.DefaultView.RowFilter = string.Format(s);
+                    dv.RowFilter = string.Format(s);
                 }
                 catch (Exception)
                 {
@@ -197,8 +198,9 @@ namespace Aditum
             }
             else
             {
-                dt.DefaultView.RowFilter = string.Empty;
+                dv.RowFilter = string.Empty;
             }
+            dgv.DataSource = dv;
         }
 
         private void btnRunAditumServer_Click(object sender, EventArgs e)
@@ -305,7 +307,8 @@ namespace Aditum
         }
 
         public void getlogs()
-        {      
+        {
+            clearfilters();
             HostIsLive = IsHostLive();
             if (HostIsLive)
             {
@@ -314,9 +317,9 @@ namespace Aditum
                 rtbxOutput.AppendText(DateTime.Now.ToString("[HH:mm:ss] ") + "[ ] Acquiring log data...");
                 try
                 {
-                    for (int i = 0; i < clbxHideSelected.Items.Count; i++)
+                    for (int i = 0; i < clbxShowSelected.Items.Count; i++)
                     {
-                        clbxHideSelected.SetItemChecked(i, false);
+                        clbxShowSelected.SetItemChecked(i, false);
                     }
                     string hostip = tbxHostIP.Text;
                     string hostusername = tbxHostUsername.Text;
@@ -365,7 +368,7 @@ namespace Aditum
                         int time_m  = Convert.ToInt32(l[3].Substring(3, 2));
                         int time_s  = Convert.ToInt32(l[3].Substring(6, 2));
                         DateTime t  = new DateTime(year, month, day, time_h, time_m, time_s); //(2000, 01, 01, 13, 37, 42); 2000 - 01 - 01 13:37:42
-                        dt.Rows.Add(x[0], x[1], x[2], x[3], t);
+                        dt.Rows.Add(x[0], x[1].TrimStart(new Char[] { '0' }), x[2].TrimStart(new Char[] { '0' }), x[3], t);
                     });
                     dt.AcceptChanges();
                     dgv.Refresh();
@@ -376,6 +379,8 @@ namespace Aditum
                     rtbxOutput.AppendText(DateTime.Now.ToString("[HH:mm:ss] ") + "[+] Succesfully parsed CSV.");
                     rtbxOutput.AppendText(System.Environment.NewLine);
                     rtbxOutput.AppendText(DateTime.Now.ToString("[HH:mm:ss] ") + "[+] Log data acquired.");
+
+                    loadlistbox();
                 }
                 catch (Exception)
                 {
@@ -409,20 +414,6 @@ namespace Aditum
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void btnClearDateFilter_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-
-        private void btnApplyDateFilter_Click(object sender, EventArgs e)
-        {
-            //DateTime start  = DateTime.ParseExact(tbxDateFrom.Text);
-            //DateTime stop   = DateTime.ParseExact(tbxDateTo.Text);
-            //calendar.SelectionStart. = start;
-            //calendar.SelectionStart = stop;
         }
 
         private void btnTimeSync_Click(object sender, EventArgs e)
@@ -531,53 +522,130 @@ namespace Aditum
         private void MonthCalendar_DateSelected(object sender, DateRangeEventArgs e)
         {
             tbxDateFrom.Text = MonthCalendar.SelectionStart.ToString("dd/MM/yyy") + " 00:00:00";
-            tbxDateTo.Text = MonthCalendar.SelectionEnd.ToString("dd/MM/yyyy")+" 00:00:00";
+            tbxDateTo.Text = MonthCalendar.SelectionEnd.ToString("dd/MM/yyyy")+" 23:59:59";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void applydatetimefilter()
         {
-            //DGV Time format: Wed Dec 14 12:00:00 2016
-            //TBX Time format: 07-12-2016 12:00:00
-            int from_day    = 01;
-            int from_month  = 01;
-            int from_year   = 2000;
-            int from_time_h = 00;
-            int from_time_m = 00;
-            int from_time_s = 00;
-            int to_day      = 01;
-            int to_month    = 01;
-            int to_year     = 2000;
-            int to_time_h   = 00;
-            int to_time_m   = 00;
-            int to_time_s   = 00;
-            try
+            if ((tbxDateFrom.Text.Length == "07-12-2016 12:00:00".Length) && (tbxDateTo.Text.Length == "07-12-2016 12:00:00".Length))
             {
+                tbxDateTo.ForeColor = Color.Black;
+                tbxDateFrom.ForeColor = Color.Black;
+                //DGV Time format: Wed Dec 14 12:00:00 2016
+                //TBX Time format: 07-12-2016 12:00:00
+                int from_day = 01;
+                int from_month = 01;
+                int from_year = 2000;
+                int from_time_h = 00;
+                int from_time_m = 00;
+                int from_time_s = 00;
+                int to_day = 01;
+                int to_month = 01;
+                int to_year = 2000;
+                int to_time_h = 00;
+                int to_time_m = 00;
+                int to_time_s = 00;
+                try
+                {
 
-                from_day    = Convert.ToInt32(tbxDateFrom.Text.Substring(0, 2));
-                from_month  = Convert.ToInt32(tbxDateFrom.Text.Substring(3, 2));
-                from_year   = Convert.ToInt32(tbxDateFrom.Text.Substring(6, 4));
-                from_time_h = Convert.ToInt32(tbxDateFrom.Text.Substring(11,2));
-                from_time_m = Convert.ToInt32(tbxDateFrom.Text.Substring(14, 2));
-                from_time_s = Convert.ToInt32(tbxDateFrom.Text.Substring(17, 2));
-                to_day      = Convert.ToInt32(tbxDateTo.Text.Substring(0, 2));
-                to_month    = Convert.ToInt32(tbxDateTo.Text.Substring(3, 2));
-                to_year     = Convert.ToInt32(tbxDateTo.Text.Substring(6, 4));
-                to_time_h   = Convert.ToInt32(tbxDateTo.Text.Substring(11, 2));
-                to_time_m   = Convert.ToInt32(tbxDateTo.Text.Substring(14, 2));
-                to_time_s   = Convert.ToInt32(tbxDateTo.Text.Substring(17, 2));
+                    from_day = Convert.ToInt32(tbxDateFrom.Text.Substring(0, 2));
+                    from_month = Convert.ToInt32(tbxDateFrom.Text.Substring(3, 2));
+                    from_year = Convert.ToInt32(tbxDateFrom.Text.Substring(6, 4));
+                    from_time_h = Convert.ToInt32(tbxDateFrom.Text.Substring(11, 2));
+                    from_time_m = Convert.ToInt32(tbxDateFrom.Text.Substring(14, 2));
+                    from_time_s = Convert.ToInt32(tbxDateFrom.Text.Substring(17, 2));
+                    to_day = Convert.ToInt32(tbxDateTo.Text.Substring(0, 2));
+                    to_month = Convert.ToInt32(tbxDateTo.Text.Substring(3, 2));
+                    to_year = Convert.ToInt32(tbxDateTo.Text.Substring(6, 4));
+                    to_time_h = Convert.ToInt32(tbxDateTo.Text.Substring(11, 2));
+                    to_time_m = Convert.ToInt32(tbxDateTo.Text.Substring(14, 2));
+                    to_time_s = Convert.ToInt32(tbxDateTo.Text.Substring(17, 2));
+                    DateTime DateFrom = new DateTime(from_year, from_month, from_day, from_time_h, from_time_m, from_time_s); //(2000, 01, 01, 13, 37, 42); 2000-01-01 13:37:42
+                    DateTime DateTo = new DateTime(to_year, to_month, to_day, to_time_h, to_time_m, to_time_s);             //(2000, 01, 01, 13, 37, 42); 2000-01-01 13:37:42
+                    string s = string.Format("TIME >= #{0}# AND TIME <= #{1}#", DateFrom, DateTo);//DateFrom.ToString("ddd MMM dd HH:mm:ss"), DateTo.ToString("ddd MMM dd HH:mm:ss")); //Wed Dec 14 12:00:00 2016
+                    DataView dv = new DataView(dt);
+                    dv.RowFilter = string.Format(s);
+                    dgv.DataSource = dv;
+                }
+                catch (Exception)
+                {
+                    if (tbxDateFrom.Focused)
+                    {
+                        tbxDateFrom.ForeColor = Color.Red;
+                    }
+                    if (tbxDateTo.Focused)
+                    {
+                        tbxDateTo.ForeColor = Color.Red;
+                    }
+                }
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Incorrect Time Format.");
+                if (tbxDateFrom.Focused)
+                {
+                    tbxDateFrom.ForeColor = Color.Red;
+                }
+                if (tbxDateTo.Focused)
+                {
+                    tbxDateTo.ForeColor = Color.Red;
+                }
             }
+        }
 
-            DateTime DateFrom   = new DateTime(from_year, from_month, from_day, from_time_h, from_time_m, from_time_s); //(2000, 01, 01, 13, 37, 42); 2000-01-01 13:37:42
-            DateTime DateTo     = new DateTime(to_year, to_month, to_day, to_time_h, to_time_m, to_time_s);             //(2000, 01, 01, 13, 37, 42); 2000-01-01 13:37:42
-            string s = string.Format("TIME >= #{0}# AND TIME <= #{1}#", DateFrom, DateTo);//DateFrom.ToString("ddd MMM dd HH:mm:ss"), DateTo.ToString("ddd MMM dd HH:mm:ss")); //Wed Dec 14 12:00:00 2016
-            MessageBox.Show(s);
+        private void loadlistbox()
+        {
+            if (dt.Rows.Count != 0)
+            {
+                clbxShowSelected.Items.Clear();
+                List<string> l = new List<string>();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    try
+                    {
+                        l.Add(dgv["ID", i].Value.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        ;
+                    }
+                }
+                l = l.Distinct().ToList();
+                foreach (var i in l)
+                {
+                    clbxShowSelected.Items.Add(i);
+                }
+            }
+        }
+
+        private void tbxDateFrom_TextChanged(object sender, EventArgs e)
+        {
+            applydatetimefilter();
+        }
+
+        private void tbxDateTo_TextChanged(object sender, EventArgs e)
+        {
+            applydatetimefilter();
+        }
+
+        private void btnClearFilters_Click(object sender, EventArgs e)
+        {
+            clearfilters();
+        }
+
+        private void clearfilters()
+        {
+            MonthCalendar.SetDate(DateTime.Now);
+
+            foreach (int i in clbxShowSelected.CheckedIndices)
+            {
+                clbxShowSelected.SetItemCheckState(i, CheckState.Unchecked);
+            }
+            clbxShowSelected.SelectedIndex = -1;
+            tbxDateFrom.Clear();
+            tbxDateTo.Clear();
             DataView dv = new DataView(dt);
-            dv.RowFilter = string.Format(s);
-            dgv.DataSource = dv;    
+            dv.RowFilter = string.Empty;
+            dgv.DataSource = dv;
         }
     }
 }
