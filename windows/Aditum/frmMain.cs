@@ -363,6 +363,7 @@ namespace Aditum
                 }
                 try
                 {
+                    char[] space = new char[] { ' ' };
                     List<string[]> rows = File.ReadAllLines("log.csv").Select(x => x.Split(',')).ToList();
                     dt.Reset();
                     dt.Columns.Add("STATUS", typeof(string));
@@ -372,32 +373,42 @@ namespace Aditum
                     dt.Columns.Add("TIME", typeof(DateTime));
                     rows.ForEach(x =>
                     {
+
                         List<string> l = x[4].Split(' ').ToList();
-                        int day = Convert.ToInt32(l[2]);
-                        int month;
-                        switch (x[4].Substring(4, 3))
-                        {
-                            case "Jan": { month = 1; break; }
-                            case "Feb": { month = 2; break; }
-                            case "Mar": { month = 3; break; }
-                            case "Apr": { month = 4; break; }
-                            case "May": { month = 5; break; }
-                            case "Jun": { month = 6; break; }
-                            case "Jul": { month = 7; break; }
-                            case "Aug": { month = 8; break; }
-                            case "Sep": { month = 9; break; }
-                            case "Oct": { month = 10; break; }
-                            case "Nov": { month = 11; break; }
-                            case "Dec": { month = 12; break; }
-                            default: { month = 1; break; }
-                        }
-                        int year = Convert.ToInt32(l[4]);
-                        int time_h = Convert.ToInt32(l[3].Substring(0, 2));
-                        int time_m = Convert.ToInt32(l[3].Substring(3, 2));
-                        int time_s = Convert.ToInt32(l[3].Substring(6, 2));
-                        DateTime t = new DateTime(year, month, day, time_h, time_m, time_s); //(2000, 01, 01, 13, 37, 42); 2000 - 01 - 01 13:37:42
-                        dt.Rows.Add(x[0], x[1].TrimStart(new Char[] { '0' }), x[2].TrimStart(new Char[] { '0' }), x[3], t);
+                        l.RemoveAll(string.IsNullOrWhiteSpace);
+                        //if (l.Count <= 3)
+                        //{
+                            foreach (var i in l)
+                            {
+                                i.Trim(space);
+                            }
+                            int day = Convert.ToInt32(l[2].Trim(space));
+                            int month;
+                            switch (x[4].Substring(4, 3))
+                            {
+                                case "Jan": { month = 1; break; }
+                                case "Feb": { month = 2; break; }
+                                case "Mar": { month = 3; break; }
+                                case "Apr": { month = 4; break; }
+                                case "May": { month = 5; break; }
+                                case "Jun": { month = 6; break; }
+                                case "Jul": { month = 7; break; }
+                                case "Aug": { month = 8; break; }
+                                case "Sep": { month = 9; break; }
+                                case "Oct": { month = 10; break; }
+                                case "Nov": { month = 11; break; }
+                                case "Dec": { month = 12; break; }
+                                default: { month = 1; break; }
+                            }
+                            int year = Convert.ToInt32(l[4]);
+                            int time_h = Convert.ToInt32(l[3].Substring(0, 2));
+                            int time_m = Convert.ToInt32(l[3].Substring(3, 2));
+                            int time_s = Convert.ToInt32(l[3].Substring(6, 2));
+                            DateTime t = new DateTime(year, month, day, time_h, time_m, time_s); //(2000, 01, 01, 13, 37, 42); 2000 - 01 - 01 13:37:42
+                            dt.Rows.Add(x[0], x[1].TrimStart(new Char[] { '0' }), x[2].TrimStart(new Char[] { '0' }), x[3], t);
+                        //}
                     });
+                    
                     dt.AcceptChanges();
                     dgv.Refresh();
                     DataView dv = new DataView(dt);
